@@ -222,7 +222,7 @@ class _HeroCard extends StatelessWidget {
         const SizedBox(height: 13),
         Text('Learn deeply.\nWrite with clarity.', style: TextStyle(color: Colors.white, fontSize: compact ? 25 : 31, height: 1.15, fontWeight: FontWeight.w900, letterSpacing: -.6)),
         const SizedBox(height: 10),
-        const ConstrainedBox(constraints: BoxConstraints(maxWidth: 500), child: Text('CSS rewards understanding, evidence and a structured argument. Start with one topic, test what you remember, then write what you know.', style: TextStyle(color: Color(0xFFE1EDF7), height: 1.5, fontSize: 13))),
+        ConstrainedBox(constraints: const BoxConstraints(maxWidth: 500), child: const Text('CSS rewards understanding, evidence and a structured argument. Start with one topic, test what you remember, then write what you know.', style: TextStyle(color: Color(0xFFE1EDF7), height: 1.5, fontSize: 13))),
         const SizedBox(height: 19),
         FilledButton.icon(
           onPressed: onStudy,
