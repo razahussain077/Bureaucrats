@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+
 import '../essay/essay_screen.dart';
+import '../study/study_hub_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,33 +10,62 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bureaucrats'), actions: [
-        IconButton(onPressed: () async { await Supabase.instance.client.auth.signOut(); }, icon: const Icon(Icons.logout), tooltip: 'Sign out'),
-        const SizedBox(width: 8),
-      ]),
+      appBar: AppBar(
+        title: const Text('Bureaucrats'),
+        actions: [
+          IconButton(
+            onPressed: () async => Supabase.instance.client.auth.signOut(),
+            icon: const Icon(Icons.logout),
+            tooltip: 'Sign out',
+          ),
+          const SizedBox(width: 8),
+        ],
+      ),
       body: SafeArea(
-        child: ListView(padding: const EdgeInsets.all(20), children: [
-          const Text('Prepare with direction.', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800, color: Color(0xFF102A43))),
-          const SizedBox(height: 8),
-          const Text('A disciplined workspace for your CSS journey.', style: TextStyle(color: Color(0xFF526579), fontSize: 15)),
-          const SizedBox(height: 24),
-          _DailyFocusCard(),
-          const SizedBox(height: 18),
-          const Text('Your preparation', style: TextStyle(fontSize: 19, fontWeight: FontWeight.w700)),
-          const SizedBox(height: 12),
-          _ModuleTile(icon: Icons.edit_note_rounded, title: 'Essay Examiner', subtitle: 'Submit an essay for structured, FPSC-style feedback', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const EssayScreen()))),
-          const _ModuleTile(icon: Icons.public, title: 'Pakistan Affairs', subtitle: 'Structured topics and analytical revision', onTap: null),
-          const _ModuleTile(icon: Icons.newspaper, title: 'Current Affairs', subtitle: 'Daily issues, context and critical analysis', onTap: null),
-          const _ModuleTile(icon: Icons.quiz_outlined, title: 'MCQ Practice', subtitle: 'Practice questions with explanations', onTap: null),
-          const SizedBox(height: 16),
-          const Text('Modules marked as coming soon are not yet connected to live content.', style: TextStyle(color: Color(0xFF718096), fontSize: 12)),
-        ]),
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            const Text(
+              'Prepare with direction.',
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800, color: Color(0xFF102A43)),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'A disciplined workspace for your CSS journey.',
+              style: TextStyle(color: Color(0xFF526579), fontSize: 15),
+            ),
+            const SizedBox(height: 24),
+            const _DailyFocusCard(),
+            const SizedBox(height: 22),
+            const Text('Your preparation', style: TextStyle(fontSize: 19, fontWeight: FontWeight.w700)),
+            const SizedBox(height: 12),
+            _ModuleTile(
+              icon: Icons.menu_book_rounded,
+              title: 'Study Centre',
+              subtitle: 'Pakistan Affairs, Current Affairs, MCQs and syllabus tracker',
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const StudyHubScreen())),
+            ),
+            _ModuleTile(
+              icon: Icons.edit_note_rounded,
+              title: 'Essay Examiner',
+              subtitle: 'Submit an essay for structured, FPSC-style practice feedback',
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const EssayScreen())),
+            ),
+            const SizedBox(height: 12),
+            const Text(
+              'Study content is an initial foundation set. Verify the latest syllabus and current facts against official sources.',
+              style: TextStyle(color: Color(0xFF718096), fontSize: 12, height: 1.4),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
 class _DailyFocusCard extends StatelessWidget {
+  const _DailyFocusCard();
+
   @override
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.all(20),
@@ -44,7 +75,7 @@ class _DailyFocusCard extends StatelessWidget {
       SizedBox(height: 10),
       Text('Build the argument,\nnot just the notes.', style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w700)),
       SizedBox(height: 8),
-      Text('Practice evidence, reasoning and a clear thesis.', style: TextStyle(color: Color(0xFFD9E2EC))),
+      Text('Practise evidence, reasoning and a clear thesis.', style: TextStyle(color: Color(0xFFD9E2EC))),
     ]),
   );
 }
@@ -54,17 +85,21 @@ class _ModuleTile extends StatelessWidget {
   final IconData icon;
   final String title;
   final String subtitle;
-  final VoidCallback? onTap;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) => Card(
     margin: const EdgeInsets.only(bottom: 10),
     child: ListTile(
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      leading: CircleAvatar(backgroundColor: const Color(0xFFEAF3FB), foregroundColor: const Color(0xFF1769AA), child: Icon(icon)),
+      leading: CircleAvatar(
+        backgroundColor: const Color(0xFFEAF3FB),
+        foregroundColor: const Color(0xFF1769AA),
+        child: Icon(icon),
+      ),
       title: Text(title, style: const TextStyle(fontWeight: FontWeight.w700)),
       subtitle: Text(subtitle),
-      trailing: Icon(onTap == null ? Icons.lock_outline : Icons.arrow_forward_ios, size: 16, color: const Color(0xFF718096)),
+      trailing: const Icon(Icons.arrow_forward_ios, size: 16, color: Color(0xFF718096)),
       onTap: onTap,
     ),
   );
