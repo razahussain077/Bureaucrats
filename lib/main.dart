@@ -7,10 +7,11 @@ import 'core/config.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final url = AppConfig.supabaseUrl;
-  final anonKey = AppConfig.supabaseAnonKey;
-  if (url.isNotEmpty && anonKey.isNotEmpty) {
-    await Supabase.initialize(url: url, publishableKey: anonKey);
+  if (AppConfig.hasSupabase) {
+    await Supabase.initialize(
+      url: AppConfig.supabaseUrl,
+      publishableKey: AppConfig.supabasePublishableKey,
+    );
   }
   runApp(const ProviderScope(child: BureaucratsApp()));
 }
