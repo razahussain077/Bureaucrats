@@ -1,24 +1,24 @@
 # Development setup
 
 ## Requirements
-- Flutter stable with Dart 3.9 or later (see the SDK constraint in pubspec.yaml)
-- A dedicated Supabase project for Bureaucrats
+- Flutter stable with Dart 3.9 or later (see the SDK constraint in `pubspec.yaml`)
+- Access to the Bureaucrats Supabase project
 - Gemini API key stored only as a Supabase Edge Function secret
 
 ## Run locally
-1. Copy the project URL and publishable key from the Supabase project Connect panel.
+1. The app has the Bureaucrats project URL and publishable key configured as safe client-side defaults.
 2. Run `flutter pub get`.
-3. Run `flutter run --dart-define=SUPABASE_URL=https://YOUR_PROJECT.supabase.co --dart-define=SUPABASE_PUBLISHABLE_KEY=YOUR_PUBLISHABLE_KEY`.
+3. Run `flutter run`.
 
-The publishable key is designed for client use; database access is constrained by RLS. Never ship a service-role key or Gemini key in Flutter.
+You can override the public configuration with `--dart-define=SUPABASE_URL=...` and `--dart-define=SUPABASE_PUBLISHABLE_KEY=...`. Never ship a service-role/secret key or Gemini key in Flutter.
 
-## Supabase setup
-1. Create a dedicated Supabase project for Bureaucrats.
-2. Apply `supabase/migrations/202611100001_initial_schema.sql` using the Supabase SQL editor or the Supabase CLI migration workflow.
-3. Deploy `supabase/functions/evaluate-essay` with JWT verification enabled.
-4. Set `GEMINI_API_KEY` as an Edge Function secret.
-5. Enable email/password authentication and configure email confirmation/redirect URLs for the app.
-6. Confirm the required tables are exposed through the Data API where applicable and retain RLS.
+## Deployed Supabase backend
+- Project: `Bureaucrats` (`ap-south-1`, Mumbai)
+- URL: `https://kqwdlktvuggxyaubcukj.supabase.co`
+- Migration `initial_schema` has been applied and the `profiles` and `essay_submissions` tables have been verified.
+- Edge Function `evaluate-essay` is deployed with JWT verification enabled.
+- Add `GEMINI_API_KEY` under Supabase Dashboard → Project Settings → Edge Functions → Secrets (or the current Edge Function secrets interface). Do not add it to Flutter or GitHub source.
+- Ensure email/password authentication and email confirmation/redirect URLs are configured for the intended app platforms.
 
 ## Quality gates
 Run:
@@ -26,12 +26,13 @@ Run:
 flutter pub get
 flutter analyze --fatal-infos
 flutter test
+flutter build apk --release
 ```
 
 Then test sign-up, email confirmation, sign-in and sign-out; verify RLS with two separate accounts; test malformed and oversized essays; validate Gemini output; and review Supabase security/performance advisors. GitHub Actions runs analysis and widget tests on pushes and pull requests, but a successful run must be confirmed before release.
 
 ## Current milestone
-The repository contains the app shell, authentication UI, Essay Examiner interface and Edge Function, initial Pakistan Affairs lessons, Current Affairs issue briefs, an interactive starter MCQ quiz and a syllabus checklist. These study modules are a functional foundation, not a complete CSS course. User progress is not yet persisted across sessions. See README for the remaining release blockers.
+The app shell, authentication UI, Essay Examiner interface and deployed Edge Function, initial Pakistan Affairs lessons, Current Affairs issue briefs, interactive starter MCQ quiz and syllabus checklist are present. These study modules are a foundation, not a complete CSS course. User progress is not yet persisted across sessions. Android/iOS builds and end-to-end authentication/essay flows remain to be verified.
 
 ## Supabase SDK note
-The app is pinned to the Supabase Flutter v2 line. Supabase announced v3 as a breaking major release planned for November 11, 2026. Do not upgrade automatically: follow the official migration guide and run the full test suite when deliberately upgrading. See the [v3 breaking-change notice](https://supabase.com/changelog/supabase-flutter-v3).
+The app is pinned to the Supabase Flutter v2 line. Do not upgrade major versions automatically; follow the official migration guide and run the full test suite when deliberately upgrading.
