@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 class AppTheme {
   static const navy = Color(0xFF102A43);
   static const blue = Color(0xFF1769AA);
@@ -12,7 +10,7 @@ class AppTheme {
       useMaterial3: true,
       colorScheme: scheme.copyWith(primary: blue, surface: Colors.white),
       scaffoldBackgroundColor: canvas,
-      textTheme: GoogleFonts.interTextTheme(),
+      textTheme: ThemeData.light().textTheme.apply(bodyColor: navy, displayColor: navy),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.white,
         foregroundColor: navy,
