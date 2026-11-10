@@ -7,6 +7,6 @@ if [ ! -x "${FLUTTER_HOME}/bin/flutter" ]; then
 fi
 export PATH="${FLUTTER_HOME}/bin:${PATH}"
 flutter config --enable-web
-flutter --disable-analytics
+flutter config --no-analytics
 flutter pub get
 flutter build web --release --no-tree-shake-icons
