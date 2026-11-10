@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../essay/essay_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Bureaucrats'), actions: [
-        IconButton(onPressed: () {}, icon: const Icon(Icons.account_circle_outlined), tooltip: 'Profile'),
+        IconButton(onPressed: () async { await Supabase.instance.client.auth.signOut(); }, icon: const Icon(Icons.logout), tooltip: 'Sign out'),
         const SizedBox(width: 8),
       ]),
       body: SafeArea(
