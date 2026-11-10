@@ -1,25 +1,31 @@
 # Bureaucrats
 
-A focused CSS preparation companion for Pakistan's Central Superior Services examination.
+Bureaucrats is a Flutter-based CSS preparation companion for Pakistan's Central Superior Services examination.
 
-## Implemented foundation
-- Flutter app shell with a clean blue/white visual system
-- Email/password sign-up and sign-in through Supabase Auth
+## Implemented in the repository
+- Blue/white Flutter application shell
+- Supabase email/password authentication UI
 - Authenticated home screen and sign-out
-- Essay writing screen with structured rubric feedback
+- Study Centre with eight introductory Pakistan Affairs lessons
+- Six evergreen Current Affairs analytical issue briefs
+- Ten interactive Pakistan Affairs MCQs with answer explanations and score
+- CSS syllabus planning checklist with an in-session progress indicator
+- Essay writing screen and structured rubric feedback view
 - Server-side Gemini evaluation through a Supabase Edge Function
 - Initial Postgres schema with row-level security and user-owned essay history
 - GitHub Actions workflow for Flutter static analysis and widget tests
 
-## Planned modules
-- Pakistan Affairs and Current Affairs learning feed
-- Syllabus and study progress
-- MCQ practice with server-controlled answer validation
-- Saved notes, revision planner and study analytics
-- Subscription entitlements verified server-side
+## Not yet production complete
+- Study content is a starter set, not the full CSS syllabus or a complete textbook-quality course.
+- Current Affairs issue briefs are not a live, dated news feed. Facts, statistics and recent developments must be editorially verified and updated.
+- Syllabus checklist progress currently lives only in the running screen; cross-device persistence is not implemented.
+- MCQ bank is a small starter set and does not yet include all compulsory/optional subjects, timed mock exams or admin authoring.
+- Essay history UI, subscription billing, admin/content CMS, notifications and analytics are not implemented.
+- No dedicated Bureaucrats Supabase project has been connected; migrations and Edge Functions have not been deployed.
+- No live Gemini request, Flutter build, device test or production deployment has been verified.
 
 ## Security
 Never put a Supabase service-role/secret key or AI provider key in the Flutter app. Configure secrets only in the Supabase project. The Edge Function requires a valid user JWT. AI-generated marks are practice feedback, not an official FPSC result.
 
-## Status
-This is an active implementation, not a production release. It has not yet been built on a Flutter toolchain, connected to a Bureaucrats-specific Supabase project, or tested against a live Gemini key. See [Development setup](docs/DEVELOPMENT.md).
+## Development
+See [Development setup](docs/DEVELOPMENT.md) for local configuration and release checks.
