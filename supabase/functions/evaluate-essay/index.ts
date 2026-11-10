@@ -34,6 +34,8 @@ Deno.serve(async (req) => {
   const { data: userData, error: userError } = await userClient.auth.getUser();
   if (userError || !userData.user) return json({ error: "Invalid session" }, 401);
 
+  const declaredLength = Number(req.headers.get("content-length") ?? "0");
+  if (declaredLength > 100_000) return json({ error: "Request body is too large" }, 413);
   let body: { topic?: unknown; essay?: unknown };
   try { body = await req.json(); } catch { return json({ error: "Invalid JSON body" }, 400); }
   const topic = typeof body.topic === "string" ? body.topic.trim() : "";
@@ -49,14 +51,20 @@ Topic: ${topic}
 Essay:
 ${essay}`;
 
-  const modelResponse = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + encodeURIComponent(geminiKey), {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      contents: [{ role: "user", parts: [{ text: prompt }] }],
-      generationConfig: { responseMimeType: "application/json", temperature: 0.2 },
-    }),
-  });
+  let modelResponse: Response;
+  try {
+    modelResponse = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + encodeURIComponent(geminiKey), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{ role: "user", parts: [{ text: prompt }] }],
+        generationConfig: { responseMimeType: "application/json", temperature: 0.2 },
+      }),
+      signal: AbortSignal.timeout(45_000),
+    });
+  } catch {
+    return json({ error: "Examiner service timed out. Please retry." }, 502);
+  }
   if (!modelResponse.ok) return json({ error: "Examiner service is temporarily unavailable" }, 502);
   const modelData = await modelResponse.json();
   const raw = modelData?.candidates?.[0]?.content?.parts?.map((p: { text?: string }) => p.text ?? "").join("");
