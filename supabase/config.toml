@@ -1,0 +1,2 @@
+[functions.evaluate-essay]
+verify_jwt = true
