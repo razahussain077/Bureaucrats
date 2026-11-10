@@ -4,6 +4,12 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../essay/essay_screen.dart';
 import '../study/study_hub_screen.dart';
 
+const _workspaceNav = [
+  (Icons.space_dashboard_rounded, 'Overview'),
+  (Icons.menu_book_rounded, 'Study Centre'),
+  (Icons.edit_note_rounded, 'Essay Examiner'),
+];
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -14,11 +20,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _section = 0;
 
-  static const _nav = [
-    (Icons.space_dashboard_rounded, 'Overview'),
-    (Icons.menu_book_rounded, 'Study Centre'),
-    (Icons.edit_note_rounded, 'Essay Examiner'),
-  ];
+  static const _nav = _workspaceNav;
 
   void _open(int index) => setState(() => _section = index);
 
@@ -94,8 +96,8 @@ class _Sidebar extends StatelessWidget {
         ]),
       ])),
       const Padding(padding: EdgeInsets.only(left: 12, bottom: 10), child: Text('WORKSPACE', style: TextStyle(fontSize: 10, letterSpacing: 1.3, color: Color(0xFF9AA8B7), fontWeight: FontWeight.w800))),
-      ...List.generate(_nav.length, (i) {
-        final item = _nav[i];
+      ...List.generate(_workspaceNav.length, (i) {
+        final item = _workspaceNav[i];
         final active = selected == i;
         return Padding(
           padding: const EdgeInsets.only(bottom: 5),
@@ -168,7 +170,7 @@ class _Dashboard extends StatelessWidget {
                 _ToolData(Icons.account_balance_rounded, 'Pakistan Affairs', '8 foundation lessons', 'Historical context, constitutional development and analytical frameworks', const Color(0xFFEAF3FB), () => onNavigate(1)),
                 _ToolData(Icons.public_rounded, 'Current Affairs', '6 issue briefs', 'Build balanced arguments around national and global challenges', const Color(0xFFEAF5F0), () => onNavigate(1)),
                 _ToolData(Icons.quiz_rounded, 'MCQ Practice', '10 starter questions', 'Test recall with instant explanations and answer feedback', const Color(0xFFFFF4E5), () => onNavigate(1)),
-                _ToolData(Icons.edit_document, 'Essay Examiner', 'Structured feedback', 'Practise thesis, structure, evidence, analysis and expression', const Color(0xFFF1EDFC), () => onNavigate(2)),
+                _ToolData(Icons.edit_note_rounded, 'Essay Examiner', 'Structured feedback', 'Practise thesis, structure, evidence, analysis and expression', const Color(0xFFF1EDFC), () => onNavigate(2)),
               ];
               return GridView.count(
                 crossAxisCount: cols,
@@ -176,7 +178,7 @@ class _Dashboard extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 crossAxisSpacing: 12,
                 mainAxisSpacing: 12,
-                childAspectRatio: compact ? 2.5 : cols == 4 ? 1.05 : 1.6,
+                childAspectRatio: compact ? 2.0 : cols == 4 ? 1.05 : 1.6,
                 children: items.map((item) => _ToolCard(item: item)).toList(),
               );
             }),
