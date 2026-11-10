@@ -40,24 +40,6 @@ grant select, insert, update on public.profiles to authenticated;
 revoke all on public.essay_submissions from anon, authenticated;
 grant select on public.essay_submissions to authenticated;
 
-create or replace function public.handle_new_user()
-returns trigger
-language plpgsql
-security invoker
-set search_path = ''
-as $$
-begin
-  insert into public.profiles (id, full_name)
-  values (new.id, nullif(new.raw_user_meta_data ->> 'full_name', ''))
-  on conflict (id) do nothing;
-  return new;
-end;
-$$;
-
-drop trigger if exists on_auth_user_created on auth.users;
-create trigger on_auth_user_created
-  after insert on auth.users
-  for each row execute procedure public.handle_new_user();
 
 comment on table public.essay_submissions is
   'User-owned essay practice submissions. Inserts are performed by the authenticated Edge Function using server-side credentials.';
