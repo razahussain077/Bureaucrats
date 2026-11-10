@@ -10,7 +10,7 @@ Future<void> main() async {
   final url = AppConfig.supabaseUrl;
   final anonKey = AppConfig.supabaseAnonKey;
   if (url.isNotEmpty && anonKey.isNotEmpty) {
-    await Supabase.initialize(url: url, anonKey: anonKey);
+    await Supabase.initialize(url: url, publishableKey: anonKey);
   }
   runApp(const ProviderScope(child: BureaucratsApp()));
 }
