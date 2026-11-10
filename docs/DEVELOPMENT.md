@@ -8,9 +8,9 @@
 ## Run
 1. Copy the project URL and publishable key from Supabase.
 2. Run `flutter pub get`.
-3. Run `flutter run --dart-define=SUPABASE_URL=https://YOUR_PROJECT.supabase.co --dart-define=SUPABASE_ANON_KEY=YOUR_PUBLISHABLE_KEY`.
+3. Run `flutter run --dart-define=SUPABASE_URL=https://YOUR_PROJECT.supabase.co --dart-define=SUPABASE_PUBLISHABLE_KEY=YOUR_PUBLISHABLE_KEY`.
 
-The publishable/anon key is designed for client use; database access is constrained by RLS. Never ship a service-role key or Gemini key in the app.
+The publishable key is designed for client use; database access is constrained by RLS. Never ship a service-role key or Gemini key in the app.
 
 ## Supabase
 1. Apply `supabase/migrations/202611100001_initial_schema.sql` using the Supabase SQL editor or CLI.
