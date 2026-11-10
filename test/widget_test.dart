@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:bureaucrats/app.dart';
+import 'package:bureaucrats/core/config.dart';
 import 'package:bureaucrats/features/study/study_hub_screen.dart';
 
 void main() {
-  testWidgets('app explains Supabase setup when project credentials are absent', (tester) async {
-    await tester.pumpWidget(const BureaucratsApp());
-    expect(find.text('Bureaucrats'), findsOneWidget);
-    expect(find.textContaining('Connect your Supabase project'), findsOneWidget);
+  test('app is configured for the deployed Bureaucrats backend', () {
+    expect(AppConfig.hasSupabase, isTrue);
+    expect(AppConfig.supabaseUrl, 'https://kqwdlktvuggxyaubcukj.supabase.co');
+    expect(AppConfig.supabasePublishableKey, startsWith('sb_publishable_'));
   });
 
   testWidgets('study centre exposes the four preparation areas', (tester) async {
