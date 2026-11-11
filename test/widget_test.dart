@@ -268,7 +268,11 @@ void main() {
     expect(find.text('The reformers and educational institutions: a comparative study'), findsOneWidget);
 
     final lastChapter = find.text('Prevailing social problems: poverty, education, health and sanitation');
-    await tester.ensureVisible(lastChapter);
+    final academyScroll = find.descendant(
+      of: find.byType(AcademyLibraryScreen),
+      matching: find.byType(Scrollable),
+    );
+    await tester.scrollUntilVisible(lastChapter, 400, scrollable: academyScroll);
     await tester.tap(lastChapter);
     await tester.pumpAndSettle();
     await tester.tap(find.text('Human development, inequality and social policy'));
@@ -280,7 +284,7 @@ void main() {
     expect(find.text('1. Poverty, inequality and social protection'), findsOneWidget);
 
     final workshop = find.text('Past-paper integration and examiner-standard answer writing');
-    await tester.ensureVisible(workshop);
+    await tester.scrollUntilVisible(workshop, 400, scrollable: academyScroll);
     await tester.tap(workshop);
     await tester.pumpAndSettle();
     expect(find.text('How to decode a Pakistan Affairs question'), findsOneWidget);
