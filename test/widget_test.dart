@@ -4,6 +4,7 @@ import 'package:bureaucrats/core/config.dart';
 import 'package:bureaucrats/features/study/study_hub_screen.dart';
 import 'package:bureaucrats/features/exams/exam_hub_screen.dart';
 import 'package:bureaucrats/features/essay/essay_screen.dart';
+import 'package:bureaucrats/features/home/home_screen.dart';
 
 void main() {
   test('app is configured for the deployed Bureaucrats backend', () {
@@ -69,6 +70,7 @@ void main() {
     expect(find.text('Optional Subjects'), findsOneWidget);
     expect(find.text('Past Papers'), findsOneWidget);
 
+    await tester.ensureVisible(find.text('Optional Subjects'));
     await tester.tap(find.text('Optional Subjects'));
     await tester.pumpAndSettle();
     expect(find.text('Choose strategically. Study systematically.'), findsOneWidget);
