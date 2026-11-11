@@ -795,6 +795,7 @@ class _PastPapersTab extends StatelessWidget {
   const _PastPapersTab();
 
   static final Uri _archive = Uri.parse('https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Papers%2FCSS');
+  static final Uri _pakistanAffairs2023 = Uri.parse('https://www.fpsc.gov.pk/assets/media/2024-06-13-GK3-%28Pakistan-Affairs%29.pdf');
   static final Uri _syllabus = Uri.parse('https://www.fpsc.gov.pk/Syllabuses?section=CSS+Syllabi');
   static final Uri _rules = Uri.parse('https://www.fpsc.gov.pk/MPTandMAIN?section=CSS+Rules');
 
@@ -841,6 +842,13 @@ class _PastPapersTab extends StatelessWidget {
         detail: 'Official FPSC archive. The archive page lists papers by examination year and subject, including recent years where published.',
         action: 'OPEN FPSC ARCHIVE',
         onTap: () => _open(context, _archive),
+      ),
+      _OfficialResourceCard(
+        icon: Icons.picture_as_pdf_rounded,
+        title: 'Pakistan Affairs — Official CE-2023 Paper',
+        detail: 'Original FPSC GK-III paper. Three hours: Part I MCQs 20 marks (30 minutes); Part II 80 marks, attempt four questions of 20 marks each.',
+        action: 'OPEN CE-2023 PAPER',
+        onTap: () => _open(context, _pakistanAffairs2023),
       ),
       _OfficialResourceCard(
         icon: Icons.menu_book_rounded,
