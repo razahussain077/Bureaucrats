@@ -141,7 +141,7 @@ void main() {
   });
 
   testWidgets('essay workspace shows planning and self-review tools', (tester) async {
-    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.physicalSize = const Size(1200, 5200);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
@@ -282,10 +282,27 @@ void main() {
 
     await tester.ensureVisible(find.text('The reformers and educational institutions: a comparative study'));
     expect(find.text('The reformers and educational institutions: a comparative study'), findsOneWidget);
+
+    Future<void> openChapter(String title) async {
+      final chapterTitle = find.text(title);
+      final chapterTile = find.ancestor(
+        of: chapterTitle,
+        matching: find.byType(ExpansionTile),
+      ).first;
+      await tester.ensureVisible(chapterTile);
+      await tester.tap(chapterTile);
+      await tester.pumpAndSettle();
+    }
+
+    await openChapter('From 1857 to the formation of the Muslim League');
     expect(find.text('The 1857 uprising, colonial restructuring and Muslim social change'), findsOneWidget);
+    await openChapter('Constitutional negotiations and the Pakistan Movement');
     expect(find.text('Round Table Conferences, Communal Award and constitutional deadlock'), findsOneWidget);
+    await openChapter('The final phase: 1935–1947');
     expect(find.text('The 1937 elections, Lahore Resolution and transfer of power'), findsOneWidget);
+    await openChapter('State formation and constitutional development');
     expect(find.text('Constitution-making, early political crises and constitutional experiments'), findsOneWidget);
+    await openChapter('Federalism, democracy and civil-military relations');
     expect(find.text('Federalism, the Eighteenth Amendment and local government'), findsOneWidget);
 
     final lastChapter = find.text('Prevailing social problems: poverty, education, health and sanitation');
