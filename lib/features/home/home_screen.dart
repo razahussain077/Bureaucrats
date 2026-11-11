@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
-
 import '../essay/essay_screen.dart';
 import '../study/study_hub_screen.dart';
 
@@ -46,11 +44,6 @@ class _HomeScreenState extends State<HomeScreen> {
           actions: [
             if (!compact) const _TopPill(icon: Icons.calendar_today_rounded, label: 'CSS 2027'),
             const SizedBox(width: 10),
-            IconButton(
-              tooltip: 'Sign out',
-              onPressed: () async => Supabase.instance.client.auth.signOut(),
-              icon: const Icon(Icons.logout_rounded, size: 20),
-            ),
             const SizedBox(width: 12),
           ],
         ),
@@ -141,8 +134,7 @@ class _Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final email = Supabase.instance.client.auth.currentUser?.email;
-    final firstName = email == null ? 'Aspirant' : email.split('@').first;
+    const firstName = 'Aspirant';
     return SingleChildScrollView(
       padding: EdgeInsets.fromLTRB(compact ? 16 : 34, 28, compact ? 16 : 34, 36),
       child: Center(
