@@ -40,6 +40,29 @@ void main() {
     expect(find.text('PRACTICE TASK'), findsOneWidget);
   });
 
+  testWidgets('academy classroom opens detailed chapter lessons', (tester) async {
+    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 7)));
+    await tester.pumpAndSettle();
+
+    expect(find.text('ACADEMY CLASSROOM'), findsOneWidget);
+    expect(find.text('Pakistan Affairs'), findsOneWidget);
+    await tester.tap(find.text('How Muslim political thought developed in South Asia'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('1. The historical setting'), findsOneWidget);
+    expect(find.textContaining('The political history of Muslims in South Asia'), findsOneWidget);
+    expect(find.text('CSS EXAM QUESTION'), findsOneWidget);
+    expect(find.text('CLASSWORK'), findsOneWidget);
+
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('English Essay').last);
+    await tester.pumpAndSettle();
+
+    expect(find.text('English Essay'.toUpperCase()), findsOneWidget);
+    expect(find.textContaining('4 chapters'), findsOneWidget);
+  });
+
   testWidgets('optional subjects and official papers are discoverable', (tester) async {
     await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 2)));
     await tester.pumpAndSettle();
