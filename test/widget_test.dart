@@ -28,10 +28,16 @@ void main() {
     expect(find.text('MCQ Practice'), findsOneWidget);
     expect(find.text('CSS Syllabus'), findsOneWidget);
 
+    await tester.ensureVisible(find.text('Compulsory Papers'));
     await tester.tap(find.text('Compulsory Papers'));
     await tester.pumpAndSettle();
     expect(find.text('English Essay'), findsOneWidget);
     expect(find.text('General Science & Ability'), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.text('Islamic Studies / Comparative Study of Major Religions'),
+      220,
+      scrollable: find.byType(Scrollable).last,
+    );
     expect(find.text('Islamic Studies / Comparative Study of Major Religions'), findsOneWidget);
 
     await tester.tap(find.text('English Essay'));
@@ -47,7 +53,11 @@ void main() {
 
     expect(find.text('Choose strategically. Study systematically.'), findsOneWidget);
     expect(find.text('Group I'), findsOneWidget);
-    await tester.scrollUntilVisible(find.text('Political Science'), 280);
+    await tester.scrollUntilVisible(
+      find.text('Political Science'),
+      280,
+      scrollable: find.byType(Scrollable).last,
+    );
     await tester.tap(find.text('Political Science'));
     await tester.pumpAndSettle();
     expect(find.text('CORE TOPIC MAP'), findsOneWidget);
@@ -84,6 +94,7 @@ void main() {
     await tester.pumpWidget(const MaterialApp(home: StudyHubScreen()));
     await tester.pumpAndSettle();
 
+    await tester.ensureVisible(find.text('MCQ Practice'));
     await tester.tap(find.text('MCQ Practice'));
     await tester.pumpAndSettle();
 
@@ -99,9 +110,11 @@ void main() {
     await tester.pumpWidget(const MaterialApp(home: EssayScreen()));
     await tester.pumpAndSettle();
 
+    expect(find.text('0 words'), findsOneWidget);
+    await tester.scrollUntilVisible(find.text('Self-review checklist'), 260);
     expect(find.text('Self-review checklist'), findsOneWidget);
     expect(find.text('Decode the prompt'), findsOneWidget);
-    expect(find.text('0 words'), findsOneWidget);
+    await tester.scrollUntilVisible(find.text('My thesis is clear, specific and arguable.'), 220);
     await tester.tap(find.text('My thesis is clear, specific and arguable.'));
     await tester.pumpAndSettle();
     expect(find.text('1 of 8 checks completed'), findsOneWidget);
