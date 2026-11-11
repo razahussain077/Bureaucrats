@@ -255,7 +255,7 @@ class _HeroCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(20),
     ),
     child: Stack(children: [
-      Positioned(right: -8, top: -22, child: Icon(Icons.school_rounded, size: compact ? 100 : 150, color: Colors.white.withValues(alpha: .07))),
+      Positioned(right: -8, top: -22, child: Icon(Icons.account_balance_rounded, size: compact ? 100 : 150, color: Colors.white.withValues(alpha: .07))),
       Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         const Text('BUREAUCRATS  •  CSS CE-2027', style: TextStyle(color: Color(0xFFB9D9F5), fontSize: 10, letterSpacing: 1.5, fontWeight: FontWeight.w900)),
         const SizedBox(height: 13),
@@ -414,9 +414,35 @@ class _BrandMark extends StatelessWidget {
   const _BrandMark();
   @override
   Widget build(BuildContext context) => Container(
-    width: 38, height: 38,
-    decoration: BoxDecoration(color: const Color(0xFF1769AA), borderRadius: BorderRadius.circular(11)),
-    child: const Icon(Icons.account_balance_rounded, color: Colors.white, size: 21),
+    width: 40,
+    height: 40,
+    decoration: BoxDecoration(
+      color: const Color(0xFF1769AA),
+      borderRadius: BorderRadius.circular(12),
+      boxShadow: const [
+        BoxShadow(color: Color(0x1A1769AA), blurRadius: 12, offset: Offset(0, 4)),
+      ],
+    ),
+    child: Stack(
+      alignment: Alignment.center,
+      children: [
+        const Text('B', style: TextStyle(
+          color: Colors.white,
+          fontSize: 25,
+          height: 1,
+          fontWeight: FontWeight.w900,
+          letterSpacing: -1.4,
+        )),
+        Positioned(
+          bottom: 8,
+          child: Container(
+            width: 13,
+            height: 2,
+            decoration: BoxDecoration(color: const Color(0xFFB9D9F5), borderRadius: BorderRadius.circular(2)),
+          ),
+        ),
+      ],
+    ),
   );
 }
 
