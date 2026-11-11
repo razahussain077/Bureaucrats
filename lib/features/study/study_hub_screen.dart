@@ -342,14 +342,14 @@ class _SyllabusTabState extends State<_SyllabusTab> {
       'Pakistan Affairs',
       'Islamic Studies / Comparative Study of Major Religions',
     ],
-    'Optional subject selection': [
-      'Group I: select one subject (200 marks)',
-      'Group II: select subjects totalling 200 marks',
-      'Group III: select one subject (100 marks)',
-      'Group IV: select one subject (100 marks)',
-      'Group V: select one subject (100 marks)',
-      'Group VI: select one subject (100 marks)',
-      'Group VII: select one subject (100 marks)',
+    'Optional subject groups (600 marks)': [
+      'Group I — 200 marks, choose ONE: Accountancy & Auditing; Economics; Computer Science; Political Science; International Relations',
+      'Group II — choose subject(s) totalling 200 marks: Physics (200); Chemistry (200); Applied Mathematics (100); Pure Mathematics (100); Statistics (100); Geology (100)',
+      'Group III — 100 marks, choose ONE: Business Administration; Public Administration; Governance & Public Policies; Town Planning & Urban Management',
+      'Group IV — 100 marks, choose ONE: History of Pakistan & India; Islamic History & Culture; British History; European History; History of USA',
+      'Group V — 100 marks, choose ONE: Gender Studies; Environmental Sciences; Agriculture & Forestry; Botany; Zoology; English Literature; Urdu Literature',
+      'Group VI — 100 marks, choose ONE: Law; Constitutional Law; International Law; Muslim Law & Jurisprudence; Mercantile Law; Criminology; Philosophy',
+      'Group VII — 100 marks, choose ONE: Journalism & Mass Communication; Psychology; Geography; Sociology; Anthropology; Punjabi; Sindhi; Pashto; Balochi; Persian; Arabic',
     ],
     'Written examination readiness': [
       'Download and verify the latest official FPSC syllabus',
@@ -372,8 +372,12 @@ class _SyllabusTabState extends State<_SyllabusTab> {
         const _SectionIntro(
           eyebrow: 'PREPARATION CHECKLIST',
           title: 'CSS syllabus tracker',
-          description: 'Tick off what you have reviewed. This checklist is a planning aid; confirm the current paper structure and optional subject rules against the official FPSC syllabus for your exam year.',
+          description: 'Tick off what you have reviewed. The written examination scheme below follows the FPSC revised CSS syllabus; always verify the latest notice for your exam cycle before finalising subjects.',
         ),
+        const Card(child: Padding(
+          padding: EdgeInsets.all(14),
+          child: Text('EXAM STRUCTURE  •  1,200 MARKS\\n6 compulsory papers = 600 marks + optional subjects = 600 marks. A 200-mark subject comprises two papers; each 100-mark subject comprises one paper. Group II allows a combination totalling 200 marks; Groups III–VII allow one 100-mark subject each.', style: TextStyle(height: 1.5)),
+        )),
         Card(
           child: Padding(
             padding: const EdgeInsets.all(16),
