@@ -88,6 +88,13 @@ void main() {
     expect(find.text('Previous Question Papers — CSS'), findsOneWidget);
     expect(find.text('Pakistan Affairs — Official CE-2023 Paper'), findsOneWidget);
     expect(find.text('OPEN FPSC ARCHIVE'), findsOneWidget);
+
+    tabController.animateTo(6);
+    await tester.pumpAndSettle();
+    expect(find.text('Pakistan Affairs — 28 official syllabus areas'), findsOneWidget);
+    await tester.tap(find.text('Pakistan Affairs — 28 official syllabus areas'));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('XXVIII. Social problems: poverty, education, health and sanitation'), findsOneWidget);
   });
 
   testWidgets('dashboard presents Bureaucrats academy identity and resources', (tester) async {
