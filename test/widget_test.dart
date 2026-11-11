@@ -47,6 +47,7 @@ void main() {
 
     expect(find.text('Choose strategically. Study systematically.'), findsOneWidget);
     expect(find.text('Group I'), findsOneWidget);
+    await tester.scrollUntilVisible(find.text('Political Science'), 280);
     await tester.tap(find.text('Political Science'));
     await tester.pumpAndSettle();
     expect(find.text('CORE TOPIC MAP'), findsOneWidget);
