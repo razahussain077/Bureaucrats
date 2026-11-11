@@ -91,15 +91,11 @@ void main() {
 
     tabController.animateTo(6);
     await tester.pumpAndSettle();
-    final syllabusScroll = find.byType(Scrollable).last;
-    final pakistanTracker = find.text('Pakistan Affairs — 28 official syllabus areas');
-    await tester.scrollUntilVisible(pakistanTracker, 300, scrollable: syllabusScroll);
-    expect(pakistanTracker, findsOneWidget);
-    await tester.tap(pakistanTracker);
-    await tester.pumpAndSettle();
-    final finalClause = find.textContaining('XXVIII. Social problems: poverty, education, health and sanitation');
-    await tester.scrollUntilVisible(finalClause, 300, scrollable: syllabusScroll);
-    expect(finalClause, findsOneWidget);
+    expect(find.text('Pakistan Affairs — 28 official syllabus areas'), findsOneWidget);
+    expect(
+      find.textContaining('XXVIII. Social problems: poverty, education, health and sanitation'),
+      findsOneWidget,
+    );
   });
 
   testWidgets('dashboard presents Bureaucrats academy identity and resources', (tester) async {
@@ -287,12 +283,19 @@ void main() {
       matching: find.byType(Scrollable),
     );
     await tester.scrollUntilVisible(lastChapter, 400, scrollable: academyScroll);
-    await tester.tap(lastChapter);
+    final chapterTile = find.ancestor(
+      of: lastChapter,
+      matching: find.byType(ExpansionTile),
+    ).first;
+    await tester.ensureVisible(chapterTile);
+    await tester.tap(chapterTile);
     await tester.pumpAndSettle();
-    final lessonTile = find.widgetWithText(
-      ExpansionTile,
-      'Human development, inequality and social policy',
-    ).last;
+
+    final lessonTile = find.byKey(
+      const PageStorageKey<String>(
+        'lesson-Human development, inequality and social policy',
+      ),
+    );
     await tester.ensureVisible(lessonTile);
     await tester.tap(lessonTile);
     await tester.pumpAndSettle();
