@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bureaucrats/core/config.dart';
+import 'package:bureaucrats/features/study/academy_library_screen.dart';
 import 'package:bureaucrats/features/study/study_hub_screen.dart';
 import 'package:bureaucrats/features/exams/exam_hub_screen.dart';
 import 'package:bureaucrats/features/essay/essay_screen.dart';
