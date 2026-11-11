@@ -128,7 +128,7 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  '\${course.chapters.length} chapters • \${course.chapters.fold<int>(0, (total, chapter) => total + chapter.lessons.length)} lessons',
+                  '${course.chapters.length} chapters • ${course.chapters.fold<int>(0, (total, chapter) => total + chapter.lessons.length)} lessons',
                   style: const TextStyle(
                     color: Color(0xFFB9D9F5),
                     fontSize: 11,
@@ -164,7 +164,7 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
                 clipBehavior: Clip.antiAlias,
                 child: ExpansionTile(
                   key: PageStorageKey<String>(
-                    '\${course.title}-\${chapter.number}',
+                    '${course.title}-${chapter.number}',
                   ),
                   initiallyExpanded: index == 0,
                   leading: CircleAvatar(
@@ -183,7 +183,7 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
                     style: const TextStyle(fontWeight: FontWeight.w800),
                   ),
                   subtitle: Text(
-                    '\${chapter.lessons.length} lesson\${chapter.lessons.length == 1 ? '' : 's'}',
+                    '${chapter.lessons.length} lesson${chapter.lessons.length == 1 ? '' : 's'}',
                   ),
                   childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 16),
                   children: [
@@ -195,7 +195,7 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Text(
-                        'FPSC SYLLABUS LINKAGE\n\${chapter.syllabusLink}',
+                        'FPSC SYLLABUS LINKAGE\n${chapter.syllabusLink}',
                         style: const TextStyle(height: 1.45, fontSize: 12),
                       ),
                     ),
