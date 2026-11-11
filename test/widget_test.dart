@@ -86,6 +86,7 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Official CSS past papers'), findsOneWidget);
     expect(find.text('Previous Question Papers — CSS'), findsOneWidget);
+    expect(find.text('Pakistan Affairs — Official CE-2023 Paper'), findsOneWidget);
     expect(find.text('OPEN FPSC ARCHIVE'), findsOneWidget);
   });
 
@@ -263,7 +264,7 @@ void main() {
 
     expect(find.text('ACADEMY CLASSROOM'), findsOneWidget);
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('31 chapters • 38 lessons'), findsOneWidget);
+    expect(find.textContaining('32 chapters • 39 lessons'), findsOneWidget);
 
     await tester.ensureVisible(find.text('The reformers and educational institutions: a comparative study'));
     expect(find.text('The reformers and educational institutions: a comparative study'), findsOneWidget);
@@ -283,7 +284,7 @@ void main() {
     expect(find.text('Mark lesson complete'), findsOneWidget);
     await tester.tap(find.text('Mark lesson complete'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 38 lessons completed'), findsOneWidget);
+    expect(find.text('1 / 39 lessons completed'), findsOneWidget);
     expect(find.text('CSS EXAM QUESTION'), findsWidgets);
     expect(find.text('CLASSWORK'), findsWidgets);
     expect(find.text('1. Poverty, inequality and social protection'), findsOneWidget);
@@ -295,7 +296,7 @@ void main() {
     expect(find.text('How to decode a Pakistan Affairs question'), findsOneWidget);
   });
 
-  testWidgets('Pakistan Affairs MCQ bank has expanded to sixty explained questions', (tester) async {
+  testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred explained questions', (tester) async {
     await tester.pumpWidget(const MaterialApp(home: StudyHubScreen()));
     await tester.pumpAndSettle();
 
