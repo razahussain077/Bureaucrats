@@ -60,8 +60,10 @@ void main() {
   });
 
   testWidgets('dashboard presents Bureaucrats academy identity and resources', (tester) async {
-    await tester.view.setPhysicalSize(const Size(1200, 900));
-    await tester.view.setDevicePixelRatio(1);
+    tester.view.physicalSize = const Size(1200, 900);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(const MaterialApp(home: HomeScreen()));
     await tester.pumpAndSettle();
 
@@ -75,8 +77,6 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Choose strategically. Study systematically.'), findsOneWidget);
 
-    await tester.view.resetPhysicalSize();
-    await tester.view.resetDevicePixelRatio();
   });
 
   testWidgets('MCQ practice checks an answer and explains it', (tester) async {
