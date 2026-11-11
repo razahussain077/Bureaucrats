@@ -803,6 +803,37 @@ Evidence to verify: UN resolutions; Simla Agreement; official statements from bo
 A high-quality answer is relevant, accurate, analytical, balanced and readable. More facts do not compensate for a weak argument, and decorative quotations do not replace evidence.'''),
         ], keyTerms: ['Model outline', 'Federalism', 'Inclusive growth', 'Stabilisation', 'Kashmir dispute', 'Crisis management', 'Source verification', 'Examiner checklist'], examQuestion: 'Using one of the model themes, write a balanced answer that contains a thesis, evidence, counterargument, policy recommendations and a reasoned conclusion.', practiceTask: 'Write one full timed answer from the three frameworks. Then annotate it against the eight-point examiner checklist and rewrite the weakest paragraph.')
       ]),
+
+      AcademyChapter(number: '32', title: 'Official past-paper map: CSS CE-2023 Pakistan Affairs', syllabusLink: 'Source: Federal Public Service Commission, Competitive Examination 2023, General Knowledge-III (Pakistan Affairs)', lessons: [
+        AcademyLesson(title: 'Understand the paper and connect every question to the course', objectives: 'Use an authentic FPSC paper to identify the examination format, syllabus coverage and the analytical work required by each question.', sections: [
+          AcademyLessonSection('1. Official paper structure', '''The FPSC CE-2023 Pakistan Affairs paper allowed three hours. Part I contained objective MCQs worth 20 marks, with a maximum of 30 minutes. Part II carried 80 marks. Candidates were instructed to attempt only four questions from Part II; all carried equal marks of 20. The paper therefore tested breadth through the objective section and depth through four selected analytical answers.
+
+Before attempting any official paper, read its instructions carefully. The number of questions, marks, time and permitted attempts can differ between papers or examination cycles. Do not assume the structure remains unchanged without checking the paper itself.
+
+Official source: https://www.fpsc.gov.pk/assets/media/2024-06-13-GK3-%28Pakistan-Affairs%29.pdf'''),
+          AcademyLessonSection('2. CE-2023 question themes and course mapping', '''Q2 — Jinnah’s leadership during the 1937–1947 decade. Course linkage: Chapter 01 (Iqbal and Jinnah), Chapter 02 (Simla Deputation and Muslim League), Chapter 03 (constitutional negotiations) and Chapter 04 (1935–1947). Answer approach: explain the change in political strategy, party organisation, constitutional negotiation, provincial politics, wartime diplomacy and the interaction between leadership and mass mobilisation.
+
+Q3 — causes of agricultural decline and food imports. Course linkage: Chapter 07 (land, people, agriculture and natural resources), Chapter 08 (economic and water constraints) and the additional lesson on population, resources and agricultural productivity. Answer approach: distinguish land and water constraints from productivity, input, research, storage, market and policy failures.
+
+Q4 — obstacles to industrial development. Course linkage: Chapter 07 (industry and resources), Chapter 08 (macroeconomic and energy constraints) and Chapter 27 (economic conditions and sector performance). Answer approach: connect energy reliability, cost of finance, technology, skills, logistics, taxation, competition, export sophistication and policy predictability.
+
+Q5 — evolution of democracy in Pakistan. Course linkage: Chapter 13 (political evolution since 1971) and Chapter 14 (democratic system). Answer approach: compare constitutional periods, military interventions, elections, parliamentary continuity, judicial and electoral institutions, local government and civilian accountability.
+
+Q6 — short- and long-term effects of joining the US-led War on Terror. Course linkage: Chapter 23 (Afghanistan since 1979), Chapter 24 (Pakistan-US relations and War on Terror) and Chapter 25 (non-state actors and security threats). Answer approach: assess security cooperation, internal militancy, displacement, economic cost, sovereignty debates, civilian harm, diplomacy and the post-2021 security environment.
+
+Q7 — Pakistan’s crossroads location, geostrategic importance and challenges. Course linkage: Chapter 07 (physical geography), Chapter 17 (changing regional apparatus), Chapter 18 (regional organisations) and Chapter 19 (neighbours excluding India). Answer approach: explain access to the Arabian Sea, proximity to the Gulf and Central Asia, China connectivity, regional trade routes, border insecurity and the difference between geographic potential and realised economic benefit.
+
+Q8 — youth bulge and sustainable economic development. Course linkage: Chapter 07 (population, society and education), Chapter 27 (growth and sector performance) and Chapter 29 (poverty, education, health and sanitation). Answer approach: connect demographic structure to foundational learning, technical skills, women’s participation, productive jobs, entrepreneurship, health, urban planning and export competitiveness.'''),
+          AcademyLessonSection('3. What this paper tells a candidate about preparation', '''The seven subjective themes span political leadership, agriculture, industry, democracy, foreign policy and security, geography and demography. This is a useful demonstration of why Pakistan Affairs cannot be prepared as a narrow chronology of the Pakistan Movement. Strong candidates connect history to contemporary public policy and support arguments with evidence.
+
+For each theme, prepare a two-page topic sheet: definition and context; key dates or constitutional provisions; causes and consequences; a Pakistan-specific example; one counterargument; three feasible recommendations; and a balanced conclusion. Practise writing four answers in the time available, not merely reading model notes.'''),
+          AcademyLessonSection('4. CE-2024, CE-2025 and CE-2026 papers', '''FPSC’s Previous Question Papers — CSS archive lists the Pakistan Affairs paper under the General Knowledge-III / GK3 (Pakistan Affairs) label for multiple examination years, including CE-2023, CE-2024, CE-2025 and CE-2026. The app links to the official archive rather than reproducing third-party transcriptions. Open the relevant examination year, select GK3 / Pakistan Affairs, download the original paper and record its exact question wording before attempting it.
+
+Archive: https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Papers%2FCSS
+
+This course currently provides a verified theme map for CE-2023. It does not claim to have transcribed or categorised every question from the CE-2024, CE-2025 or CE-2026 papers. Add those mappings only after checking each original FPSC PDF.'''),
+        ], keyTerms: ['FPSC CE-2023', 'GK-III Pakistan Affairs', 'Question selection', 'Question mapping', 'Jinnah 1937–1947', 'Agricultural productivity', 'Industrialisation', 'Demographic dividend'], examQuestion: 'Using the CE-2023 paper, explain how Pakistan Affairs questions connect historical foundations with contemporary economic, political and security challenges.', practiceTask: 'Open the official CE-2023 paper. Choose any four of Q2–Q8, prepare a 10-minute outline for each and then attempt all four under the original examination time and word-discipline conditions.')
+      ]),
     ],
   ),
   AcademyCourse(
