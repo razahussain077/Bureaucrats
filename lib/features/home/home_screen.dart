@@ -169,7 +169,7 @@ class _Dashboard extends StatelessWidget {
               final items = [
                 _ToolData(Icons.account_balance_rounded, 'Pakistan Affairs', '8 foundation lessons', 'Historical context, constitutional development and analytical frameworks', const Color(0xFFEAF3FB), () => onNavigate(1)),
                 _ToolData(Icons.public_rounded, 'Current Affairs', '6 issue briefs', 'Build balanced arguments around national and global challenges', const Color(0xFFEAF5F0), () => onNavigate(1)),
-                _ToolData(Icons.quiz_rounded, 'MCQ Practice', '10 starter questions', 'Test recall with instant explanations and answer feedback', const Color(0xFFFFF4E5), () => onNavigate(1)),
+                _ToolData(Icons.quiz_rounded, 'MCQ Practice', '30 practice questions', 'Test recall with instant explanations and answer feedback', const Color(0xFFFFF4E5), () => onNavigate(1)),
                 _ToolData(Icons.edit_note_rounded, 'Essay Examiner', 'Structured feedback', 'Practise thesis, structure, evidence, analysis and expression', const Color(0xFFF1EDFC), () => onNavigate(2)),
               ];
               return GridView.count(
