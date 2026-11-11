@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bureaucrats/core/config.dart';
 import 'package:bureaucrats/features/study/study_hub_screen.dart';
+import 'package:bureaucrats/features/exams/exam_hub_screen.dart';
 
 void main() {
   test('app is configured for the deployed Bureaucrats backend', () {
@@ -42,3 +43,17 @@ void main() {
     expect(find.textContaining('met Lord Minto in October 1906'), findsOneWidget);
   });
 }
+
+
+  testWidgets('timed practice test starts and presents a question', (tester) async {
+    await tester.pumpWidget(const MaterialApp(home: ExamHubScreen()));
+    await tester.pump();
+
+    expect(find.text('Start a practice test'), findsOneWidget);
+    await tester.tap(find.text('Begin timed test'));
+    await tester.pump();
+
+    expect(find.text('QUESTION 1 OF 12'), findsOneWidget);
+    expect(find.text('The Simla Deputation met Lord Minto in:'), findsOneWidget);
+    expect(find.text('Next question'), findsOneWidget);
+  });
