@@ -45,10 +45,16 @@ class _EssayScreenState extends State<EssayScreen> {
       const SizedBox(height: 14),
       TextField(controller: _essay, minLines: 14, maxLines: 24, textAlignVertical: TextAlignVertical.top, decoration: const InputDecoration(labelText: 'Your essay', hintText: 'Write your complete essay here...')),
       const SizedBox(height: 16),
+      const Card(
+        child: Padding(
+          padding: EdgeInsets.all(14),
+          child: Text('Public study access is enabled. Essay evaluation is temporarily locked because the secure examiner service currently requires an authenticated session. Your writing stays on this page and is not submitted.', style: TextStyle(height: 1.45)),
+        ),
+      ),
       FilledButton.icon(
-        onPressed: _busy ? null : _submit,
-        icon: _busy ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2)) : const Icon(Icons.fact_check_outlined),
-        label: Text(_busy ? 'Evaluating…' : 'Evaluate essay'),
+        onPressed: null,
+        icon: const Icon(Icons.lock_outline_rounded),
+        label: const Text('Evaluation unavailable in public mode'),
       ),
       if (_error != null) ...[const SizedBox(height: 12), Text(_error!, style: const TextStyle(color: Color(0xFF9B2C2C)))],
       if (_evaluation != null) ...[const SizedBox(height: 24), _EvaluationView(evaluation: _evaluation!)],
