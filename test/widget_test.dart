@@ -251,4 +251,43 @@ void main() {
     }
   });
 
+
+  testWidgets('Pakistan Affairs classroom covers all expanded syllabus chapters', (tester) async {
+    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 7)));
+    await tester.pumpAndSettle();
+
+    expect(find.text('ACADEMY CLASSROOM'), findsOneWidget);
+    expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
+    expect(find.textContaining('29 chapters • 36 lessons'), findsOneWidget);
+
+    await tester.ensureVisible(find.text('The reformers and educational institutions: a comparative study'));
+    expect(find.text('The reformers and educational institutions: a comparative study'), findsOneWidget);
+
+    final lastChapter = find.text('Prevailing social problems: poverty, education, health and sanitation');
+    await tester.ensureVisible(lastChapter);
+    await tester.tap(lastChapter);
+    await tester.pumpAndSettle();
+
+    expect(find.text('Human development, inequality and social policy'), findsOneWidget);
+    expect(find.text('CSS EXAM QUESTION'), findsWidgets);
+    expect(find.text('CLASSWORK'), findsWidgets);
+    expect(find.textContaining('The Pakistan Economic Survey 2025–26'), findsOneWidget);
+  });
+
+  testWidgets('Pakistan Affairs MCQ bank has expanded to sixty explained questions', (tester) async {
+    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen()));
+    await tester.pumpAndSettle();
+
+    await tester.ensureVisible(find.text('MCQ Practice'));
+    await tester.tap(find.text('MCQ Practice'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('1 / 60'), findsOneWidget);
+    expect(find.text('The Simla Deputation took place in:'), findsOneWidget);
+  });
+
 }
