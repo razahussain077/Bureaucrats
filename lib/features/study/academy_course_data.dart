@@ -149,6 +149,24 @@ The Indian Councils Act 1909 introduced separate electorates for Muslims. This p
             examQuestion: 'Evaluate the significance of the Simla Deputation and the formation of the All-India Muslim League in Muslim political representation.',
             practiceTask: 'Construct a timeline from 1857 to 1909 and write a short explanation of how education, language and constitutional representation interacted.',
           ),
+          AcademyLesson(
+            title: 'The 1857 uprising, colonial restructuring and Muslim social change',
+            objectives: 'Explain the diverse causes of 1857 and analyse the political, administrative, economic and educational consequences of direct Crown rule.',
+            sections: [
+              AcademyLessonSection('1. Multiple causes and regional variation', '''The uprising of 1857 did not have one uniform cause or one centrally coordinated national leadership. Military grievances included service conditions, overseas deployment concerns and the cartridge controversy. Political causes included annexation policies and the doctrine of lapse. Economic pressures included changes in land revenue, the disruption of older patronage networks and the effect of colonial commercial policy. Religious and social anxieties made the new order appear threatening to several communities.
+
+Different regions and groups participated for different reasons. Some princely rulers, soldiers, peasants, landlords, artisans and religious leaders supported the uprising; others remained neutral or aligned with the British. The movement had a major anti-colonial dimension, but it should not be described as a fully unified nationalist movement in the modern sense.'''),
+              AcademyLessonSection('2. From Company rule to the Crown', '''After the uprising was suppressed, the Government of India Act 1858 transferred authority from the East India Company to the British Crown. The Governor-General also became the Viceroy. The colonial state reorganised the army, strengthened surveillance, changed administrative recruitment and attempted to manage relations with princely states and religious communities. The Queen’s Proclamation of 1858 promised non-interference in religious beliefs and equal treatment under law, although political and economic power remained colonial.
+
+The end of the Mughal dynasty was symbolically important. Bahadur Shah Zafar was exiled, and the old imperial court ceased to function. The new administration gradually expanded railways, telegraph, legal institutions and revenue extraction. These changes integrated territory for colonial purposes while also producing new political and economic dependencies.'''),
+              AcademyLessonSection('3. Uneven Muslim experience and new strategies', '''The consequences for Muslim elites varied by region. In parts of North India, groups associated with the old court and administration lost patronage and influence. Access to government employment increasingly depended on new educational and linguistic requirements. This did not mean that all Muslims suffered in the same way: class, region, landholding, occupation and local alliances shaped outcomes.
+
+Sir Syed Ahmad Khan’s emphasis on modern education was one response to the changing environment. Other scholars prioritised traditional religious learning or combined inherited curricula with new subjects. The key historical development was the emergence of competing strategies for survival and advancement under colonial rule. A strong answer compares these responses and avoids describing Muslim society as politically or intellectually uniform.'''),
+            ],
+            keyTerms: ['Uprising of 1857', 'Government of India Act 1858', 'Queen’s Proclamation', 'Company rule', 'Crown rule', 'Colonial restructuring', 'Bahadur Shah Zafar', 'Educational reform'],
+            examQuestion: '“The uprising of 1857 transformed the political and social conditions of Muslims in South Asia.” Evaluate this statement with reference to the transfer of power and subsequent reform movements.',
+            practiceTask: 'Prepare a cause-consequence table for 1857. Separate military, political, economic and social causes, then evaluate three consequences of direct Crown rule.'
+          ),
         ],
       ),
       AcademyChapter(
@@ -173,6 +191,24 @@ For exam purposes, distinguish intellectual influence from direct institutional 
             keyTerms: ['Lucknow Pact', 'Dyarchy', 'Nehru Report', 'Fourteen Points', 'Allahabad Address', 'Federalism'],
             examQuestion: 'Compare the Nehru Report and Jinnah’s Fourteen Points with reference to federalism and minority safeguards.',
             practiceTask: 'Create a comparison table with four headings: centre, provinces, representation and minority safeguards. Use it to write a balanced 500-word answer.',
+          ),
+          AcademyLesson(
+            title: 'Round Table Conferences, Communal Award and constitutional deadlock',
+            objectives: 'Trace the constitutional negotiations of 1930–1935 and explain how representation, federalism and minority safeguards shaped the Pakistan demand.',
+            sections: [
+              AcademyLessonSection('1. Round Table Conferences', '''The three Round Table Conferences were held in London between 1930 and 1932 to discuss constitutional reforms for British India. The first conference began without Congress participation because of the Civil Disobedience Movement. The Gandhi-Irwin Pact of 1931 enabled Gandhi to attend the second conference, but major disagreements over representation, federalism and minority safeguards remained. The third conference in 1932 was attended by fewer political representatives and did not resolve the central disputes.
+
+Muslim representatives sought guarantees that would protect political participation in a future constitutional arrangement. The discussions exposed the difficulty of building a single institutional framework for communities and provinces with competing fears about majority rule.'''),
+              AcademyLessonSection('2. Communal Award and Poona Pact', '''In 1932, British Prime Minister Ramsay MacDonald announced the Communal Award, which extended separate electorates and reserved representation to several communities. The Award became controversial, particularly in relation to depressed classes. Gandhi’s fast and the Poona Pact between Gandhi and B. R. Ambedkar altered the arrangements for depressed-class representation within joint electorates.
+
+For Pakistan Affairs, the important analytical issue is how colonial constitutional design formalised communal categories while attempting to manage competing claims. Candidates should distinguish Muslim separate electorates from the provisions concerning other communities and explain the political consequences rather than treating all safeguards as identical.'''),
+              AcademyLessonSection('3. Government of India Act 1935', '''The Government of India Act 1935 was the most extensive constitutional statute of British India. It provided for provincial autonomy, proposed an all-India federation and retained substantial powers for the Governor-General and governors. The federal scheme did not come fully into operation, but provincial autonomy shaped the elections of 1937 and the political experience of Congress and Muslim League ministries.
+
+The Act also preserved a restricted franchise, so the electorate did not represent the entire adult population. Analyse the Act through the distribution of powers, provincial autonomy, executive discretion, federal design and representation. The 1937 elections that followed made provincial politics central to the future constitutional debate.'''),
+            ],
+            keyTerms: ['Round Table Conferences', 'Gandhi-Irwin Pact', 'Communal Award', 'Poona Pact', 'Provincial autonomy', 'Government of India Act 1935', 'Federal scheme', 'Restricted franchise'],
+            examQuestion: 'How did the constitutional negotiations of 1930–1935 shape Muslim political demands and the future of federalism in British India?',
+            practiceTask: 'Compare the Nehru Report, Jinnah’s Fourteen Points, the Communal Award and the Government of India Act 1935 under representation, provincial powers and minority safeguards.'
           ),
         ],
       ),
@@ -199,6 +235,24 @@ The transfer of power was accompanied by mass displacement and communal violence
             examQuestion: 'Was partition inevitable by 1947? Evaluate the constitutional and political factors that led to the final decision.',
             practiceTask: 'Write two competing explanations for the failure of the Cabinet Mission Plan, then assess which factors carry the greatest explanatory weight.',
           ),
+          AcademyLesson(
+            title: 'The 1937 elections, Lahore Resolution and transfer of power',
+            objectives: 'Analyse the shift from provincial electoral politics to the demand for Pakistan and explain the failure of the final constitutional negotiations.',
+            sections: [
+              AcademyLessonSection('1. The 1937 elections and Congress ministries', '''The 1937 provincial elections under the Government of India Act 1935 exposed the uneven organisational strength of the Muslim League. Congress won majorities in several provinces and formed ministries. The League performed poorly in a number of Muslim-majority provinces, where regional parties and local political networks remained influential. Jinnah responded by strengthening the League’s organisation, membership and provincial alliances.
+
+The League’s criticism of Congress ministries became part of its political mobilisation. Historians debate the nature and extent of alleged discrimination; candidates should distinguish documented administrative decisions from party claims and later political narratives. The analytical point is that the experience of provincial government affected Muslim perceptions of safeguards under a future all-India majority system.'''),
+              AcademyLessonSection('2. Lahore Resolution and wartime politics', '''The Lahore Resolution was adopted on 23 March 1940 at the Muslim League’s annual session. Its wording called for geographically contiguous units in Muslim-majority areas to be grouped into independent states, with autonomous and sovereign constituent units. The text did not specify every constitutional detail of the state that emerged in 1947; its meaning and later interpretation have been debated.
+
+The Second World War changed the balance between British authority and Indian political organisations. The resignation of Congress ministries in 1939, the League’s Day of Deliverance, the Cripps proposals of 1942 and the growing importance of mass politics changed the environment. The League increasingly presented itself as the principal political vehicle for Muslim constitutional claims.'''),
+              AcademyLessonSection('3. Cabinet Mission, 1945–46 elections and partition', '''The Simla Conference of 1945 failed amid disagreement about the League’s right to nominate Muslim representatives. The 1945–46 elections strengthened the League’s electoral position in separate Muslim constituencies. The Cabinet Mission Plan of 1946 proposed a united India with a weak centre and provincial groupings. Jinnah engaged with the plan, but disagreement over its interpretation, implementation and the future distribution of power undermined it.
+
+Communal violence and political mistrust intensified during 1946–47. The 3 June Plan accepted partition, and the Indian Independence Act 1947 created the legal framework for two dominions. Partition brought mass displacement, violence, asset division, refugee crises and disputes over princely states. A complete answer evaluates the political negotiations alongside the human cost of transfer of power.'''),
+            ],
+            keyTerms: ['1937 elections', 'Congress ministries', 'Day of Deliverance', 'Lahore Resolution', 'Cripps proposals', 'Simla Conference', 'Cabinet Mission Plan', 'Indian Independence Act 1947'],
+            examQuestion: 'Why did the constitutional negotiations of the 1940s fail to preserve a united India? Assess the role of the Muslim League and the Lahore Resolution.',
+            practiceTask: 'Write a dated timeline from 1937 to 1947. For each milestone, identify the constitutional offer, the position of Congress, the position of the League and the reason for failure or success.'
+          ),
         ],
       ),
       AcademyChapter(
@@ -224,6 +278,27 @@ The Constitution of 1973 was adopted by the National Assembly on 10 April and ca
             examQuestion: 'Assess the relationship between federal accommodation, electoral legitimacy and constitutional stability in Pakistan from 1947 to 1973.',
             practiceTask: 'Prepare a comparison grid for the 1956, 1962 and 1973 constitutions: executive, legislature, federalism, rights and accountability.',
           ),
+          AcademyLesson(
+            title: 'Constitution-making, early political crises and constitutional experiments',
+            objectives: 'Explain why constitution-making was delayed after 1947 and compare the 1956, 1962 and 1973 constitutional frameworks.',
+            sections: [
+              AcademyLessonSection('1. Inherited institutions and the Objectives Resolution', '''At independence, Pakistan used the Government of India Act 1935 as an interim constitutional framework, adapted by the Indian Independence Act 1947. The first Constituent Assembly had to define representation, federal powers, language, citizenship, executive authority and the relationship between religion and the state. These questions were politically difficult because the new country contained two geographically separated wings with different demographic, linguistic and economic profiles.
+
+The Objectives Resolution was moved by Liaquat Ali Khan and adopted on 12 March 1949. It declared that sovereignty belongs to Allah and that authority would be exercised by the people through chosen representatives within limits prescribed by the Constitution. It also referred to democracy, freedom, equality, tolerance, social justice and minority rights. Its later constitutional role made it a foundational text for debates on Pakistan’s constitutional identity.'''),
+              AcademyLessonSection('2. Delayed constitution-making and the 1956 Constitution', '''Constitution-making was delayed by political instability, disagreement over representation between East and West Pakistan, language controversies, executive interference and tensions between the Constituent Assembly and Governor-General. The dissolution of the first Constituent Assembly in 1954 created a major constitutional crisis. The second Constituent Assembly eventually adopted the first Constitution, which came into force on 23 March 1956.
+
+The 1956 Constitution established a parliamentary system, a federal structure and a unicameral legislature, and declared Pakistan an Islamic Republic. Its operation was short-lived: martial law was imposed in October 1958 and the Constitution was abrogated. Explain why institutional weakness and political instability prevented the constitutional system from becoming consolidated.'''),
+              AcademyLessonSection('3. The 1962 and 1973 constitutional systems', '''The 1962 Constitution established a presidential system and an indirect electoral arrangement based on Basic Democracies. It concentrated executive authority in the presidency and operated under Ayub Khan’s political framework. The system faced opposition over representation, political participation, regional inequality and executive centralisation.
+
+The 1973 Constitution was passed by the National Assembly on 10 April 1973 and came into force on 14 August 1973. It created a parliamentary federation with a bicameral Parliament, fundamental rights and a distribution of legislative powers. Its consensual adoption was an important political achievement. Subsequent amendments and periods of military rule changed its operation, but the 1973 Constitution remains the central constitutional framework of Pakistan.'''),
+              AcademyLessonSection('4. Constitutional learning from the early decades', '''The period from 1947 to 1973 shows that constitutional documents alone cannot sustain democracy. Stable federal arrangements require political inclusion, a credible electoral mandate, parliamentary authority, provincial participation, civilian institutional oversight and accepted rules for transfer of power. The 1971 crisis demonstrated the severe consequences of denying political representation and failing to negotiate constitutional disputes.
+
+In an exam answer, compare the three constitutions by executive-legislative relations, federalism, representation, rights and amendment procedures. Then explain how institutional practice affected the formal design.'''),
+            ],
+            keyTerms: ['Interim constitutional framework', 'Objectives Resolution', 'Constituent Assembly', '1956 Constitution', 'Basic Democracies', '1962 Constitution', '1973 Constitution', 'Constitutional supremacy'],
+            examQuestion: 'Compare the constitutions of 1956, 1962 and 1973 and evaluate why constitutional government remained fragile in Pakistan’s first decades.',
+            practiceTask: 'Prepare a three-column comparison of the 1956, 1962 and 1973 Constitutions covering executive, legislature, federalism, rights and political participation.'
+          ),
         ],
       ),
       AcademyChapter(
@@ -248,6 +323,27 @@ Devolution must be evaluated through both legal powers and practical capacity. A
             keyTerms: ['Civilian supremacy', '18th Amendment', 'Council of Common Interests', 'National Finance Commission', 'Local government', 'Devolution'],
             examQuestion: '“Constitutional devolution is necessary but not sufficient for effective federalism in Pakistan.” Discuss.',
             practiceTask: 'Choose one public service and trace which level of government is responsible for policy, financing, implementation and accountability.',
+          ),
+          AcademyLesson(
+            title: 'Federalism, the Eighteenth Amendment and local government',
+            objectives: 'Explain the distribution of powers and finances in Pakistan’s federation and evaluate the performance of intergovernmental institutions.',
+            sections: [
+              AcademyLessonSection('1. The federal structure', '''Federalism divides constitutional authority between the federation and provinces. Pakistan’s Parliament is bicameral: the National Assembly represents population while the Senate gives federating units equal representation. The Council of Common Interests (CCI), provided under Article 153, is a constitutional forum for coordination on matters involving the federation and provinces. The National Finance Commission (NFC), under Article 160, recommends distribution of specified revenues and grants.
+
+Federalism is more than administrative decentralisation. It is a constitutional guarantee that provincial units have an agreed share in law-making, resources and national decisions. Its performance depends on functioning institutions, transparent data and predictable coordination.'''),
+              AcademyLessonSection('2. Eighteenth Amendment and provincial autonomy', '''The Eighteenth Amendment 2010 made major changes to the constitutional distribution of powers. It abolished the Concurrent Legislative List and transferred many responsibilities to provinces, strengthened parliamentary government and changed the process of presidential assent and appointments, among other provisions. Provincial autonomy was also affected by the NFC framework and institutions such as the CCI.
+
+Devolution creates opportunities for policies tailored to local needs, but it also requires provincial administrative capacity, revenue mobilisation, trained staff, planning systems and accountability. If functions move without resources or capable institutions, citizens may experience service gaps rather than empowerment.'''),
+              AcademyLessonSection('3. Local government and service delivery', '''Article 140A requires provinces to establish local government systems and devolve political, administrative and financial responsibility to elected local representatives. Local governments are important for municipal services, local roads, water and sanitation, local planning and community participation. However, their powers and continuity depend on provincial legislation, elections, fiscal transfers and administrative arrangements.
+
+A durable system needs predictable formula-based finance, clear functions, local revenue authority, professional staff, transparent procurement and citizen oversight. Local bodies should be evaluated on service quality, inclusion and accountability, not only on the number of councils created.'''),
+              AcademyLessonSection('4. Civil-military relations and constitutional balance', '''Civil-military relations concern the constitutional location of coercive power, elected civilian oversight, defence policy, intelligence accountability and the professional role of the armed forces. Pakistan’s history includes periods of direct military rule and strong military influence over strategic decision-making. Explanations should consider security pressures, political fragmentation, weak civilian institutions, elite bargains and constitutional interruptions rather than assigning every outcome to one factor.
+
+Reforms include parliamentary scrutiny of security policy, transparent budgeting within lawful limits, professional civil service capacity, rule of law, clear constitutional mandates and regular political dialogue. Civilian authority must be exercised responsibly; military professionalism must remain within the constitutional order.'''),
+            ],
+            keyTerms: ['Federalism', 'Senate', 'Council of Common Interests', 'NFC Award', 'Eighteenth Amendment', 'Article 140A', 'Local government', 'Civilian oversight'],
+            examQuestion: 'Has the Eighteenth Amendment strengthened federalism in Pakistan? Evaluate the role of the CCI, NFC and local government in translating provincial autonomy into better services.',
+            practiceTask: 'Map one public service from federal to district level. Identify the constitutional mandate, financing source, implementing agency and accountability mechanism at each level.'
           ),
         ],
       ),
@@ -416,6 +512,27 @@ Organisations should be assessed by their mandate, membership, decision-making r
             examQuestion: 'Assess the opportunities and constraints shaping Pakistan’s role in the changing regional order.',
             practiceTask: 'Prepare one-page country briefs on China, Afghanistan, Iran, India and the United States. Use the same headings to make comparison possible.',
           ),
+          AcademyLesson(
+            title: 'Foreign policy of Pakistan: principles, phases and instruments',
+            objectives: 'Trace major phases of Pakistan’s foreign policy and distinguish enduring national interests from changing alliances and policy instruments.',
+            sections: [
+              AcademyLessonSection('1. Principles and determinants', '''Foreign policy is the set of decisions and actions through which a state manages relations with other states and international organisations. Pakistan’s key interests include territorial integrity, sovereignty, security, economic prosperity, access to markets and energy, protection of citizens and a stable regional environment. Policy is influenced by geography, military capability, economic resources, domestic politics, leadership, public opinion and the international balance of power.
+
+The principles often cited in Pakistan’s diplomatic discourse include peaceful coexistence, respect for sovereignty, support for self-determination, non-interference, multilateralism and cooperation with Muslim-majority states. These principles must be analysed alongside real-world choices and strategic trade-offs.'''),
+              AcademyLessonSection('2. Major phases since 1947', '''In the early years, Pakistan sought security assistance and international support while managing relations with India and Afghanistan. During the Cold War it joined Western-led security arrangements including SEATO and the Baghdad Pact/CENTO, while also developing relations with China. The 1965 and 1971 wars and the 1972 Simla Agreement changed the regional environment. The Soviet intervention in Afghanistan in 1979 drew Pakistan into a major international conflict and increased its strategic relationship with the United States and Gulf partners.
+
+Nuclear tests in 1998 altered Pakistan’s strategic position. After 9/11, Pakistan again became a frontline partner in the US-led campaign in Afghanistan. The 2010s and 2020s brought greater attention to geo-economics, CPEC, regional connectivity, strategic autonomy, relations with Gulf states and the changing role of China and the United States.'''),
+              AcademyLessonSection('3. Instruments of foreign policy', '''Diplomacy involves negotiations, official visits, treaties, multilateral voting, public communication and crisis management. Economic instruments include trade agreements, investment, transit, remittances, development finance and energy cooperation. Security instruments include defence diplomacy, lawful intelligence cooperation and confidence-building measures. International law and institutions can help manage disputes when states accept agreed procedures.
+
+An effective policy uses instruments that match national capability. A state with weak export competitiveness and limited fiscal space cannot sustain every strategic ambition. Economic resilience, professional diplomacy, accurate information and domestic political consensus strengthen external bargaining power.'''),
+              AcademyLessonSection('4. Evaluation and contemporary priorities', '''Foreign policy should be assessed by outcomes rather than slogans. Useful questions include: did it improve security, expand trade, attract investment, reduce conflict, diversify partners, protect citizens and strengthen international credibility? A policy may deliver a short-term security benefit while creating longer-term economic or diplomatic costs. A balanced answer explains both.
+
+For current preparation, candidates should update official foreign ministry statements, trade data, regional developments and multilateral decisions shortly before the examination. Distinguish a signed agreement from a proposed corridor, an announcement from implementation and a government claim from independently verified evidence.'''),
+            ],
+            keyTerms: ['National interest', 'Strategic autonomy', 'Geo-economics', 'SEATO', 'CENTO', 'CPEC', 'Diplomacy', 'Multilateralism'],
+            examQuestion: 'Critically evaluate the evolution of Pakistan’s foreign policy since 1947. How can economic diplomacy strengthen strategic autonomy?',
+            practiceTask: 'Prepare a foreign-policy timeline in five phases. For each phase, identify the main security concern, principal partners, economic objective and long-term consequence.'
+          ),
         ],
       ),
       AcademyChapter(
@@ -440,6 +557,27 @@ A balanced answer recognises deterrence arguments and international concerns. It
             keyTerms: ['Human security', 'Non-state actors', 'Proxy conflict', 'Deterrence', 'Nuclear safety', 'Crisis stability'],
             examQuestion: '“Pakistan’s national security must integrate military preparedness with human, economic and environmental security.” Discuss.',
             practiceTask: 'Select one non-traditional threat and map its causes, affected institutions, citizens at risk, prevention measures and response capacity.',
+          ),
+          AcademyLesson(
+            title: 'National security doctrine and civil-military coordination',
+            objectives: 'Distinguish traditional and human security and explain how national security policy connects defence, governance and economic resilience.',
+            sections: [
+              AcademyLessonSection('1. Traditional and comprehensive security', '''Traditional security focuses on military threats, territorial integrity, deterrence, borders and the defence of the state. Comprehensive or human security also considers economic vulnerability, food, water, health, energy, cyber systems, climate hazards and personal safety. These dimensions interact: water stress can affect food prices and migration; economic weakness can reduce defence resources; weak digital systems can disrupt banking, energy and public services.
+
+A balanced security framework does not replace military defence with social policy. It recognises that defence, institutions and human wellbeing depend on one another.'''),
+              AcademyLessonSection('2. National security institutions and coordination', '''National security policy requires coordination among elected leadership, Parliament, armed forces, intelligence agencies, police, provincial governments, civil administration, regulators and communities. Each institution has a distinct legal mandate. Effective coordination requires clear command responsibility, lawful information sharing, professional competence, parliamentary oversight and respect for fundamental rights.
+
+The National Security Committee provides a high-level forum for coordinating key security questions. Institutional effectiveness depends on implementation and clear responsibility rather than meetings alone. Provincial and local capacity is vital because many security risks emerge through policing, service delivery, disaster response and community trust.'''),
+              AcademyLessonSection('3. Economic security and resilience', '''Economic security concerns reliable access to finance, energy, food, water, technology, transport and essential supply chains. Public debt, low exports, foreign-exchange shortages, weak industrial capacity and import dependence can limit strategic choice. Resilience requires diversified markets, domestic productivity, secure infrastructure, transparent regulation, skilled workers and emergency planning.
+
+Economic security should be evaluated by the ability to absorb shocks and recover without severe loss of welfare or state capacity. Blanket protection and expensive subsidies may weaken long-term resilience if they are not linked to productivity and measurable results.'''),
+              AcademyLessonSection('4. Disaster, climate and cyber risk', '''Floods, droughts, heatwaves, earthquakes, disease outbreaks and cyberattacks can affect national security by disrupting lives, infrastructure, public trust and economic activity. Preparedness includes early warning, resilient utilities, disaster financing, local response capacity, cyber hygiene, backup systems and reliable public information.
+
+A rights-respecting security policy separates peaceful dissent from violent threats and uses lawful investigation and evidence. Security is strongest when the public trusts institutions and believes that authority is exercised fairly.'''),
+            ],
+            keyTerms: ['Traditional security', 'Human security', 'National Security Committee', 'Economic security', 'Resilience', 'Cybersecurity', 'Disaster risk', 'Civilian oversight'],
+            examQuestion: 'Can Pakistan achieve national security without strengthening economic and human security? Discuss the links between defence, governance and social resilience.',
+            practiceTask: 'Build a national risk matrix for five threats. Rate likelihood and impact, identify responsible institutions, and propose prevention, response and recovery measures.'
           ),
         ],
       ),
@@ -466,6 +604,25 @@ Use dated primary sources for current developments. Conflict facts can change qu
             examQuestion: 'Analyse the Kashmir dispute as a challenge to regional stability and international diplomacy.',
             practiceTask: 'Prepare separate timelines for Kashmir and Palestine. For each, list three legal issues, three political obstacles and three realistic diplomatic measures.',
           ),
+          AcademyLesson(
+            title: 'Kashmir and Palestine: international law, self-determination and diplomacy',
+            objectives: 'Compare the legal and diplomatic dimensions of the two issues without treating their histories or legal frameworks as identical.',
+            sections: [
+              AcademyLessonSection('1. Historical and legal contexts are distinct', '''The Kashmir dispute arose from the 1947 partition and the accession of the princely state of Jammu and Kashmir, followed by conflict between India and Pakistan and consideration by the United Nations. The Palestine issue developed under Ottoman rule, the British Mandate, competing national movements, the 1947 UN partition proposal, the 1948 war and the occupation that followed the 1967 conflict. These are distinct histories; a comparative answer should not assume that the legal instruments or facts are interchangeable.
+
+For Kashmir, examine the UN Security Council resolutions of 1948–49, the Simla Agreement 1972, the Line of Control and the competing positions of India and Pakistan. For Palestine, examine UNGA Resolution 181, relevant Security Council resolutions, occupation, settlements, refugees, the Oslo process and international humanitarian law.'''),
+              AcademyLessonSection('2. Self-determination, occupation and civilian protection', '''Self-determination is a principle of international law, but its application depends on historical context, legal instruments and the circumstances of the population concerned. International humanitarian law regulates the conduct of hostilities and the protection of civilians. Human rights law continues to matter in situations of conflict and occupation. Legal analysis should identify the source of the rule, the actor bound by it and the institution competent to assess alleged violations.
+
+Avoid treating all events as legally identical. Distinguish a UN General Assembly resolution from a Security Council decision, an advisory opinion from a binding contentious judgment, and an allegation from a court finding.'''),
+              AcademyLessonSection('3. Pakistan’s diplomatic role', '''Pakistan has consistently supported the right of the Palestinian people to self-determination and an independent state on the basis of relevant UN resolutions. On Kashmir, Pakistan advocates a settlement reflecting the aspirations of the people of Jammu and Kashmir and refers to the UN framework. These positions are pursued through bilateral diplomacy, the OIC, the United Nations and other multilateral platforms.
+
+A strong answer evaluates diplomatic influence through coalition-building, agenda-setting, humanitarian support, legal engagement and implementation. Statements at international forums do not by themselves produce a settlement.'''),
+              AcademyLessonSection('4. A principled policy response', '''A principled approach requires protection of civilians, humanitarian access, accountability, rejection of attacks on civilians, compliance with international law and meaningful political dialogue. For both issues, durable peace requires credible arrangements and the participation of affected populations. Pakistan’s policy should be consistent, evidence-based and grounded in international law.'''),
+            ],
+            keyTerms: ['Self-determination', 'Occupation', 'UN Security Council', 'UNGA Resolution 181', 'Simla Agreement', 'Line of Control', 'International humanitarian law', 'OIC'],
+            examQuestion: 'Compare the Kashmir and Palestine issues as international questions of self-determination and civilian protection. Identify the distinct legal frameworks and Pakistan’s diplomatic role.',
+            practiceTask: 'Prepare two separate timelines and then a comparative table: origins, relevant UN instruments, current status, humanitarian issues and diplomatic options.'
+          ),
         ],
       ),
       AcademyChapter(
@@ -490,6 +647,27 @@ A sound policy discussion considers border management, dialogue, intelligence co
             keyTerms: ['Soviet intervention', 'Afghan refugees', 'War on terror', 'Sovereignty', 'Border management', 'Regional diplomacy'],
             examQuestion: 'Evaluate the effects of the Afghan conflict on Pakistan’s internal security and foreign policy since 1979.',
             practiceTask: 'Divide the answer into three periods: 1979–1989, 1989–2001 and 2001 onward. For each, list security, economic, social and diplomatic effects.',
+          ),
+          AcademyLesson(
+            title: 'Afghanistan after 2014: border security, TTP, refugees and regional diplomacy',
+            objectives: 'Evaluate Pakistan’s post-2014 Afghan policy and distinguish the consequences of the 2021 transition from the longer history of conflict.',
+            sections: [
+              AcademyLessonSection('1. Post-2014 security environment', '''The end of NATO’s combat mission in 2014 did not end the Afghan conflict. Afghan security forces faced sustained Taliban pressure, while Pakistan remained concerned about cross-border militant activity, refugee management, border regulation and the political direction of Afghanistan. Pakistan’s policy had to balance security operations with trade, local border communities and diplomatic engagement.
+
+The 2014 National Action Plan set out a broad counterterrorism agenda after the Peshawar Army Public School attack. Its implementation involved federal and provincial authorities, law-enforcement agencies, courts, financial regulators and education institutions. A sound answer assesses implementation rather than assuming that adoption of a plan automatically produced results.'''),
+              AcademyLessonSection('2. The 2021 transition and the TTP challenge', '''The Taliban returned to power in Kabul in August 2021 after the collapse of the former Afghan government and withdrawal of foreign forces. Pakistan expected the transition to improve border security, but concerns about the Tehreek-e-Taliban Pakistan and other militant networks persisted. The TTP is a distinct organisation from the Afghan Taliban, although relationships, sanctuary allegations and ideological links are part of the regional security debate.
+
+Candidates should distinguish the official positions of Pakistan and the Afghan authorities from independently verified reporting. Cross-border attacks, border clashes and trade closures have affected civilian communities and diplomatic relations. Avoid describing all Afghan citizens or refugees as security threats.'''),
+              AcademyLessonSection('3. Refugees, trade and humanitarian considerations', '''Pakistan has hosted Afghan refugees for decades. Refugee policy involves legal status, registration, protection, voluntary return, livelihood access, education and relations with host communities. Abrupt or coercive displacement can create humanitarian risks and damage bilateral trust. Policy should meet security and documentation requirements while respecting due process and the principle of non-refoulement where applicable.
+
+Trade and transit are also essential to regional stability. Border closures disrupt livelihoods, supply chains and access to markets. Legal trade, customs modernisation, transport infrastructure and regular official contact can reduce incentives for smuggling and improve economic confidence.'''),
+              AcademyLessonSection('4. A sustainable policy framework', '''Pakistan’s long-term approach should combine lawful border management, intelligence coordination, dialogue with Afghan authorities, regional diplomacy, refugee protection, economic connectivity and domestic counter-extremism policy. The state should address recruitment drivers and improve public services in affected districts. Military operations may respond to immediate threats, but durable security also depends on political arrangements and regional cooperation.
+
+A strong conclusion weighs three objectives: preventing attacks on Pakistani citizens, maintaining a stable and sovereign Afghanistan, and preserving humanitarian and economic links that benefit both societies.'''),
+            ],
+            keyTerms: ['NATO mission 2014', 'National Action Plan', 'Taliban 2021 transition', 'TTP', 'Border management', 'Refugee protection', 'Non-refoulement', 'Transit trade'],
+            examQuestion: 'Assess Pakistan’s challenges in Afghanistan after 2014, particularly after the Taliban takeover in 2021. What policy framework can balance security, diplomacy and humanitarian responsibilities?',
+            practiceTask: 'Write a 500-word policy brief with separate sections for TTP/security, border management, refugees, trade and regional diplomacy. Identify the responsible Pakistani institutions.'
           ),
         ],
       ),
