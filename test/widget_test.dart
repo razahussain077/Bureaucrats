@@ -171,7 +171,7 @@ void main() {
   });
 
   testWidgets('optional academy subjects open their detailed lessons', (tester) async {
-    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.physicalSize = const Size(1200, 5200);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
