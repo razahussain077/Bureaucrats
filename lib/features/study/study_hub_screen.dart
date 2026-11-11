@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class StudyHubScreen extends StatelessWidget {
-  const StudyHubScreen({super.key});
+  const StudyHubScreen({super.key, this.initialTabIndex = 0});
+
+  final int initialTabIndex;
 
   @override
   Widget build(BuildContext context) => DefaultTabController(
-    length: 5,
+    initialIndex: initialTabIndex.clamp(0, 6),
+    length: 7,
     child: Scaffold(
       appBar: AppBar(
         title: const Text('Study Centre'),
@@ -13,9 +17,11 @@ class StudyHubScreen extends StatelessWidget {
           isScrollable: true,
           tabs: [
             Tab(text: 'Pakistan Affairs'),
-            Tab(text: 'Core Papers'),
+            Tab(text: 'Compulsory Papers'),
+            Tab(text: 'Optional Papers'),
             Tab(text: 'Current Affairs'),
             Tab(text: 'MCQ Practice'),
+            Tab(text: 'Past Papers'),
             Tab(text: 'CSS Syllabus'),
           ],
         ),
@@ -24,8 +30,10 @@ class StudyHubScreen extends StatelessWidget {
         children: [
           _PakistanAffairsTab(),
           _CompulsoryTab(),
+          _OptionalPapersTab(),
           _CurrentAffairsTab(),
           _McqTab(),
+          _PastPapersTab(),
           _SyllabusTab(),
         ],
       ),
@@ -310,6 +318,218 @@ class _CoreCourse {
   final List<String> topics;
 }
 
+
+class _OptionalPapersTab extends StatelessWidget {
+  const _OptionalPapersTab();
+
+  static const groups = <_OptionalGroup>[
+    _OptionalGroup('Group I', '200 marks • Select ONE subject', 'Accountancy & Auditing · Economics · Computer Science · Political Science · International Relations'),
+    _OptionalGroup('Group II', '200 marks • Select subject(s) totalling 200', 'Physics (200) · Chemistry (200) · Applied Mathematics (100) · Pure Mathematics (100) · Statistics (100) · Geology (100)'),
+    _OptionalGroup('Group III', '100 marks • Select ONE subject', 'Business Administration · Public Administration · Governance & Public Policies · Town Planning & Urban Management'),
+    _OptionalGroup('Group IV', '100 marks • Select ONE subject', 'History of Pakistan & India · Islamic History & Culture · British History · European History · History of USA'),
+    _OptionalGroup('Group V', '100 marks • Select ONE subject', 'Gender Studies · Environmental Sciences · Agriculture & Forestry · Botany · Zoology · English Literature · Urdu Literature'),
+    _OptionalGroup('Group VI', '100 marks • Select ONE subject', 'Law · Constitutional Law · International Law · Muslim Law & Jurisprudence · Mercantile Law · Criminology · Philosophy'),
+    _OptionalGroup('Group VII', '100 marks • Select ONE subject', 'Journalism & Mass Communication · Psychology · Geography · Sociology · Anthropology · Punjabi · Sindhi · Pashto · Balochi · Persian · Arabic'),
+  ];
+
+  static const courses = <_OptionalCourse>[
+    _OptionalCourse('Political Science', 'Group I • 200 marks', [
+      'Political theory: state, sovereignty, liberty, equality, justice and rights',
+      'Major political thinkers and traditions; compare arguments rather than memorising biographies',
+      'Comparative government: constitutions, executives, legislatures, judiciaries and party systems',
+      'Political systems of the UK, USA and other prescribed cases',
+      'Political development, ideologies and contemporary governance debates',
+      'Muslim political thought and the political system of Pakistan',
+    ], 'Compare parliamentary and presidential systems with reference to executive accountability and legislative oversight.'),
+    _OptionalCourse('International Relations', 'Group I • 200 marks', [
+      'Scope, evolution and levels of analysis in International Relations',
+      'Realism, liberalism, constructivism and critical approaches',
+      'Foreign policy analysis, national interest and decision-making',
+      'International law, diplomacy, security and conflict',
+      'Global political economy, trade, institutions and interdependence',
+      'Pakistan’s foreign policy and relations with neighbouring and major powers',
+    ], 'Assess whether economic interdependence reduces conflict or creates new forms of strategic vulnerability.'),
+    _OptionalCourse('Economics', 'Group I • 200 marks', [
+      'Demand, supply, elasticity, consumer choice and production theory',
+      'Costs, market structures, pricing and factor markets',
+      'National income, consumption, investment and aggregate demand',
+      'Money, banking, inflation, unemployment and monetary policy',
+      'Fiscal policy, public finance, taxation and public debt',
+      'Growth, development, poverty, inequality and Pakistan’s economic structure',
+    ], 'Evaluate the trade-offs between fiscal consolidation, growth and distributional equity in a developing economy.'),
+    _OptionalCourse('Computer Science', 'Group I • 200 marks', [
+      'Programming fundamentals, algorithms, data structures and complexity',
+      'Computer organisation, operating systems and memory management',
+      'Database concepts, relational modelling, SQL and transactions',
+      'Computer networks, protocols, security and distributed systems',
+      'Software engineering, testing, requirements and design',
+      'Artificial intelligence, machine learning and data-related fundamentals',
+    ], 'Explain how database normalisation reduces anomalies, and identify situations where denormalisation may be justified.'),
+    _OptionalCourse('Public Administration', 'Group III • 100 marks', [
+      'Evolution and scope of public administration; classical and contemporary theories',
+      'Organisation, bureaucracy, leadership, motivation and administrative behaviour',
+      'Public policy cycle, implementation, evaluation and evidence use',
+      'Financial administration, budgeting, audit and accountability',
+      'Civil service systems, reforms, ethics and administrative law',
+      'Local government, service delivery and administrative challenges in Pakistan',
+    ], 'Why do administrative reforms often fail at implementation despite sound policy design?'),
+    _OptionalCourse('Governance & Public Policies', 'Group III • 100 marks', [
+      'Governance concepts: legitimacy, accountability, transparency and participation',
+      'State capacity, institutions, rule of law and regulatory quality',
+      'Policy formulation, stakeholder analysis and policy instruments',
+      'Implementation gaps, monitoring, evaluation and public-sector performance',
+      'Federalism, decentralisation, local government and intergovernmental coordination',
+      'Governance challenges and reform options in Pakistan',
+    ], 'Propose a practical framework for improving local service delivery while strengthening accountability.'),
+    _OptionalCourse('History of Pakistan & India', 'Group IV • 100 marks', [
+      'Political and cultural formations before the colonial period',
+      'Expansion of British rule and the transformation of institutions',
+      'Reform, resistance and social change in the nineteenth century',
+      'Constitutional reforms, political organisations and mass movements',
+      'Partition, independence and early state-building',
+      'Post-independence political, constitutional and regional developments',
+    ], 'Assess the relative importance of constitutional negotiations and mass politics in the making of Pakistan.'),
+    _OptionalCourse('Gender Studies', 'Group V • 100 marks', [
+      'Key concepts: sex, gender, patriarchy, intersectionality and socialisation',
+      'Major feminist theories and debates',
+      'Gender, work, education, health, media and political participation',
+      'Violence, rights, law and institutional responses',
+      'Gender and development; measurement and policy approaches',
+      'Gender issues, legislation and public policy in Pakistan',
+    ], 'Evaluate how unpaid care work shapes women’s economic participation and what policy responses are feasible.'),
+    _OptionalCourse('Environmental Sciences', 'Group V • 100 marks', [
+      'Ecosystems, biodiversity, biogeochemical cycles and conservation',
+      'Air, water and soil pollution; sources, impacts and control',
+      'Climate science, vulnerability, adaptation and mitigation',
+      'Natural resources, energy, water management and sustainability',
+      'Environmental impact assessment, law and institutions',
+      'Pakistan’s environmental risks, disaster management and climate policy',
+    ], 'Compare climate adaptation and mitigation priorities for a climate-vulnerable country such as Pakistan.'),
+    _OptionalCourse('Criminology', 'Group VI • 100 marks', [
+      'Definitions, measurement and patterns of crime',
+      'Classical, positivist, sociological and critical theories of crime',
+      'Juvenile delinquency, organised crime, cybercrime and terrorism',
+      'Criminal justice institutions: police, prosecution, courts and corrections',
+      'Victimology, rehabilitation, deterrence and restorative approaches',
+      'Crime prevention, criminal justice reform and Pakistan’s context',
+    ], 'Critically assess whether deterrence alone can reduce repeat offending.'),
+    _OptionalCourse('Psychology', 'Group VII • 100 marks', [
+      'Foundations, schools of thought and research methods',
+      'Biological bases of behaviour, sensation, perception and consciousness',
+      'Learning, memory, cognition, intelligence and motivation',
+      'Developmental, social and personality psychology',
+      'Psychological disorders, assessment and evidence-based interventions',
+      'Applications of psychology in education, organisations and society',
+    ], 'Discuss the strengths and limitations of intelligence testing across different cultural and social settings.'),
+    _OptionalCourse('Sociology', 'Group VII • 100 marks', [
+      'Sociological imagination, methods and major theoretical perspectives',
+      'Culture, socialisation, groups, organisations and social control',
+      'Family, education, religion, economy and political institutions',
+      'Stratification, class, status, gender and social mobility',
+      'Population, urbanisation, migration, development and social change',
+      'Social problems, civil society and the Pakistani social structure',
+    ], 'Analyse the relationship between rapid urbanisation, informal settlements and unequal access to public services.'),
+    _OptionalCourse('Journalism & Mass Communication', 'Group VII • 100 marks', [
+      'Communication models, news values and the role of mass media',
+      'Media theories, public opinion, agenda-setting and framing',
+      'Journalism genres, reporting, editing and media ethics',
+      'Broadcast, print, digital media and platform transformation',
+      'Development communication, advertising and public relations',
+      'Media law, regulation, misinformation and Pakistan’s media landscape',
+    ], 'Evaluate how digital platforms have changed agenda-setting and the verification responsibilities of journalists.'),
+    _OptionalCourse('Business Administration', 'Group III • 100 marks', [
+      'Management foundations, organisational structure and leadership',
+      'Strategic management, competitive analysis and decision-making',
+      'Marketing principles, consumer behaviour and market research',
+      'Human resource management, performance and organisational culture',
+      'Operations, quality, supply chains and process improvement',
+      'Financial management, entrepreneurship and business ethics',
+    ], 'Explain how a firm can improve operational efficiency without undermining service quality or employee capability.'),
+  ];
+
+  @override
+  Widget build(BuildContext context) => ListView(
+    padding: const EdgeInsets.all(16),
+    children: [
+      const _SectionIntro(
+        eyebrow: 'OPTIONAL SUBJECT FACULTY',
+        title: 'Choose strategically. Study systematically.',
+        description: 'The CSS written examination allocates 600 marks to optional subjects. Review the official group rules before choosing; the modules below are introductory study frameworks, not complete subject syllabi.',
+      ),
+      Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(color: const Color(0xFF123B63), borderRadius: BorderRadius.circular(16)),
+        child: const Row(children: [
+          Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text('OPTIONAL PAPERS', style: TextStyle(color: Color(0xFFB9D9F5), fontSize: 10, letterSpacing: 1.2, fontWeight: FontWeight.w900)),
+            SizedBox(height: 7),
+            Text('600 marks', style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.w900)),
+            SizedBox(height: 4),
+            Text('Subject combinations must follow FPSC group restrictions.', style: TextStyle(color: Color(0xFFE1EDF7), fontSize: 12, height: 1.4)),
+          ])),
+          Icon(Icons.account_balance_rounded, size: 42, color: Color(0xFFB9D9F5)),
+        ]),
+      ),
+      const SizedBox(height: 20),
+      const Text('OFFICIAL SUBJECT GROUPS', style: TextStyle(fontSize: 11, letterSpacing: 1.1, fontWeight: FontWeight.w900, color: Color(0xFF1769AA))),
+      const SizedBox(height: 8),
+      ...groups.map((group) => Card(
+        margin: const EdgeInsets.only(bottom: 8),
+        child: ExpansionTile(
+          title: Text(group.name, style: const TextStyle(fontWeight: FontWeight.w800)),
+          subtitle: Text(group.selection),
+          childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+          children: [Align(alignment: Alignment.centerLeft, child: Text(group.subjects, style: const TextStyle(height: 1.55, color: Color(0xFF486581))))],
+        ),
+      )),
+      const SizedBox(height: 18),
+      const Text('STARTER LEARNING MODULES', style: TextStyle(fontSize: 11, letterSpacing: 1.1, fontWeight: FontWeight.w900, color: Color(0xFF1769AA))),
+      const SizedBox(height: 5),
+      const Text('Selected subjects with topic maps and analytical practice prompts.', style: TextStyle(fontSize: 12, color: Color(0xFF627D98))),
+      const SizedBox(height: 9),
+      ...courses.map((course) => Card(
+        margin: const EdgeInsets.only(bottom: 9),
+        child: ExpansionTile(
+          leading: const CircleAvatar(backgroundColor: Color(0xFFEAF3FB), child: Icon(Icons.menu_book_rounded, color: Color(0xFF1769AA), size: 19)),
+          title: Text(course.title, style: const TextStyle(fontWeight: FontWeight.w800)),
+          subtitle: Text(course.group),
+          childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+          children: [
+            const Align(alignment: Alignment.centerLeft, child: Text('CORE TOPIC MAP', style: TextStyle(fontSize: 10, letterSpacing: 1, fontWeight: FontWeight.w900, color: Color(0xFF1769AA)))),
+            const SizedBox(height: 8),
+            ...course.topics.map((topic) => Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                const Icon(Icons.arrow_right_rounded, size: 18, color: Color(0xFF1769AA)),
+                Expanded(child: Text(topic, style: const TextStyle(height: 1.4))),
+              ]),
+            )),
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(color: const Color(0xFFF0F6FC), borderRadius: BorderRadius.circular(10)),
+              child: Text('CSS PRACTICE QUESTION\n${course.question}', style: const TextStyle(height: 1.5)),
+            ),
+          ],
+        ),
+      )),
+      const SizedBox(height: 6),
+      const Text('Coverage note: these are starter modules for selected optional subjects. Use the official FPSC syllabus to confirm every prescribed topic; subjects not yet expanded still appear in their correct group above.', style: TextStyle(fontSize: 11, height: 1.5, color: Color(0xFF627D98))),
+    ],
+  );
+}
+
+class _OptionalGroup {
+  const _OptionalGroup(this.name, this.selection, this.subjects);
+  final String name, selection, subjects;
+}
+
+class _OptionalCourse {
+  const _OptionalCourse(this.title, this.group, this.topics, this.question);
+  final String title, group, question;
+  final List<String> topics;
+}
+
 class _CurrentAffairsTab extends StatelessWidget {
   const _CurrentAffairsTab();
 
@@ -493,6 +713,110 @@ class _McqTabState extends State<_McqTab> {
       ],
     );
   }
+}
+
+
+class _PastPapersTab extends StatelessWidget {
+  const _PastPapersTab();
+
+  static final Uri _archive = Uri.parse('https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Papers%2FCSS');
+  static final Uri _syllabus = Uri.parse('https://www.fpsc.gov.pk/Syllabuses?section=CSS+Syllabi');
+  static final Uri _rules = Uri.parse('https://www.fpsc.gov.pk/MPTandMAIN?section=CSS+Rules');
+
+  Future<void> _open(BuildContext context, Uri uri) async {
+    try {
+      final opened = await launchUrl(uri, mode: LaunchMode.externalApplication);
+      if (!opened && context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Could not open the FPSC website. Please try again.')));
+      }
+    } catch (_) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Could not open the FPSC website. Please try again.')));
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) => ListView(
+    padding: const EdgeInsets.all(16),
+    children: [
+      const _SectionIntro(
+        eyebrow: 'AUTHENTIC EXAM MATERIAL',
+        title: 'Official CSS past papers',
+        description: 'Open original papers from the Federal Public Service Commission. Bureaucrats does not re-host, alter or label generated questions as official past papers.',
+      ),
+      Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(color: const Color(0xFF123B63), borderRadius: BorderRadius.circular(16)),
+        child: const Row(children: [
+          Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text('SOURCE OF RECORD', style: TextStyle(color: Color(0xFFB9D9F5), fontSize: 10, letterSpacing: 1.2, fontWeight: FontWeight.w900)),
+            SizedBox(height: 7),
+            Text('Federal Public Service Commission', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w900)),
+            SizedBox(height: 5),
+            Text('Use the original papers to understand question style, depth and recurring syllabus areas.', style: TextStyle(color: Color(0xFFE1EDF7), fontSize: 12, height: 1.45)),
+          ])),
+          Icon(Icons.verified_outlined, size: 38, color: Color(0xFFB9D9F5)),
+        ]),
+      ),
+      const SizedBox(height: 14),
+      _OfficialResourceCard(
+        icon: Icons.picture_as_pdf_outlined,
+        title: 'Previous Question Papers — CSS',
+        detail: 'Official FPSC archive. The archive page lists papers by examination year and subject, including recent years where published.',
+        action: 'OPEN FPSC ARCHIVE',
+        onTap: () => _open(context, _archive),
+      ),
+      _OfficialResourceCard(
+        icon: Icons.menu_book_rounded,
+        title: 'CSS Syllabus',
+        detail: 'Verify compulsory papers, optional subject groups, topic coverage and mark allocations before finalising your study plan.',
+        action: 'VIEW OFFICIAL SYLLABUS',
+        onTap: () => _open(context, _syllabus),
+      ),
+      _OfficialResourceCard(
+        icon: Icons.gavel_rounded,
+        title: 'CSS Rules',
+        detail: 'Consult the Commission’s published rules for examination requirements and procedural matters.',
+        action: 'VIEW OFFICIAL RULES',
+        onTap: () => _open(context, _rules),
+      ),
+      const SizedBox(height: 10),
+      Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(color: const Color(0xFFFFF7E8), borderRadius: BorderRadius.circular(12), border: Border.all(color: Color(0xFFF3E4C5))),
+        child: const Text('Study method: attempt one paper under timed conditions, mark every question against the syllabus, classify your weak areas, then write a revised answer plan. Always confirm that the paper belongs to the correct examination year and subject.', style: TextStyle(height: 1.5, color: Color(0xFF76551D))),
+      ),
+      const SizedBox(height: 10),
+      const Text('Official material is hosted by FPSC and may change or move. If an archive item is unavailable, use FPSC website navigation to locate the latest published paper.', style: TextStyle(fontSize: 11, height: 1.5, color: Color(0xFF627D98))),
+    ],
+  );
+}
+
+class _OfficialResourceCard extends StatelessWidget {
+  const _OfficialResourceCard({required this.icon, required this.title, required this.detail, required this.action, required this.onTap});
+  final IconData icon;
+  final String title, detail, action;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) => Card(
+    margin: const EdgeInsets.only(bottom: 10),
+    child: Padding(
+      padding: const EdgeInsets.all(15),
+      child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Container(width: 42, height: 42, decoration: BoxDecoration(color: const Color(0xFFEAF3FB), borderRadius: BorderRadius.circular(12)), child: Icon(icon, color: const Color(0xFF1769AA))),
+        const SizedBox(width: 12),
+        Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(title, style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF102A43))),
+          const SizedBox(height: 5),
+          Text(detail, style: const TextStyle(fontSize: 12, height: 1.45, color: Color(0xFF627D98))),
+          const SizedBox(height: 10),
+          TextButton.icon(onPressed: onTap, icon: const Icon(Icons.open_in_new_rounded, size: 15), label: Text(action), style: TextButton.styleFrom(padding: EdgeInsets.zero, visualDensity: VisualDensity.compact)),
+        ])),
+      ]),
+    ),
+  );
 }
 
 class _SyllabusTab extends StatefulWidget {
