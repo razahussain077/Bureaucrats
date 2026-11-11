@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class StudyHubScreen extends StatelessWidget {
   const StudyHubScreen({super.key, this.initialTabIndex = 0});
@@ -853,7 +854,55 @@ class _SyllabusTabState extends State<_SyllabusTab> {
     ],
   };
 
+  static const _progressStorageKey = 'bureaucrats.css_syllabus.completed.v1';
   final Set<String> completed = <String>{};
+  final SharedPreferencesAsync _preferences = SharedPreferencesAsync();
+  bool _loadingProgress = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadProgress();
+  }
+
+  Future<void> _loadProgress() async {
+    try {
+      final saved = await _preferences.getStringList(_progressStorageKey);
+      if (!mounted) return;
+      setState(() {
+        completed
+          ..clear()
+          ..addAll(saved ?? const <String>[]);
+        _loadingProgress = false;
+      });
+    } catch (_) {
+      if (mounted) setState(() => _loadingProgress = false);
+    }
+  }
+
+  Future<void> _saveProgress() async {
+    try {
+      final values = completed.toList()..sort();
+      await _preferences.setStringList(_progressStorageKey, values);
+    } catch (_) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Progress could not be saved on this device.')),
+        );
+      }
+    }
+  }
+
+  void _updateProgress(String item, bool? isComplete) {
+    setState(() {
+      if (isComplete == true) {
+        completed.add(item);
+      } else {
+        completed.remove(item);
+      }
+    });
+    _saveProgress();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -880,9 +929,14 @@ class _SyllabusTabState extends State<_SyllabusTab> {
                 Text('${completed.length} / $all', style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF1769AA))),
               ]),
               const SizedBox(height: 10),
-              LinearProgressIndicator(value: progress, minHeight: 8, borderRadius: BorderRadius.circular(8)),
-              const SizedBox(height: 6),
-              Text('${(progress * 100).round()}% marked complete', style: const TextStyle(fontSize: 12, color: Color(0xFF627D98))),
+              LinearProgressIndicator(value: _loadingProgress ? null : progress, minHeight: 8, borderRadius: BorderRadius.circular(8)),
+              const SizedBox(height: 7),
+              Row(children: [
+                Expanded(child: Text(_loadingProgress ? 'Restoring saved progress…' : '${(progress * 100).round()}% marked complete', style: const TextStyle(fontSize: 12, color: Color(0xFF627D98)))),
+                const Icon(Icons.phone_android_rounded, size: 13, color: Color(0xFF627D98)),
+                const SizedBox(width: 5),
+                const Text('Saved on this device', style: TextStyle(fontSize: 10, color: Color(0xFF627D98))),
+              ]),
             ]),
           ),
         ),
@@ -897,13 +951,7 @@ class _SyllabusTabState extends State<_SyllabusTab> {
               value: completed.contains(item),
               controlAffinity: ListTileControlAffinity.leading,
               title: Text(item, style: const TextStyle(fontSize: 14)),
-              onChanged: (value) => setState(() {
-                if (value == true) {
-                  completed.add(item);
-                } else {
-                  completed.remove(item);
-                }
-              }),
+              onChanged: _loadingProgress ? null : (value) => _updateProgress(item, value),
             )).toList(),
           ),
         )),
