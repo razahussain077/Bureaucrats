@@ -340,6 +340,7 @@ class _LessonPanel extends StatelessWidget {
       margin: const EdgeInsets.only(top: 8),
       color: const Color(0xFFFCFDFE),
       child: ExpansionTile(
+        key: PageStorageKey<String>('lesson-${lesson.title}'),
         tilePadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 3),
         childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
         title: Text(
