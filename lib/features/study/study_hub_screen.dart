@@ -969,7 +969,6 @@ class _SyllabusTabState extends State<_SyllabusTab> {
 
   static const _progressStorageKey = 'bureaucrats.css_syllabus.completed.v1';
   final Set<String> completed = <String>{};
-  final SharedPreferencesAsync _preferences = SharedPreferencesAsync();
   bool _loadingProgress = true;
 
   @override
@@ -980,7 +979,8 @@ class _SyllabusTabState extends State<_SyllabusTab> {
 
   Future<void> _loadProgress() async {
     try {
-      final saved = await _preferences.getStringList(_progressStorageKey);
+      final preferences = SharedPreferencesAsync();
+      final saved = await preferences.getStringList(_progressStorageKey);
       if (!mounted) return;
       setState(() {
         completed
@@ -996,7 +996,8 @@ class _SyllabusTabState extends State<_SyllabusTab> {
   Future<void> _saveProgress() async {
     try {
       final values = completed.toList()..sort();
-      await _preferences.setStringList(_progressStorageKey, values);
+      final preferences = SharedPreferencesAsync();
+      await preferences.setStringList(_progressStorageKey, values);
     } catch (_) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
