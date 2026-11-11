@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'academy_course_data.dart';
 import 'comparative_religions_course.dart';
@@ -12,7 +13,60 @@ class AcademyLibraryScreen extends StatefulWidget {
 }
 
 class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
+  static const _progressKey = 'bureaucrats.academy.completed_lessons.v1';
+  final SharedPreferencesAsync _preferences = SharedPreferencesAsync();
+  final Set<String> _completedLessons = <String>{};
   int _selectedCourseIndex = 0;
+  bool _progressLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadProgress();
+  }
+
+  String _lessonKey(
+    AcademyCourse course,
+    AcademyChapter chapter,
+    AcademyLesson lesson,
+  ) => '${course.title}::${chapter.number}::${lesson.title}';
+
+  Future<void> _loadProgress() async {
+    try {
+      final saved = await _preferences.getStringList(_progressKey);
+      if (!mounted) return;
+      setState(() {
+        _completedLessons
+          ..clear()
+          ..addAll(saved ?? const <String>[]);
+        _progressLoading = false;
+      });
+    } catch (_) {
+      if (mounted) setState(() => _progressLoading = false);
+    }
+  }
+
+  Future<void> _setLessonComplete(String key, bool isComplete) async {
+    setState(() {
+      if (isComplete) {
+        _completedLessons.add(key);
+      } else {
+        _completedLessons.remove(key);
+      }
+    });
+    try {
+      final values = _completedLessons.toList()..sort();
+      await _preferences.setStringList(_progressKey, values);
+    } catch (_) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Lesson progress could not be saved on this device.'),
+          ),
+        );
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +76,16 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
       ...comparativeReligionCourses,
     ];
     final course = courses[_selectedCourseIndex];
+    final courseLessonCount = course.chapters.fold<int>(
+      0,
+      (total, chapter) => total + chapter.lessons.length,
+    );
+    final courseCompletedCount = course.chapters.fold<int>(
+      0,
+      (total, chapter) => total + chapter.lessons.where(
+        (lesson) => _completedLessons.contains(_lessonKey(course, chapter, lesson)),
+      ).length,
+    );
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -135,11 +199,36 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  '${course.chapters.length} chapters • ${course.chapters.fold<int>(0, (total, chapter) => total + chapter.lessons.length)} lessons',
+                  '${course.chapters.length} chapters • $courseLessonCount lessons',
                   style: const TextStyle(
                     color: Color(0xFFB9D9F5),
                     fontSize: 11,
                     fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  _progressLoading
+                      ? 'Restoring lesson progress…'
+                      : '$courseCompletedCount / $courseLessonCount lessons completed',
+                  style: const TextStyle(
+                    color: Color(0xFFE1EDF7),
+                    fontSize: 11,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 5),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: LinearProgressIndicator(
+                    value: _progressLoading || courseLessonCount == 0
+                        ? null
+                        : courseCompletedCount / courseLessonCount,
+                    minHeight: 5,
+                    backgroundColor: const Color(0xFF315B7E),
+                    valueColor: const AlwaysStoppedAnimation<Color>(
+                      Color(0xFFB9D9F5),
+                    ),
                   ),
                 ),
               ],
@@ -208,7 +297,16 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
                     ),
                     const SizedBox(height: 10),
                     for (final lesson in chapter.lessons)
-                      _LessonPanel(lesson: lesson),
+                      _LessonPanel(
+                        lesson: lesson,
+                        completed: _completedLessons.contains(
+                          _lessonKey(course, chapter, lesson),
+                        ),
+                        onCompletionChanged: (isComplete) => _setLessonComplete(
+                          _lessonKey(course, chapter, lesson),
+                          isComplete,
+                        ),
+                      ),
                   ],
                 ),
               );
@@ -221,9 +319,15 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
 }
 
 class _LessonPanel extends StatelessWidget {
-  const _LessonPanel({required this.lesson});
+  const _LessonPanel({
+    required this.lesson,
+    required this.completed,
+    required this.onCompletionChanged,
+  });
 
   final AcademyLesson lesson;
+  final bool completed;
+  final ValueChanged<bool> onCompletionChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -243,6 +347,22 @@ class _LessonPanel extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
         children: [
+          CheckboxListTile(
+            contentPadding: EdgeInsets.zero,
+            controlAffinity: ListTileControlAffinity.leading,
+            value: completed,
+            onChanged: (value) {
+              if (value != null) onCompletionChanged(value);
+            },
+            title: const Text(
+              'Mark lesson complete',
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
+            ),
+            subtitle: const Text(
+              'Progress is saved on this device',
+              style: TextStyle(fontSize: 11),
+            ),
+          ),
           for (final section in lesson.sections) ...[
             Align(
               alignment: Alignment.centerLeft,
