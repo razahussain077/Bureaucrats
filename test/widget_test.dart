@@ -22,12 +22,12 @@ void main() {
     expect(find.text('CLASS NOTES'), findsOneWidget);
     expect(find.textContaining('The events of 1857 marked a decisive rupture'), findsOneWidget);
     expect(find.text('ANSWER-WRITING TASK'), findsOneWidget);
-    expect(find.text('Core Papers'), findsOneWidget);
+    expect(find.text('Compulsory Papers'), findsOneWidget);
     expect(find.text('Current Affairs'), findsWidgets);
     expect(find.text('MCQ Practice'), findsOneWidget);
     expect(find.text('CSS Syllabus'), findsOneWidget);
 
-    await tester.tap(find.text('Core Papers'));
+    await tester.tap(find.text('Compulsory Papers'));
     await tester.pumpAndSettle();
     expect(find.text('English Essay'), findsOneWidget);
     expect(find.text('General Science & Ability'), findsOneWidget);
@@ -38,6 +38,43 @@ void main() {
     expect(find.text('TEACHING NOTES'), findsOneWidget);
     expect(find.textContaining('A CSS essay is an argument'), findsOneWidget);
     expect(find.text('PRACTICE TASK'), findsOneWidget);
+  });
+
+  testWidgets('optional subjects and official papers are discoverable', (tester) async {
+    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 2)));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Choose strategically. Study systematically.'), findsOneWidget);
+    expect(find.text('Group I'), findsOneWidget);
+    await tester.tap(find.text('Political Science'));
+    await tester.pumpAndSettle();
+    expect(find.text('CORE TOPIC MAP'), findsOneWidget);
+    expect(find.textContaining('Political theory'), findsOneWidget);
+
+    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 5)));
+    await tester.pumpAndSettle();
+    expect(find.text('Official CSS past papers'), findsOneWidget);
+    expect(find.text('Previous Question Papers — CSS'), findsOneWidget);
+    expect(find.text('OPEN FPSC ARCHIVE'), findsOneWidget);
+  });
+
+  testWidgets('dashboard presents Bureaucrats academy identity and resources', (tester) async {
+    await tester.view.setPhysicalSize(const Size(1200, 900));
+    await tester.view.setDevicePixelRatio(1);
+    await tester.pumpWidget(const MaterialApp(home: HomeScreen()));
+    await tester.pumpAndSettle();
+
+    expect(find.text('BUREAUCRATS  /  CSS ACADEMY'), findsOneWidget);
+    expect(find.text('The academic workspace'), findsOneWidget);
+    expect(find.text('Optional Subjects'), findsOneWidget);
+    expect(find.text('Past Papers'), findsOneWidget);
+
+    await tester.tap(find.text('Optional Subjects'));
+    await tester.pumpAndSettle();
+    expect(find.text('Choose strategically. Study systematically.'), findsOneWidget);
+
+    await tester.view.resetPhysicalSize();
+    await tester.view.resetDevicePixelRatio();
   });
 
   testWidgets('MCQ practice checks an answer and explains it', (tester) async {
