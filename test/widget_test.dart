@@ -42,8 +42,6 @@ void main() {
     expect(find.textContaining('Correct.'), findsOneWidget);
     expect(find.textContaining('met Lord Minto in October 1906'), findsOneWidget);
   });
-}
-
 
   testWidgets('timed practice test starts and presents a question', (tester) async {
     await tester.pumpWidget(const MaterialApp(home: ExamHubScreen()));
@@ -57,3 +55,4 @@ void main() {
     expect(find.text('The Simla Deputation met Lord Minto in:'), findsOneWidget);
     expect(find.text('Next question'), findsOneWidget);
   });
+}
