@@ -219,4 +219,36 @@ void main() {
     expect(find.textContaining('3 chapters'), findsOneWidget);
   });
 
+
+  testWidgets('expanded optional academy courses open detailed lessons', (tester) async {
+    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 7)));
+    await tester.pumpAndSettle();
+
+    const courses = <(String, String)>[
+      ('Accountancy & Auditing', '4 chapters'),
+      ('Agriculture & Forestry', '3 chapters'),
+      ('Anthropology', '3 chapters'),
+      ('Applied Mathematics', '4 chapters'),
+      ('Physics', '4 chapters'),
+      ('Chemistry', '4 chapters'),
+      ('Constitutional Law', '4 chapters'),
+      ('British History', '4 chapters'),
+      ('Governance & Public Policies', '3 chapters'),
+      ('Town Planning & Urban Management', '3 chapters'),
+    ];
+
+    for (final course in courses) {
+      await tester.tap(find.byType(DropdownButtonFormField<int>));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(course.$1).last);
+      await tester.pumpAndSettle();
+      expect(find.text(course.$1.toUpperCase()), findsOneWidget);
+      expect(find.textContaining(course.$2), findsOneWidget);
+    }
+  });
+
 }
