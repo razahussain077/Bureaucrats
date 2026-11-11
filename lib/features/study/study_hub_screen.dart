@@ -687,6 +687,7 @@ class _McqTabState extends State<_McqTab> {
     _Question('The Budget in Brief is a document associated with the:', ['Federal budget', 'Annual census', 'Constitutional amendment', 'Election schedule'], 0, 'The Finance Division publishes the Budget in Brief as part of the federal budget document set.'),
     _Question('The term “circular debt” in Pakistan is most closely associated with:', ['Power-sector payment arrears', 'Federal employee pensions', 'Agricultural land records', 'Foreign exchange reserves'], 0, 'Circular debt describes accumulated payment arrears across the power-sector supply chain.'),
     _Question('The Twenty-seventh Amendment established the Federal Constitutional Court in:', ['2022', '2023', '2024', '2025'], 3, 'The Constitution (Twenty-seventh Amendment) Act 2025 established the Federal Constitutional Court of Pakistan.'),
+    _Question('The first Constitution of Pakistan was abrogated in:', ['1956', '1958', '1962', '1969'], 1, 'The 1956 Constitution was abrogated in October 1958 when martial law was imposed.'),
   ];
 
   int index = 0;
