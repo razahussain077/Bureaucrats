@@ -104,9 +104,9 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('0 words'), findsOneWidget);
+    expect(find.text('Decode the prompt'), findsOneWidget);
     await tester.scrollUntilVisible(find.text('Self-review checklist'), 260);
     expect(find.text('Self-review checklist'), findsOneWidget);
-    expect(find.text('Decode the prompt'), findsOneWidget);
     await tester.scrollUntilVisible(find.text('My thesis is clear, specific and arguable.'), 220);
     await tester.tap(find.text('My thesis is clear, specific and arguable.'));
     await tester.pumpAndSettle();
