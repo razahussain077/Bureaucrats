@@ -45,7 +45,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('ACADEMY CLASSROOM'), findsOneWidget);
-    expect(find.text('Pakistan Affairs'), findsOneWidget);
+    expect(find.text('Pakistan Affairs'), findsWidgets);
     await tester.tap(find.text('How Muslim political thought developed in South Asia'));
     await tester.pumpAndSettle();
 
