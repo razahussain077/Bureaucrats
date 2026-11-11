@@ -189,6 +189,34 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('GENDER STUDIES'), findsOneWidget);
     expect(find.textContaining('4 chapters'), findsOneWidget);
+
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Sociology').last);
+    await tester.pumpAndSettle();
+    expect(find.text('SOCIOLOGY'), findsOneWidget);
+    expect(find.textContaining('3 chapters'), findsOneWidget);
+
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Criminology').last);
+    await tester.pumpAndSettle();
+    expect(find.text('CRIMINOLOGY'), findsOneWidget);
+    expect(find.textContaining('3 chapters'), findsOneWidget);
+
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Environmental Sciences').last);
+    await tester.pumpAndSettle();
+    expect(find.text('ENVIRONMENTAL SCIENCES'), findsOneWidget);
+    expect(find.textContaining('3 chapters'), findsOneWidget);
+
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Business Administration').last);
+    await tester.pumpAndSettle();
+    expect(find.text('BUSINESS ADMINISTRATION'), findsOneWidget);
+    expect(find.textContaining('3 chapters'), findsOneWidget);
   });
 
 }
