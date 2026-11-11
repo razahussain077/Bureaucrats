@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:bureaucrats/core/config.dart';
 import 'package:bureaucrats/features/study/study_hub_screen.dart';
 import 'package:bureaucrats/features/exams/exam_hub_screen.dart';
+import 'package:bureaucrats/features/essay/essay_screen.dart';
 
 void main() {
   test('app is configured for the deployed Bureaucrats backend', () {
@@ -41,6 +42,18 @@ void main() {
 
     expect(find.textContaining('Correct.'), findsOneWidget);
     expect(find.textContaining('met Lord Minto in October 1906'), findsOneWidget);
+  });
+
+  testWidgets('essay workspace shows planning and self-review tools', (tester) async {
+    await tester.pumpWidget(const MaterialApp(home: EssayScreen()));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Self-review checklist'), findsOneWidget);
+    expect(find.text('Decode the prompt'), findsOneWidget);
+    expect(find.text('0 words'), findsOneWidget);
+    await tester.tap(find.text('My thesis is clear, specific and arguable.'));
+    await tester.pumpAndSettle();
+    expect(find.text('1 of 8 checks completed'), findsOneWidget);
   });
 
   testWidgets('timed practice test starts and presents a question', (tester) async {
