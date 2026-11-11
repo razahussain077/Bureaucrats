@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import '../essay/essay_screen.dart';
+import '../exams/exam_hub_screen.dart';
 import '../study/study_hub_screen.dart';
 
 const _workspaceNav = [
   (Icons.space_dashboard_rounded, 'Overview'),
   (Icons.menu_book_rounded, 'Study Centre'),
   (Icons.edit_note_rounded, 'Essay Examiner'),
+  (Icons.timer_rounded, 'Practice Tests'),
 ];
 
 class HomeScreen extends StatefulWidget {
@@ -53,7 +55,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ? _Dashboard(onNavigate: _open, compact: compact)
               : _section == 1
                   ? const StudyHubScreen()
-                  : const EssayScreen()),
+                  : _section == 2
+                      ? const EssayScreen()
+                      : const ExamHubScreen()),
         ]),
         bottomNavigationBar: wide ? null : NavigationBar(
           selectedIndex: _section,
@@ -63,6 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
             NavigationDestination(icon: Icon(Icons.space_dashboard_outlined), selectedIcon: Icon(Icons.space_dashboard_rounded), label: 'Home'),
             NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Study'),
             NavigationDestination(icon: Icon(Icons.edit_note_outlined), selectedIcon: Icon(Icons.edit_note_rounded), label: 'Essay'),
+            NavigationDestination(icon: Icon(Icons.timer_outlined), selectedIcon: Icon(Icons.timer_rounded), label: 'Tests'),
           ],
         ),
       );
