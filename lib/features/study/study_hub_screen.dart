@@ -5,7 +5,7 @@ class StudyHubScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => DefaultTabController(
-    length: 4,
+    length: 5,
     child: Scaffold(
       appBar: AppBar(
         title: const Text('Study Centre'),
@@ -13,6 +13,7 @@ class StudyHubScreen extends StatelessWidget {
           isScrollable: true,
           tabs: [
             Tab(text: 'Pakistan Affairs'),
+            Tab(text: 'Core Papers'),
             Tab(text: 'Current Affairs'),
             Tab(text: 'MCQ Practice'),
             Tab(text: 'CSS Syllabus'),
@@ -22,6 +23,7 @@ class StudyHubScreen extends StatelessWidget {
       body: const TabBarView(
         children: [
           _PakistanAffairsTab(),
+          _CompulsoryTab(),
           _CurrentAffairsTab(),
           _McqTab(),
           _SyllabusTab(),
@@ -139,6 +141,105 @@ class _PakistanAffairsTab extends StatelessWidget {
       ),
     ],
   );
+}
+
+
+class _CompulsoryTab extends StatelessWidget {
+  const _CompulsoryTab();
+
+  static const courses = <_CoreCourse>[
+    _CoreCourse('English Essay', '100 marks', 'Build a defensible thesis, a coherent argument and evidence-led paragraphs.', [
+      'Interpret the question: command words, scope and assumptions',
+      'Choose and narrow a topic; formulate a precise thesis',
+      'Plan a logical outline with a clear introduction and conclusion',
+      'Develop analytical paragraphs using claims, evidence and reasoning',
+      'Use examples, counterarguments and balanced evaluation',
+      'Practise timed essays, revision and language accuracy',
+    ], 'The examiner assesses relevant knowledge, analysis, organisation, expression and technical control. Avoid memorised material that does not answer the exact topic.'),
+    _CoreCourse('English (Precis & Composition)', '100 marks', 'Practise the distinct language tasks specified in the FPSC syllabus.', [
+      'Precis writing: central idea, compression, title and faithful tone',
+      'Reading comprehension: inference, evidence and concise responses',
+      'Grammar and vocabulary: tense, articles, prepositions, conjunctions and usage',
+      'Sentence correction: identify the exact structural or punctuation fault',
+      'Grouping of words and pairs of commonly confused words',
+      'Urdu-to-English translation: meaning, idiom and sentence structure',
+    ], 'Do not add opinions to a precis or alter the author’s meaning. In correction questions, make only the necessary changes.'),
+    _CoreCourse('General Science & Ability', '100 marks', 'Cover the official science and quantitative / reasoning components systematically.', [
+      'Physical sciences: universe, Earth systems, weather, hazards and energy',
+      'Chemistry and materials: atomic structure, bonding, radiation and modern materials',
+      'Biological sciences: cells, biomolecules, plant and animal kingdoms, human physiology and common diseases',
+      'Environment: atmosphere, water and land pollution, climate, GIS and population',
+      'Food science: balanced diet, nutrients, food quality, deterioration and preservation',
+      'Information technology: hardware, software, networks, information systems, AI and telecommunications',
+      'Quantitative ability: arithmetic, algebra, geometry, ratios, rates, percentages and sampling',
+      'Logical / analytical reasoning and verbal, mechanical, numerical and social mental abilities',
+    ], 'Separate the 60-mark General Science component from the 40-mark General Ability component when planning revision. Show working in numerical questions.'),
+    _CoreCourse('Current Affairs', '100 marks', 'Build issue-based analysis across Pakistan’s domestic affairs, external relations and global issues.', [
+      'Pakistan domestic affairs: political, economic and social developments',
+      'Pakistan external affairs: India, China, Afghanistan, Russia and the Muslim world',
+      'Relations with the United States and regional / international organisations',
+      'Global issues: security, political economy, human rights and climate',
+      'Population, terrorism, energy politics, nuclear security and international trade',
+      'Middle East, Kashmir, Palestine, globalisation and maritime cooperation',
+      'Evidence file: dated facts, official documents, credible data and competing viewpoints',
+    ], 'Every current-affairs statistic must carry a date and credible source. Distinguish verified fact from analysis and forecast.'),
+    _CoreCourse('Islamic Studies / Comparative Study of Major Religions', '100 marks', 'Prepare the relevant paper according to the candidate’s eligibility and the official syllabus.', [
+      'Core beliefs, sources and principles of the selected paper',
+      'Seerah / foundational historical context and ethical framework',
+      'Social justice, human dignity, rights, responsibilities and governance',
+      'Economic principles, welfare, accountability and public ethics',
+      'Contemporary challenges and reasoned application of principles',
+      'Comparative themes and interfaith understanding where prescribed',
+      'Practise structured answers with accurate references and balanced analysis',
+    ], 'Non-Muslim candidates may opt for Comparative Study of Major Religions. Check the official paper’s language and syllabus instructions before preparation.'),
+  ];
+
+  @override
+  Widget build(BuildContext context) => ListView(
+    padding: const EdgeInsets.all(16),
+    children: [
+      const _SectionIntro(
+        eyebrow: 'COMPULSORY PAPER ROADMAPS',
+        title: 'Core CSS papers',
+        description: 'Five compulsory-paper roadmaps alongside the Pakistan Affairs foundation course. Use these as a structured starting checklist, then study the full official syllabus and primary sources.',
+      ),
+      ...courses.map((course) => Card(
+        margin: const EdgeInsets.only(bottom: 10),
+        child: ExpansionTile(
+          title: Text(course.title, style: const TextStyle(fontWeight: FontWeight.w700)),
+          subtitle: Text(course.marks),
+          childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+          children: [
+            Align(alignment: Alignment.centerLeft, child: Text(course.purpose)),
+            const SizedBox(height: 12),
+            const Align(alignment: Alignment.centerLeft, child: Text('TOPIC ROADMAP', style: TextStyle(fontSize: 11, letterSpacing: 1, fontWeight: FontWeight.w800, color: Color(0xFF1769AA)))),
+            const SizedBox(height: 8),
+            ...course.topics.map((topic) => Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                const Icon(Icons.checklist_rounded, size: 18, color: Color(0xFF1769AA)),
+                const SizedBox(width: 8),
+                Expanded(child: Text(topic)),
+              ]),
+            )),
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(color: const Color(0xFFF0F6FC), borderRadius: BorderRadius.circular(10)),
+              child: Text('EXAMINER’S GUIDANCE\n${course.guidance}', style: const TextStyle(height: 1.45)),
+            ),
+          ],
+        ),
+      )),
+      const Text('These roadmaps are learning aids, not a claim that every topic has been fully taught. The FPSC syllabus remains authoritative.', style: TextStyle(fontSize: 12, color: Color(0xFF627D98))),
+    ],
+  );
+}
+
+class _CoreCourse {
+  const _CoreCourse(this.title, this.marks, this.purpose, this.topics, this.guidance);
+  final String title, marks, purpose, guidance;
+  final List<String> topics;
 }
 
 class _CurrentAffairsTab extends StatelessWidget {
@@ -376,7 +477,7 @@ class _SyllabusTabState extends State<_SyllabusTab> {
         ),
         const Card(child: Padding(
           padding: EdgeInsets.all(14),
-          child: Text('EXAM STRUCTURE  •  1,200 MARKS\\n6 compulsory papers = 600 marks + optional subjects = 600 marks. A 200-mark subject comprises two papers; each 100-mark subject comprises one paper. Group II allows a combination totalling 200 marks; Groups III–VII allow one 100-mark subject each.', style: TextStyle(height: 1.5)),
+          child: Text('EXAM STRUCTURE  •  1,200 MARKS\n6 compulsory papers = 600 marks + optional subjects = 600 marks. A 200-mark subject comprises two papers; each 100-mark subject comprises one paper. Group II allows a combination totalling 200 marks; Groups III–VII allow one 100-mark subject each.', style: TextStyle(height: 1.5)),
         )),
         Card(
           child: Padding(
