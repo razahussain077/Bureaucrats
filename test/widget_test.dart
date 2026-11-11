@@ -278,7 +278,7 @@ void main() {
 
     expect(find.text('ACADEMY CLASSROOM'), findsOneWidget);
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('32 chapters • 53 lessons'), findsOneWidget);
+    expect(find.textContaining('32 chapters • 55 lessons'), findsOneWidget);
 
     await tester.ensureVisible(find.text('The reformers and educational institutions: a comparative study'));
     expect(find.text('The reformers and educational institutions: a comparative study'), findsOneWidget);
@@ -332,7 +332,7 @@ void main() {
     expect(find.text('Mark lesson complete'), findsOneWidget);
     await tester.tap(find.text('Mark lesson complete'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 53 lessons completed'), findsOneWidget);
+    expect(find.text('1 / 55 lessons completed'), findsOneWidget);
     expect(find.text('CSS EXAM QUESTION'), findsWidgets);
     expect(find.text('CLASSWORK'), findsWidgets);
     expect(find.text('1. Poverty, inequality and social protection'), findsOneWidget);
@@ -352,6 +352,26 @@ void main() {
     await tester.tap(jinnahAnswer);
     await tester.pumpAndSettle();
     expect(find.textContaining('The decade from 1937 to 1947 transformed'), findsOneWidget);
+
+    final warAnswer = find.byKey(
+      const PageStorageKey<String>(
+        'lesson-Complete model answer: Pakistan and the US-led War on Terror',
+      ),
+    );
+    await tester.ensureVisible(warAnswer);
+    await tester.tap(warAnswer);
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Pakistan’s decision to join the US-led coalition'), findsOneWidget);
+
+    final geographyAnswer = find.byKey(
+      const PageStorageKey<String>(
+        'lesson-Complete model answer: Pakistan’s geo-strategic location and its challenges',
+      ),
+    );
+    await tester.ensureVisible(geographyAnswer);
+    await tester.tap(geographyAnswer);
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Pakistan occupies a strategically important location'), findsOneWidget);
   });
 
   testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred explained questions', (tester) async {
