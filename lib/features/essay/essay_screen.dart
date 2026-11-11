@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'essay_repository.dart';
 
 class EssayScreen extends StatefulWidget {
   const EssayScreen({super.key});
@@ -10,139 +9,118 @@ class EssayScreen extends StatefulWidget {
 class _EssayScreenState extends State<EssayScreen> {
   final _topic = TextEditingController();
   final _essay = TextEditingController();
-  bool _busy = false;
-  String? _error;
-  Map<String, dynamic>? _evaluation;
+  final Set<int> _reviewed = {};
+  static const _checks = [
+    'My introduction directly addresses the exact question.',
+    'My thesis is clear, specific and arguable.',
+    'Each paragraph develops one main claim.',
+    'I support claims with relevant examples or credible evidence.',
+    'I consider counterarguments and alternative explanations.',
+    'My paragraphs connect logically and avoid repetition.',
+    'My conclusion answers the question without introducing a new argument.',
+    'I checked grammar, punctuation, spelling and sentence clarity.',
+  ];
+
+  int get _words => _essay.text.trim().isEmpty
+      ? 0
+      : _essay.text.trim().split(RegExp(r'\\s+')).length;
 
   @override
-  void dispose() { _topic.dispose(); _essay.dispose(); super.dispose(); }
+  void initState() {
+    super.initState();
+    _essay.addListener(_refresh);
+  }
 
-  Future<void> _submit() async {
-    if (_topic.text.trim().length < 5 || _essay.text.trim().length < 500) {
-      setState(() => _error = 'Enter a topic (at least 5 characters) and an essay of at least 500 characters.');
-      return;
-    }
-    setState(() { _busy = true; _error = null; _evaluation = null; });
-    try {
-      final result = await EssayRepository().evaluate(topic: _topic.text.trim(), essay: _essay.text.trim());
-      if (mounted) setState(() => _evaluation = result);
-    } catch (_) {
-      if (mounted) setState(() => _error = 'Evaluation failed. Check your connection and sign-in, then try again.');
-    } finally {
-      if (mounted) setState(() => _busy = false);
-    }
+  void _refresh() {
+    if (mounted) setState(() {});
+  }
+
+  @override
+  void dispose() {
+    _topic.dispose();
+    _essay.removeListener(_refresh);
+    _essay.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(title: const Text('Essay Examiner')),
-    body: ListView(padding: const EdgeInsets.all(20), children: [
-      const Text('Write with clarity. Argue with evidence.', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w800, color: Color(0xFF102A43))),
-      const SizedBox(height: 8),
-      const Text('Practice feedback is indicative, not an official FPSC assessment.', style: TextStyle(color: Color(0xFF627D98))),
-      const SizedBox(height: 20),
-      TextField(controller: _topic, decoration: const InputDecoration(labelText: 'Essay topic')),
-      const SizedBox(height: 14),
-      TextField(controller: _essay, minLines: 14, maxLines: 24, textAlignVertical: TextAlignVertical.top, decoration: const InputDecoration(labelText: 'Your essay', hintText: 'Write your complete essay here...')),
-      const SizedBox(height: 16),
-      const Card(
-        child: Padding(
-          padding: EdgeInsets.all(14),
-          child: Text('Public study access is enabled. Essay evaluation is temporarily locked because the secure examiner service currently requires an authenticated session. Your writing stays on this page and is not submitted.', style: TextStyle(height: 1.45)),
+    body: ListView(
+      padding: const EdgeInsets.all(20),
+      children: [
+        const Text('Write with clarity. Argue with evidence.', style: TextStyle(fontSize: 23, fontWeight: FontWeight.w800, color: Color(0xFF102A43))),
+        const SizedBox(height: 8),
+        const Text('A structured practice desk for planning, drafting and reviewing CSS essays.', style: TextStyle(color: Color(0xFF627D98))),
+        const SizedBox(height: 20),
+        TextField(controller: _topic, decoration: const InputDecoration(labelText: 'Essay topic', hintText: 'Enter the exact essay question')),
+        const SizedBox(height: 14),
+        Card(
+          elevation: 0,
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: const [
+              Text('Before you write', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: Color(0xFF102A43))),
+              SizedBox(height: 10),
+              _PlanStep(number: '01', title: 'Decode the prompt', detail: 'Identify the command, scope, assumptions and central issue.'),
+              _PlanStep(number: '02', title: 'Take a position', detail: 'Write a one-sentence thesis that answers the question.'),
+              _PlanStep(number: '03', title: 'Build the argument', detail: 'Arrange 6–10 claims in a logical sequence; attach evidence to each.'),
+              _PlanStep(number: '04', title: 'Test the outline', detail: 'Check relevance, balance, counterarguments and a defensible conclusion.'),
+            ]),
+          ),
         ),
-      ),
-      FilledButton.icon(
-        onPressed: null,
-        icon: const Icon(Icons.lock_outline_rounded),
-        label: const Text('Evaluation unavailable in public mode'),
-      ),
-      if (_error != null) ...[const SizedBox(height: 12), Text(_error!, style: const TextStyle(color: Color(0xFF9B2C2C)))],
-      if (_evaluation != null) ...[const SizedBox(height: 24), _EvaluationView(evaluation: _evaluation!)],
-    ]),
+        const SizedBox(height: 14),
+        TextField(
+          controller: _essay,
+          minLines: 14,
+          maxLines: 28,
+          textAlignVertical: TextAlignVertical.top,
+          decoration: const InputDecoration(labelText: 'Essay draft', alignLabelWithHint: true, hintText: 'Write your introduction, thesis, body paragraphs and conclusion here...', border: OutlineInputBorder()),
+        ),
+        const SizedBox(height: 8),
+        Row(children: [
+          Text('$_words words', style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF1769AA))),
+          const Spacer(),
+          Text(_words < 1500 ? 'Practice target: develop a full-length argument' : 'Long-form draft', style: const TextStyle(fontSize: 11, color: Color(0xFF718096))),
+        ]),
+        const SizedBox(height: 22),
+        const Text('Self-review checklist', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Color(0xFF102A43))),
+        const SizedBox(height: 5),
+        Text('${_reviewed.length} of ${_checks.length} checks completed', style: const TextStyle(color: Color(0xFF627D98))),
+        const SizedBox(height: 8),
+        LinearProgressIndicator(value: _reviewed.length / _checks.length, minHeight: 6, borderRadius: BorderRadius.circular(8)),
+        const SizedBox(height: 8),
+        Card(
+          elevation: 0,
+          child: Column(children: List.generate(_checks.length, (i) => CheckboxListTile(
+            value: _reviewed.contains(i),
+            onChanged: (value) => setState(() { if (value == true) { _reviewed.add(i); } else { _reviewed.remove(i); } }),
+            controlAffinity: ListTileControlAffinity.leading,
+            dense: true,
+            title: Text(_checks[i], style: const TextStyle(fontSize: 13)),
+          ))),
+        ),
+        const SizedBox(height: 12),
+        const Text('AI evaluation and saved submission history are not enabled in this public guest workspace yet. This page provides local drafting and self-review only; it does not assign an AI score or save your essay to a server.', style: TextStyle(fontSize: 12, height: 1.5, color: Color(0xFF627D98))),
+      ],
+    ),
   );
 }
 
-class _EvaluationView extends StatelessWidget {
-  const _EvaluationView({required this.evaluation});
-  final Map<String, dynamic> evaluation;
-  static const _labels = {
-    'thesis_and_argument': 'Thesis & argument',
-    'structure_and_coherence': 'Structure & coherence',
-    'knowledge_and_evidence': 'Knowledge & evidence',
-    'analysis_and_critical_thinking': 'Analysis & critical thinking',
-    'language_and_expression': 'Language & expression',
-  };
-  static const _maxima = {
-    'thesis_and_argument': 20,
-    'structure_and_coherence': 20,
-    'knowledge_and_evidence': 20,
-    'analysis_and_critical_thinking': 25,
-    'language_and_expression': 15,
-  };
-
+class _PlanStep extends StatelessWidget {
+  const _PlanStep({required this.number, required this.title, required this.detail});
+  final String number, title, detail;
   @override
-  Widget build(BuildContext context) {
-    final rubric = evaluation['rubric'] as Map<String, dynamic>;
-    final score = (evaluation['total_score'] as num).toInt();
-    final strengths = (evaluation['strengths'] as List).whereType<String>().toList();
-    final weaknesses = (evaluation['weaknesses'] as List).whereType<String>().toList();
-    final revisions = (evaluation['actionable_revisions'] as List).whereType<Map>();
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Card(child: Padding(padding: const EdgeInsets.all(20), child: Row(children: [
-        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text('PRACTICE SCORE', style: TextStyle(fontSize: 11, letterSpacing: 1, fontWeight: FontWeight.w700, color: Color(0xFF627D98))),
-          const SizedBox(height: 5),
-          Text('$score/100', style: const TextStyle(fontSize: 34, fontWeight: FontWeight.w800, color: Color(0xFF102A43))),
-        ]),
-        const Spacer(),
-        const Icon(Icons.fact_check_outlined, size: 38, color: Color(0xFF1769AA)),
-      ]))),
-      const SizedBox(height: 12),
-      const Text('Rubric breakdown', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
-      const SizedBox(height: 8),
-      Card(child: Padding(padding: const EdgeInsets.all(16), child: Column(children: _labels.entries.map((entry) {
-        final value = (rubric[entry.key] as num?)?.toInt() ?? 0;
-        final max = _maxima[entry.key]!;
-        return Padding(padding: const EdgeInsets.only(bottom: 14), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Row(children: [Expanded(child: Text(entry.value, style: const TextStyle(fontWeight: FontWeight.w600))), Text('$value/$max', style: const TextStyle(fontWeight: FontWeight.w700))]),
-          const SizedBox(height: 6),
-          ClipRRect(borderRadius: BorderRadius.circular(8), child: LinearProgressIndicator(value: value / max, minHeight: 7, backgroundColor: const Color(0xFFEAF0F6))),
-        ]));
-      }).toList()))),
-      const SizedBox(height: 12),
-      _FeedbackList(title: 'Strengths', items: strengths, icon: Icons.check_circle_outline),
-      _FeedbackList(title: 'Areas to improve', items: weaknesses, icon: Icons.trending_up),
-      const SizedBox(height: 12),
-      const Text('Actionable revisions', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
-      const SizedBox(height: 8),
-      ...revisions.map((item) => Card(margin: const EdgeInsets.only(bottom: 8), child: Padding(padding: const EdgeInsets.all(14), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text('${item['issue'] ?? 'Issue'}', style: const TextStyle(fontWeight: FontWeight.w700)),
-        const SizedBox(height: 6),
-        Text('${item['revision'] ?? ''}'),
-        if (item['reason'] != null) ...[const SizedBox(height: 5), Text('${item['reason']}', style: const TextStyle(color: Color(0xFF627D98)))],
-      ])))),
-      const SizedBox(height: 12),
-      const Text('Examiner summary', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
-      const SizedBox(height: 8),
-      Card(child: Padding(padding: const EdgeInsets.all(16), child: Text('${evaluation['overall_feedback']}'))),
-      const SizedBox(height: 8),
-      const Text('This is AI-assisted practice feedback, not an official FPSC mark or pass/fail decision.', style: TextStyle(fontSize: 12, color: Color(0xFF627D98))),
-    ]);
-  }
-}
-
-class _FeedbackList extends StatelessWidget {
-  const _FeedbackList({required this.title, required this.items, required this.icon});
-  final String title;
-  final List<String> items;
-  final IconData icon;
-  @override
-  Widget build(BuildContext context) => Padding(padding: const EdgeInsets.only(bottom: 12), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-    Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
-    const SizedBox(height: 8),
-    Card(child: Padding(padding: const EdgeInsets.all(14), child: items.isEmpty ? const Text('No items returned.') : Column(children: items.map((item) => Padding(
-      padding: const EdgeInsets.only(bottom: 9),
-      child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [Icon(icon, size: 18, color: const Color(0xFF1769AA)), const SizedBox(width: 9), Expanded(child: Text(item))]),
-    )).toList()))),
-  ]));
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.only(bottom: 12),
+    child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      CircleAvatar(radius: 14, backgroundColor: const Color(0xFFEAF3FB), child: Text(number, style: const TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: Color(0xFF1769AA)))),
+      const SizedBox(width: 10),
+      Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(title, style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF243B53))),
+        const SizedBox(height: 2),
+        Text(detail, style: const TextStyle(fontSize: 12, height: 1.4, color: Color(0xFF627D98))),
+      ])),
+    ]),
+  );
 }
