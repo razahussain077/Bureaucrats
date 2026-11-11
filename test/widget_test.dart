@@ -50,7 +50,10 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.textContaining('Political Science'), findsOneWidget);
 
-    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 5)));
+    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen()));
+    await tester.pumpAndSettle();
+    final tabController = DefaultTabController.of(tester.element(find.byType(TabBarView)));
+    tabController.animateTo(5);
     await tester.pumpAndSettle();
     expect(find.text('Official CSS past papers'), findsOneWidget);
     expect(find.text('Previous Question Papers — CSS'), findsOneWidget);
@@ -94,12 +97,14 @@ void main() {
   });
 
   testWidgets('essay workspace shows planning and self-review tools', (tester) async {
+    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(const MaterialApp(home: EssayScreen()));
     await tester.pumpAndSettle();
 
     expect(find.text('Decode the prompt'), findsOneWidget);
-    await tester.drag(find.byType(ListView).first, const Offset(0, -1400));
-    await tester.pumpAndSettle();
     expect(find.text('Self-review checklist'), findsOneWidget);
     await tester.ensureVisible(find.text('My thesis is clear, specific and arguable.'));
     expect(find.text('Self-review checklist'), findsOneWidget);
