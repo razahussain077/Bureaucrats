@@ -32,6 +32,12 @@ void main() {
     expect(find.text('English Essay'), findsOneWidget);
     expect(find.text('General Science & Ability'), findsOneWidget);
     expect(find.text('Islamic Studies / Comparative Study of Major Religions'), findsOneWidget);
+
+    await tester.tap(find.text('English Essay'));
+    await tester.pumpAndSettle();
+    expect(find.text('TEACHING NOTES'), findsOneWidget);
+    expect(find.textContaining('A CSS essay is an argument'), findsOneWidget);
+    expect(find.text('PRACTICE TASK'), findsOneWidget);
   });
 
   testWidgets('MCQ practice checks an answer and explains it', (tester) async {
