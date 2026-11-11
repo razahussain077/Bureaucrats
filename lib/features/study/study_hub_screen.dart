@@ -202,6 +202,27 @@ class _McqTabState extends State<_McqTab> {
     _Question('The Cabinet Mission came to India in:', ['1942', '1945', '1946', '1947'], 2, 'The Cabinet Mission arrived in 1946 to propose a constitutional framework for transfer of power.'),
     _Question('The Objectives Resolution was passed by Pakistan’s Constituent Assembly in:', ['1947', '1948', '1949', '1951'], 2, 'The Objectives Resolution was adopted on 12 March 1949.'),
     _Question('The Constitution of 1973 established a:', ['Presidential system', 'Parliamentary federal system', 'Confederal system', 'Unitary presidential system'], 1, 'The 1973 Constitution established a federal parliamentary framework.'),
+
+    _Question('The first Constitution of Pakistan came into force on:', ['23 March 1956', '14 August 1947', '8 June 1962', '10 April 1973'], 0, 'The 1956 Constitution came into force on 23 March 1956 and declared Pakistan an Islamic Republic.'),
+    _Question('The One Unit scheme was introduced in:', ['1949', '1955', '1958', '1962'], 1, 'The One Unit scheme merged the provinces and states of West Pakistan into one administrative unit in 1955.'),
+    _Question('The 1962 Constitution introduced which form of government?', ['Parliamentary', 'Presidential', 'Confederal', 'Directorial'], 1, 'The 1962 Constitution established a presidential system with a strong executive presidency.'),
+    _Question('The first general elections on the basis of adult franchise in Pakistan were held in:', ['1956', '1965', '1970', '1977'], 2, 'The 1970 general elections were the first nationwide elections based on adult franchise.'),
+    _Question('The Legal Framework Order associated with the 1970 elections was issued by:', ['Ayub Khan', 'Yahya Khan', 'Zulfikar Ali Bhutto', 'Zia-ul-Haq'], 1, 'President Yahya Khan issued the Legal Framework Order in 1970 to provide the framework for the elections and constitution-making.'),
+    _Question('The Constitution of 1973 was passed by the National Assembly on:', ['10 April 1973', '14 August 1973', '23 March 1973', '12 March 1973'], 0, 'The National Assembly passed the 1973 Constitution on 10 April; it came into force on 14 August 1973.'),
+    _Question('The Eighth Amendment to the 1973 Constitution was passed in:', ['1985', '1988', '1997', '2003'], 0, 'The Eighth Amendment was adopted in 1985 and, among other changes, strengthened presidential powers including the dissolution power under Article 58(2)(b).'),
+    _Question('The 18th Constitutional Amendment was enacted in:', ['2008', '2010', '2013', '2018'], 1, 'The 18th Amendment was enacted in 2010 and substantially altered the federal-provincial distribution of powers.'),
+    _Question('The Council of Common Interests is provided under which article?', ['Article 25', 'Article 58', 'Article 153', 'Article 160'], 2, 'Article 153 of the Constitution provides for the Council of Common Interests.'),
+    _Question('The National Finance Commission is constitutionally provided under:', ['Article 140', 'Article 153', 'Article 160', 'Article 184'], 2, 'Article 160 provides for the National Finance Commission to make recommendations on federal-provincial financial distribution.'),
+    _Question('The Objectives Resolution was moved by:', ['Liaquat Ali Khan', 'Khawaja Nazimuddin', 'Muhammad Ali Bogra', 'Iskander Mirza'], 0, 'Prime Minister Liaquat Ali Khan moved the Objectives Resolution in the Constituent Assembly in March 1949.'),
+    _Question('The first Governor-General of Pakistan was:', ['Liaquat Ali Khan', 'Muhammad Ali Jinnah', 'Ghulam Muhammad', 'Khawaja Nazimuddin'], 1, 'Muhammad Ali Jinnah served as Pakistan’s first Governor-General from 1947 until his death in 1948.'),
+    _Question('The first Prime Minister of Pakistan was:', ['Muhammad Ali Jinnah', 'Liaquat Ali Khan', 'Ibrahim Ismail Chundrigar', 'Khawaja Nazimuddin'], 1, 'Liaquat Ali Khan became Pakistan’s first Prime Minister in August 1947.'),
+    _Question('The Indus Waters Treaty was signed in:', ['1958', '1960', '1965', '1972'], 1, 'Pakistan and India signed the Indus Waters Treaty in 1960 with the World Bank playing a facilitating role.'),
+    _Question('The Tashkent Declaration followed the:', ['1948 war', '1965 war', '1971 war', 'Kargil conflict'], 1, 'The Tashkent Declaration was signed in January 1966 after the 1965 war between Pakistan and India.'),
+    _Question('The Simla Agreement between Pakistan and India was signed in:', ['1966', '1971', '1972', '1974'], 2, 'The Simla Agreement was signed in July 1972 after the 1971 war.'),
+    _Question('The first session of the Constituent Assembly of Pakistan was held on:', ['10 August 1947', '14 August 1947', '11 September 1948', '12 March 1949'], 0, 'The Constituent Assembly held its first meeting on 10 August 1947 in Karachi.'),
+    _Question('The Lahore Resolution was moved by:', ['A.K. Fazlul Huq', 'Liaquat Ali Khan', 'Chaudhry Khaliquzzaman', 'Huseyn Shaheed Suhrawardy'], 0, 'A.K. Fazlul Huq, the Premier of Bengal, moved the Lahore Resolution at the Muslim League session.'),
+    _Question('The Nehru Report was published in:', ['1927', '1928', '1929', '1930'], 1, 'The Nehru Report was published in 1928 and proposed a constitutional framework for British India.'),
+    _Question('The Cripps Mission visited India in:', ['1940', '1942', '1945', '1946'], 1, 'The Cripps Mission arrived in 1942 during the Second World War to secure Indian cooperation.'),
   ];
 
   int index = 0;
