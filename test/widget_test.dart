@@ -303,7 +303,7 @@ void main() {
     await tester.tap(find.text('MCQ Practice'));
     await tester.pumpAndSettle();
 
-    expect(find.text('1 / 60'), findsOneWidget);
+    expect(find.text('1 / 100'), findsOneWidget);
     expect(find.text('The Simla Deputation took place in:'), findsOneWidget);
   });
 
