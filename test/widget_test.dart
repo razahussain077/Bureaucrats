@@ -272,10 +272,15 @@ void main() {
 
     expect(find.text('ACADEMY CLASSROOM'), findsOneWidget);
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('32 chapters • 44 lessons'), findsOneWidget);
+    expect(find.textContaining('32 chapters • 53 lessons'), findsOneWidget);
 
     await tester.ensureVisible(find.text('The reformers and educational institutions: a comparative study'));
     expect(find.text('The reformers and educational institutions: a comparative study'), findsOneWidget);
+    expect(find.text('The 1857 uprising, colonial restructuring and Muslim social change'), findsOneWidget);
+    expect(find.text('Round Table Conferences, Communal Award and constitutional deadlock'), findsOneWidget);
+    expect(find.text('The 1937 elections, Lahore Resolution and transfer of power'), findsOneWidget);
+    expect(find.text('Constitution-making, early political crises and constitutional experiments'), findsOneWidget);
+    expect(find.text('Federalism, the Eighteenth Amendment and local government'), findsOneWidget);
 
     final lastChapter = find.text('Prevailing social problems: poverty, education, health and sanitation');
     final academyScroll = find.descendant(
@@ -304,7 +309,7 @@ void main() {
     expect(find.text('Mark lesson complete'), findsOneWidget);
     await tester.tap(find.text('Mark lesson complete'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 44 lessons completed'), findsOneWidget);
+    expect(find.text('1 / 53 lessons completed'), findsOneWidget);
     expect(find.text('CSS EXAM QUESTION'), findsWidgets);
     expect(find.text('CLASSWORK'), findsWidgets);
     expect(find.text('1. Poverty, inequality and social protection'), findsOneWidget);
