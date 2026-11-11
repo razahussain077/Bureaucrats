@@ -15,7 +15,34 @@ class AppTheme {
         backgroundColor: Colors.white,
         foregroundColor: navy,
         elevation: 0,
+        scrolledUnderElevation: 0,
+        surfaceTintColor: Colors.transparent,
         centerTitle: false,
+      ),
+      navigationBarTheme: NavigationBarThemeData(
+        backgroundColor: Colors.white,
+        indicatorColor: const Color(0xFFEAF3FB),
+        labelTextStyle: WidgetStateProperty.resolveWith((states) => TextStyle(
+          fontSize: 10,
+          fontWeight: states.contains(WidgetState.selected) ? FontWeight.w800 : FontWeight.w600,
+          color: states.contains(WidgetState.selected) ? blue : const Color(0xFF718096),
+        )),
+      ),
+      tabBarTheme: const TabBarThemeData(
+        labelColor: blue,
+        unselectedLabelColor: Color(0xFF718096),
+        labelStyle: TextStyle(fontWeight: FontWeight.w800, fontSize: 12),
+        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 12),
+        indicatorColor: blue,
+        dividerColor: Color(0xFFE6EDF4),
+      ),
+      filledButtonTheme: FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          backgroundColor: blue,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(11)),
+          textStyle: const TextStyle(fontWeight: FontWeight.w800),
+        ),
       ),
       cardTheme: CardThemeData(
         color: Colors.white,
