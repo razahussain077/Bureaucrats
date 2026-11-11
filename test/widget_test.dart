@@ -19,6 +19,12 @@ void main() {
     expect(find.text('Current Affairs'), findsWidgets);
     expect(find.text('MCQ Practice'), findsOneWidget);
     expect(find.text('CSS Syllabus'), findsOneWidget);
+
+    await tester.tap(find.text('Core Papers'));
+    await tester.pumpAndSettle();
+    expect(find.text('English Essay'), findsOneWidget);
+    expect(find.text('General Science & Ability'), findsOneWidget);
+    expect(find.text('Islamic Studies / Comparative Study of Major Religions'), findsOneWidget);
   });
 
   testWidgets('MCQ practice checks an answer and explains it', (tester) async {
