@@ -1099,9 +1099,6 @@ Pakistan’s youth bulge can become a demographic dividend if human capital, pro
         examQuestion: 'Given Pakistan’s youth bulge, what policy measures can convert demographic pressure into sustainable economic development?',
         practiceTask: 'Create a five-pillar youth strategy. For each pillar, specify one responsible institution, one budget or delivery mechanism and two measurable outcomes.'
       ),
-      ]),
-
-
       AcademyLesson(
         title: 'Complete model answer: Pakistan and the US-led War on Terror',
         objectives: 'Evaluate the short- and long-term effects of Pakistan joining the post-9/11 coalition, balancing security cooperation with sovereignty and domestic costs.',
@@ -1154,7 +1151,10 @@ Pakistan’s location is a strategic opportunity, not a guarantee of power or pr
         examQuestion: 'Pakistan is located at the crossroads of South Asia. Explain its geo-strategic and geo-political importance and the challenges arising from this location.',
         practiceTask: 'Draw a labelled map showing Pakistan, neighbouring states, Arabian Sea ports, the Karakoram route, Afghanistan transit links and major regional corridors. Write a 35-minute answer that separates opportunities from constraints.'
       ),
-      AcademyChapter(number: '32', title: 'Official past-paper map: CSS CE-2023 Pakistan Affairs', syllabusLink: 'Source: Federal Public Service Commission, Competitive Examination 2023, General Knowledge-III (Pakistan Affairs)', lessons: [
+            ]),
+
+
+AcademyChapter(number: '32', title: 'Official past-paper map: CSS CE-2023 Pakistan Affairs', syllabusLink: 'Source: Federal Public Service Commission, Competitive Examination 2023, General Knowledge-III (Pakistan Affairs)', lessons: [
         AcademyLesson(title: 'Understand the paper and connect every question to the course', objectives: 'Use an authentic FPSC paper to identify the examination format, syllabus coverage and the analytical work required by each question.', sections: [
           AcademyLessonSection('1. Official paper structure', '''The FPSC CE-2023 Pakistan Affairs paper allowed three hours. Part I contained objective MCQs worth 20 marks, with a maximum of 30 minutes. Part II carried 80 marks. Candidates were instructed to attempt only four questions from Part II; all carried equal marks of 20. The paper therefore tested breadth through the objective section and depth through four selected analytical answers.
 
