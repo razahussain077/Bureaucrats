@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'academy_library_screen.dart';
 
 class StudyHubScreen extends StatelessWidget {
   const StudyHubScreen({super.key, this.initialTabIndex = 0});
@@ -9,8 +10,8 @@ class StudyHubScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => DefaultTabController(
-    initialIndex: initialTabIndex.clamp(0, 6).toInt(),
-    length: 7,
+    initialIndex: initialTabIndex.clamp(0, 7).toInt(),
+    length: 8,
     child: Scaffold(
       appBar: AppBar(
         title: const Text('Study Centre'),
@@ -24,6 +25,7 @@ class StudyHubScreen extends StatelessWidget {
             Tab(text: 'MCQ Practice'),
             Tab(text: 'Past Papers'),
             Tab(text: 'CSS Syllabus'),
+            Tab(text: 'Academy Lessons'),
           ],
         ),
       ),
@@ -36,6 +38,7 @@ class StudyHubScreen extends StatelessWidget {
           _McqTab(),
           _PastPapersTab(),
           _SyllabusTab(),
+          AcademyLibraryScreen(),
         ],
       ),
     ),
