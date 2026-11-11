@@ -298,6 +298,9 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
                     const SizedBox(height: 10),
                     for (final lesson in chapter.lessons)
                       _LessonPanel(
+                        key: ValueKey<String>(
+                          _lessonKey(course, chapter, lesson),
+                        ),
                         lesson: lesson,
                         completed: _completedLessons.contains(
                           _lessonKey(course, chapter, lesson),
@@ -320,6 +323,7 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
 
 class _LessonPanel extends StatelessWidget {
   const _LessonPanel({
+    super.key,
     required this.lesson,
     required this.completed,
     required this.onCompletionChanged,
