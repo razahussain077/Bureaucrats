@@ -42,7 +42,7 @@ void main() {
   });
 
   testWidgets('academy classroom opens detailed chapter lessons', (tester) async {
-    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.physicalSize = const Size(1200, 5200);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
@@ -79,6 +79,10 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.textContaining('Political Science'), findsOneWidget);
 
+    tester.view.physicalSize = const Size(1200, 1800);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(const MaterialApp(home: StudyHubScreen()));
     await tester.pumpAndSettle();
     final tabController = DefaultTabController.of(tester.element(find.byType(TabBarView)));
@@ -91,11 +95,13 @@ void main() {
 
     tabController.animateTo(6);
     await tester.pumpAndSettle();
-    expect(find.text('Pakistan Affairs — 28 official syllabus areas'), findsOneWidget);
-    expect(
-      find.textContaining('XXVIII. Social problems: poverty, education, health and sanitation'),
-      findsOneWidget,
-    );
+    final pakistanTracker = find.text('Pakistan Affairs — 28 official syllabus areas');
+    await tester.ensureVisible(pakistanTracker);
+    await tester.tap(pakistanTracker);
+    await tester.pumpAndSettle();
+    final finalClause = find.textContaining('XXVIII. Social problems: poverty, education, health and sanitation');
+    await tester.ensureVisible(finalClause);
+    expect(finalClause, findsOneWidget);
   });
 
   testWidgets('dashboard presents Bureaucrats academy identity and resources', (tester) async {
