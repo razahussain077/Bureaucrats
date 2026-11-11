@@ -14,7 +14,6 @@ class AcademyLibraryScreen extends StatefulWidget {
 
 class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
   static const _progressKey = 'bureaucrats.academy.completed_lessons.v1';
-  final SharedPreferencesAsync _preferences = SharedPreferencesAsync();
   final Set<String> _completedLessons = <String>{};
   int _selectedCourseIndex = 0;
   bool _progressLoading = true;
@@ -33,7 +32,8 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
 
   Future<void> _loadProgress() async {
     try {
-      final saved = await _preferences.getStringList(_progressKey);
+      final preferences = SharedPreferencesAsync();
+      final saved = await preferences.getStringList(_progressKey);
       if (!mounted) return;
       setState(() {
         _completedLessons
@@ -56,7 +56,8 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
     });
     try {
       final values = _completedLessons.toList()..sort();
-      await _preferences.setStringList(_progressKey, values);
+      final preferences = SharedPreferencesAsync();
+      await preferences.setStringList(_progressKey, values);
     } catch (_) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
