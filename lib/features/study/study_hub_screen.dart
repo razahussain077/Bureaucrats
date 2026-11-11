@@ -8,7 +8,7 @@ class StudyHubScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => DefaultTabController(
-    initialIndex: initialTabIndex.clamp(0, 6),
+    initialIndex: initialTabIndex.clamp(0, 6).toInt(),
     length: 7,
     child: Scaffold(
       appBar: AppBar(
