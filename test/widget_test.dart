@@ -271,11 +271,13 @@ void main() {
     await tester.ensureVisible(lastChapter);
     await tester.tap(lastChapter);
     await tester.pumpAndSettle();
+    await tester.tap(find.text('Human development, inequality and social policy'));
+    await tester.pumpAndSettle();
 
     expect(find.text('Human development, inequality and social policy'), findsOneWidget);
     expect(find.text('CSS EXAM QUESTION'), findsWidgets);
     expect(find.text('CLASSWORK'), findsWidgets);
-    expect(find.textContaining('The Pakistan Economic Survey 2025–26'), findsOneWidget);
+    expect(find.text('1. Poverty, inequality and social protection'), findsOneWidget);
   });
 
   testWidgets('Pakistan Affairs MCQ bank has expanded to sixty explained questions', (tester) async {
