@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'academy_course_data.dart';
+import 'comparative_religions_course.dart';
 
 class AcademyLibraryScreen extends StatefulWidget {
   const AcademyLibraryScreen({super.key});
@@ -14,7 +15,8 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final course = compulsoryAcademyCourses[_selectedCourseIndex];
+    final courses = [...compulsoryAcademyCourses, ...comparativeReligionCourses];
+    final course = courses[_selectedCourseIndex];
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,11 +67,11 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
                   ),
                 ),
                 items: [
-                  for (var i = 0; i < compulsoryAcademyCourses.length; i++)
+                  for (var i = 0; i < courses.length; i++)
                     DropdownMenuItem(
                       value: i,
                       child: Text(
-                        compulsoryAcademyCourses[i].title,
+                        courses[i].title,
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
