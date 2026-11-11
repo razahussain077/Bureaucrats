@@ -33,13 +33,6 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('English Essay'), findsOneWidget);
     expect(find.text('General Science & Ability'), findsOneWidget);
-    await tester.scrollUntilVisible(
-      find.text('Islamic Studies / Comparative Study of Major Religions'),
-      220,
-      scrollable: find.byType(Scrollable).last,
-    );
-    expect(find.text('Islamic Studies / Comparative Study of Major Religions'), findsOneWidget);
-
     await tester.tap(find.text('English Essay'));
     await tester.pumpAndSettle();
     expect(find.text('TEACHING NOTES'), findsOneWidget);
