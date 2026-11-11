@@ -284,7 +284,12 @@ void main() {
     await tester.scrollUntilVisible(lastChapter, 400, scrollable: academyScroll);
     await tester.tap(lastChapter);
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Human development, inequality and social policy'));
+    final lessonTile = find.widgetWithText(
+      ExpansionTile,
+      'Human development, inequality and social policy',
+    );
+    await tester.ensureVisible(lessonTile);
+    await tester.tap(lessonTile);
     await tester.pumpAndSettle();
 
     expect(find.text('Human development, inequality and social policy'), findsOneWidget);
