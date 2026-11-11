@@ -19,10 +19,15 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _section = 0;
+  int _studyTab = 0;
 
   static const _nav = _workspaceNav;
 
   void _open(int index) => setState(() => _section = index);
+  void _openStudyTab(int tab) => setState(() {
+    _studyTab = tab;
+    _section = 1;
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
       return Scaffold(
         backgroundColor: const Color(0xFFF5F8FC),
         appBar: AppBar(
-          toolbarHeight: 72,
-          titleSpacing: wide ? 28 : 18,
+          toolbarHeight: 76,
+          titleSpacing: wide ? 30 : 16,
+          scrolledUnderElevation: 0,
+          surfaceTintColor: Colors.transparent,
           title: Row(children: [
             if (!wide) const _BrandMark(),
             if (!wide) const SizedBox(width: 10),
@@ -52,9 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Row(children: [
           if (wide) _Sidebar(selected: _section, onSelect: _open),
           Expanded(child: _section == 0
-              ? _Dashboard(onNavigate: _open, compact: compact)
+              ? _Dashboard(onNavigate: _open, onStudyTab: _openStudyTab, compact: compact)
               : _section == 1
-                  ? const StudyHubScreen()
+                  ? StudyHubScreen(initialTabIndex: _studyTab)
                   : _section == 2
                       ? const EssayScreen()
                       : const ExamHubScreen()),
@@ -82,9 +89,9 @@ class _Sidebar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-    width: 248,
-    color: Colors.white,
-    padding: const EdgeInsets.fromLTRB(18, 24, 14, 18),
+    width: 238,
+    decoration: const BoxDecoration(color: Colors.white, border: Border(right: BorderSide(color: Color(0xFFE6EDF4)))),
+    padding: const EdgeInsets.fromLTRB(17, 25, 13, 18),
     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const Padding(padding: EdgeInsets.only(left: 10, bottom: 34), child: Row(children: [
         _BrandMark(), SizedBox(width: 11),
@@ -132,73 +139,107 @@ class _Sidebar extends StatelessWidget {
   );
 }
 
+
 class _Dashboard extends StatelessWidget {
-  const _Dashboard({required this.onNavigate, required this.compact});
+  const _Dashboard({required this.onNavigate, required this.onStudyTab, required this.compact});
   final ValueChanged<int> onNavigate;
+  final ValueChanged<int> onStudyTab;
   final bool compact;
 
   @override
-  Widget build(BuildContext context) {
-    const firstName = 'Aspirant';
-    return SingleChildScrollView(
-      padding: EdgeInsets.fromLTRB(compact ? 16 : 34, 28, compact ? 16 : 34, 36),
-      child: Center(
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 1240),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                const Text('YOUR CSS JOURNEY', style: TextStyle(fontSize: 10, letterSpacing: 1.6, color: Color(0xFF1769AA), fontWeight: FontWeight.w900)),
-                const SizedBox(height: 9),
-                Text('Good to see you, $firstName.', maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: compact ? 25 : 31, height: 1.15, fontWeight: FontWeight.w900, letterSpacing: -.8, color: const Color(0xFF102A43))),
-                const SizedBox(height: 8),
-                const Text('A clear plan turns preparation into measurable progress.', style: TextStyle(fontSize: 13, color: Color(0xFF718096))),
-              ])),
-              if (!compact) const _TopPill(icon: Icons.auto_awesome_rounded, label: 'Your learning desk'),
-            ]),
-            const SizedBox(height: 25),
-            _HeroCard(onStudy: () => onNavigate(1), compact: compact),
-            const SizedBox(height: 25),
-            const _SectionHeading(title: 'Your preparation toolkit', subtitle: 'Focused resources for the written examination'),
-            const SizedBox(height: 13),
-            LayoutBuilder(builder: (context, box) {
-              final cols = box.maxWidth > 850 ? 4 : box.maxWidth > 540 ? 2 : 1;
-              final items = [
-                _ToolData(Icons.account_balance_rounded, 'Pakistan Affairs', '8 foundation lessons', 'Historical context, constitutional development and analytical frameworks', const Color(0xFFEAF3FB), () => onNavigate(1)),
-                _ToolData(Icons.public_rounded, 'Current Affairs', '6 issue briefs', 'Build balanced arguments around national and global challenges', const Color(0xFFEAF5F0), () => onNavigate(1)),
-                _ToolData(Icons.quiz_rounded, 'MCQ Practice', '30 practice questions', 'Test recall with instant explanations and answer feedback', const Color(0xFFFFF4E5), () => onNavigate(1)),
-                _ToolData(Icons.edit_note_rounded, 'Essay Examiner', 'Practice workspace', 'Develop thesis, structure, evidence, analysis and expression', const Color(0xFFF1EDFC), () => onNavigate(2)),
-                _ToolData(Icons.timer_rounded, 'Practice Tests', 'Timed MCQ tests', 'Attempt timed questions, review explanations and calculate your score', const Color(0xFFEAF5F0), () => onNavigate(3)),
-              ];
-              return GridView.count(
-                crossAxisCount: cols,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                crossAxisSpacing: 12,
-                mainAxisSpacing: 12,
-                childAspectRatio: compact ? 2.0 : cols == 4 ? 1.05 : 1.6,
-                children: items.map((item) => _ToolCard(item: item)).toList(),
-              );
-            }),
-            const SizedBox(height: 26),
-            LayoutBuilder(builder: (context, box) {
-              final stacked = box.maxWidth < 760;
-              final plan = const _StudyPlanCard();
-              final guidance = const _GuidanceCard();
-              if (stacked) return Column(children: [plan, const SizedBox(height: 14), guidance]);
-              return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Expanded(flex: 6, child: plan),
-                const SizedBox(width: 14),
-                Expanded(flex: 4, child: guidance),
-              ]);
-            }),
-            const SizedBox(height: 22),
-            const _FooterNote(),
+  Widget build(BuildContext context) => SingleChildScrollView(
+    padding: EdgeInsets.fromLTRB(compact ? 16 : 34, compact ? 20 : 28, compact ? 16 : 34, 36),
+    child: Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 1320),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+            Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              const Text('BUREAUCRATS  /  CSS ACADEMY', style: TextStyle(fontSize: 10, letterSpacing: 1.6, color: Color(0xFF1769AA), fontWeight: FontWeight.w900)),
+              const SizedBox(height: 8),
+              Text('Your preparation,\\nwith direction.', maxLines: 2, style: TextStyle(fontSize: compact ? 27 : 34, height: 1.12, fontWeight: FontWeight.w900, letterSpacing: -1.0, color: const Color(0xFF102A43))),
+              const SizedBox(height: 7),
+              const Text('A focused academic workspace for the CSS Competitive Examination.', style: TextStyle(fontSize: 13, height: 1.45, color: Color(0xFF718096))),
+            ])),
+            if (!compact) const _TopPill(icon: Icons.verified_outlined, label: 'CSS CE-2027'),
           ]),
-        ),
+          const SizedBox(height: 22),
+          _HeroCard(onStudy: () => onStudyTab(0), compact: compact),
+          const SizedBox(height: 22),
+          LayoutBuilder(builder: (context, box) {
+            final itemWidth = box.maxWidth < 560 ? box.maxWidth : (box.maxWidth - 24) / 3;
+            return Wrap(spacing: 12, runSpacing: 12, children: [
+              _MetricCard(width: itemWidth, value: '1,200', label: 'WRITTEN EXAM MARKS', detail: 'Six compulsory + optional papers'),
+              _MetricCard(width: itemWidth, value: '600', label: 'COMPULSORY MARKS', detail: 'Six papers • 100 marks each'),
+              _MetricCard(width: itemWidth, value: '600', label: 'OPTIONAL MARKS', detail: 'Selections governed by seven groups'),
+            ]);
+          }),
+          const SizedBox(height: 28),
+          const _SectionHeading(title: 'The academic workspace', subtitle: 'Move from syllabus coverage to deliberate practice'),
+          const SizedBox(height: 13),
+          LayoutBuilder(builder: (context, box) {
+            final cols = box.maxWidth > 980 ? 3 : box.maxWidth > 580 ? 2 : 1;
+            final items = [
+              _ToolData(Icons.menu_book_rounded, 'Study Centre', 'Compulsory foundations', 'Structured teaching notes, topic roadmaps and answer-writing tasks.', const Color(0xFFEAF3FB), () => onStudyTab(0)),
+              _ToolData(Icons.account_balance_rounded, 'Optional Subjects', 'Seven official groups', 'Review subject combinations and explore starter modules for selected subjects.', const Color(0xFFEAF3FB), () => onStudyTab(2)),
+              _ToolData(Icons.library_books_rounded, 'Past Papers', 'Official FPSC archive', 'Open original CSS question papers, syllabus and examination rules.', const Color(0xFFEAF3FB), () => onStudyTab(5)),
+              _ToolData(Icons.public_rounded, 'Current Affairs', 'Six analytical briefs', 'Build evidence-led arguments around Pakistan and global issues.', const Color(0xFFEAF3FB), () => onStudyTab(3)),
+              _ToolData(Icons.quiz_rounded, 'MCQ Practice', '30 practice questions', 'Test recall with instant explanations and answer feedback.', const Color(0xFFEAF3FB), () => onStudyTab(4)),
+              _ToolData(Icons.edit_note_rounded, 'Essay Workshop', 'Planning workspace', 'Develop a thesis, outline, evidence, analysis and final review.', const Color(0xFFEAF3FB), () => onNavigate(2)),
+              _ToolData(Icons.timer_rounded, 'Timed Practice Tests', 'Exam-style routine', 'Attempt timed questions, review explanations and assess your score.', const Color(0xFFEAF3FB), () => onNavigate(3)),
+            ];
+            return GridView.count(
+              crossAxisCount: cols,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              crossAxisSpacing: 13,
+              mainAxisSpacing: 13,
+              childAspectRatio: compact ? 2.15 : cols == 3 ? 1.65 : 1.8,
+              children: items.map((item) => _ToolCard(item: item)).toList(),
+            );
+          }),
+          const SizedBox(height: 26),
+          LayoutBuilder(builder: (context, box) {
+            final stacked = box.maxWidth < 760;
+            const plan = _StudyPlanCard();
+            const guidance = _GuidanceCard();
+            if (stacked) return const Column(children: [plan, SizedBox(height: 14), guidance]);
+            return const Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Expanded(flex: 6, child: plan),
+              SizedBox(width: 14),
+              Expanded(flex: 4, child: guidance),
+            ]);
+          }),
+          const SizedBox(height: 22),
+          const _FooterNote(),
+        ]),
       ),
-    );
-  }
+    ),
+  );
+}
+
+class _MetricCard extends StatelessWidget {
+  const _MetricCard({required this.width, required this.value, required this.label, required this.detail});
+  final double width;
+  final String value, label, detail;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    width: width,
+    padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 15),
+    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15), border: Border.all(color: const Color(0xFFE3EAF1))),
+    child: Row(children: [
+      Container(width: 4, height: 42, decoration: BoxDecoration(color: const Color(0xFF1769AA), borderRadius: BorderRadius.circular(5))),
+      const SizedBox(width: 13),
+      Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(value, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, letterSpacing: -.5, color: Color(0xFF102A43))),
+        const SizedBox(height: 2),
+        Text(label, style: const TextStyle(fontSize: 9, letterSpacing: .8, fontWeight: FontWeight.w900, color: Color(0xFF1769AA))),
+        const SizedBox(height: 3),
+        Text(detail, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 10, height: 1.3, color: Color(0xFF718096))),
+      ])),
+    ]),
+  );
 }
 
 class _HeroCard extends StatelessWidget {
@@ -216,17 +257,17 @@ class _HeroCard extends StatelessWidget {
     child: Stack(children: [
       Positioned(right: -8, top: -22, child: Icon(Icons.school_rounded, size: compact ? 100 : 150, color: Colors.white.withValues(alpha: .07))),
       Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const Text('THE DISCIPLINED ASPIRANT', style: TextStyle(color: Color(0xFFB9D9F5), fontSize: 10, letterSpacing: 1.5, fontWeight: FontWeight.w900)),
+        const Text('BUREAUCRATS  •  CSS CE-2027', style: TextStyle(color: Color(0xFFB9D9F5), fontSize: 10, letterSpacing: 1.5, fontWeight: FontWeight.w900)),
         const SizedBox(height: 13),
-        Text('Learn deeply.\nWrite with clarity.', style: TextStyle(color: Colors.white, fontSize: compact ? 25 : 31, height: 1.15, fontWeight: FontWeight.w900, letterSpacing: -.6)),
+        Text('Prepare with discipline.\nAnswer with authority.', style: TextStyle(color: Colors.white, fontSize: compact ? 25 : 31, height: 1.15, fontWeight: FontWeight.w900, letterSpacing: -.6)),
         const SizedBox(height: 10),
-        ConstrainedBox(constraints: const BoxConstraints(maxWidth: 500), child: const Text('CSS rewards understanding, evidence and a structured argument. Start with one topic, test what you remember, then write what you know.', style: TextStyle(color: Color(0xFFE1EDF7), height: 1.5, fontSize: 13))),
+        ConstrainedBox(constraints: const BoxConstraints(maxWidth: 500), child: const Text('A serious preparation system begins with syllabus command, builds through active recall and is proven in clear, well-supported written answers.', style: TextStyle(color: Color(0xFFE1EDF7), height: 1.5, fontSize: 13))),
         const SizedBox(height: 19),
         FilledButton.icon(
           onPressed: onStudy,
           style: FilledButton.styleFrom(backgroundColor: Colors.white, foregroundColor: const Color(0xFF145B94), padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 13)),
           icon: const Icon(Icons.menu_book_rounded, size: 17),
-          label: const Text('Continue learning', style: TextStyle(fontWeight: FontWeight.w800)),
+          label: const Text('Enter the Study Centre', style: TextStyle(fontWeight: FontWeight.w800)),
         ),
       ]),
     ]),
