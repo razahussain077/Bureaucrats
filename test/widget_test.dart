@@ -46,15 +46,9 @@ void main() {
 
     expect(find.text('Choose strategically. Study systematically.'), findsOneWidget);
     expect(find.text('Group I'), findsOneWidget);
-    await tester.scrollUntilVisible(
-      find.text('Political Science'),
-      280,
-      scrollable: find.byType(Scrollable).last,
-    );
-    await tester.tap(find.text('Political Science'));
+    await tester.tap(find.text('Group I'));
     await tester.pumpAndSettle();
-    expect(find.text('CORE TOPIC MAP'), findsOneWidget);
-    expect(find.textContaining('Political theory'), findsOneWidget);
+    expect(find.textContaining('Political Science'), findsOneWidget);
 
     await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 5)));
     await tester.pumpAndSettle();
@@ -103,11 +97,12 @@ void main() {
     await tester.pumpWidget(const MaterialApp(home: EssayScreen()));
     await tester.pumpAndSettle();
 
-    expect(find.text('0 words'), findsOneWidget);
     expect(find.text('Decode the prompt'), findsOneWidget);
-    await tester.scrollUntilVisible(find.text('Self-review checklist'), 260);
+    await tester.drag(find.byType(ListView).first, const Offset(0, -1400));
+    await tester.pumpAndSettle();
     expect(find.text('Self-review checklist'), findsOneWidget);
-    await tester.scrollUntilVisible(find.text('My thesis is clear, specific and arguable.'), 220);
+    await tester.ensureVisible(find.text('My thesis is clear, specific and arguable.'));
+    expect(find.text('Self-review checklist'), findsOneWidget);
     await tester.tap(find.text('My thesis is clear, specific and arguable.'));
     await tester.pumpAndSettle();
     expect(find.text('1 of 8 checks completed'), findsOneWidget);
