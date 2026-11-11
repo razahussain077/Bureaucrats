@@ -91,10 +91,15 @@ void main() {
 
     tabController.animateTo(6);
     await tester.pumpAndSettle();
-    expect(find.text('Pakistan Affairs — 28 official syllabus areas'), findsOneWidget);
-    await tester.tap(find.text('Pakistan Affairs — 28 official syllabus areas'));
+    final syllabusScroll = find.byType(Scrollable).last;
+    final pakistanTracker = find.text('Pakistan Affairs — 28 official syllabus areas');
+    await tester.scrollUntilVisible(pakistanTracker, 300, scrollable: syllabusScroll);
+    expect(pakistanTracker, findsOneWidget);
+    await tester.tap(pakistanTracker);
     await tester.pumpAndSettle();
-    expect(find.textContaining('XXVIII. Social problems: poverty, education, health and sanitation'), findsOneWidget);
+    final finalClause = find.textContaining('XXVIII. Social problems: poverty, education, health and sanitation');
+    await tester.scrollUntilVisible(finalClause, 300, scrollable: syllabusScroll);
+    expect(finalClause, findsOneWidget);
   });
 
   testWidgets('dashboard presents Bureaucrats academy identity and resources', (tester) async {
@@ -287,7 +292,7 @@ void main() {
     final lessonTile = find.widgetWithText(
       ExpansionTile,
       'Human development, inequality and social policy',
-    );
+    ).last;
     await tester.ensureVisible(lessonTile);
     await tester.tap(lessonTile);
     await tester.pumpAndSettle();
