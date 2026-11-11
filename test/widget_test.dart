@@ -41,11 +41,16 @@ void main() {
   });
 
   testWidgets('academy classroom opens detailed chapter lessons', (tester) async {
+    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 7)));
     await tester.pumpAndSettle();
 
     expect(find.text('ACADEMY CLASSROOM'), findsOneWidget);
     expect(find.text('Pakistan Affairs'), findsWidgets);
+    await tester.ensureVisible(find.text('How Muslim political thought developed in South Asia'));
     await tester.tap(find.text('How Muslim political thought developed in South Asia'));
     await tester.pumpAndSettle();
 
