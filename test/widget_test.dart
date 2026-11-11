@@ -262,7 +262,7 @@ void main() {
 
     expect(find.text('ACADEMY CLASSROOM'), findsOneWidget);
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('29 chapters • 36 lessons'), findsOneWidget);
+    expect(find.textContaining('31 chapters • 38 lessons'), findsOneWidget);
 
     await tester.ensureVisible(find.text('The reformers and educational institutions: a comparative study'));
     expect(find.text('The reformers and educational institutions: a comparative study'), findsOneWidget);
@@ -278,6 +278,12 @@ void main() {
     expect(find.text('CSS EXAM QUESTION'), findsWidgets);
     expect(find.text('CLASSWORK'), findsWidgets);
     expect(find.text('1. Poverty, inequality and social protection'), findsOneWidget);
+
+    final workshop = find.text('Past-paper integration and examiner-standard answer writing');
+    await tester.ensureVisible(workshop);
+    await tester.tap(workshop);
+    await tester.pumpAndSettle();
+    expect(find.text('How to decode a Pakistan Affairs question'), findsOneWidget);
   });
 
   testWidgets('Pakistan Affairs MCQ bank has expanded to sixty explained questions', (tester) async {
