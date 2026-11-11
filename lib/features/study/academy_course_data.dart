@@ -739,6 +739,70 @@ Local governments, provincial departments, utilities, schools and health facilit
 The Pakistan Economic Survey 2025–26 includes separate chapters on education, health and nutrition, population and labour, social protection and related indicators. Use those official tables for updated figures and state the year and definition of every statistic.'''),
         ], keyTerms: ['Multidimensional poverty', 'Horizontal inequality', 'Social protection', 'Out-of-school children', 'Learning outcomes', 'Primary healthcare', 'WASH', 'Policy evaluation'], examQuestion: 'Why have improvements in economic growth not automatically translated into adequate human development in Pakistan? Discuss education, health, poverty and sanitation together.', practiceTask: 'Prepare a district-level social development plan with four outcomes: poverty reduction, learning, primary healthcare and safe sanitation. Specify baseline indicators, agencies, budget logic and evaluation methods.')
       ]),
+
+      AcademyChapter(number: '30', title: 'Past-paper integration and examiner-standard answer writing', syllabusLink: 'Supplementary academy workshop: use authentic FPSC papers, connect questions to the syllabus and write analytical, evidence-led answers', lessons: [
+        AcademyLesson(title: 'How to decode a Pakistan Affairs question', objectives: 'Identify the demand, time period, scope and command word in a question before planning an answer.', sections: [
+          AcademyLessonSection('1. Command words and question demand', '''The command word tells you what the examiner expects. “Explain” requires a clear account of how or why something happened. “Discuss” requires a structured examination of major arguments and evidence. “Critically examine” requires analysis, limitations, counterarguments and a reasoned judgement. “Evaluate” requires criteria and a conclusion about relative importance or effectiveness. “Compare” requires explicit similarities and differences, not two disconnected descriptions.
+
+Underline the topic, time period, geographical scope and command word. A question about political evolution since 1971 should not become a general history of the entire Pakistan Movement. A question about the Indus Waters Treaty requires treaty provisions and water governance, not only a list of dams.'''),
+          AcademyLessonSection('2. Build a thesis before writing', '''A thesis is the central judgement that answers the question. It should be specific enough to guide the essay and balanced enough to accommodate evidence. For example: “Pakistan’s water insecurity is produced by both transboundary uncertainty and domestic weaknesses in allocation, storage, irrigation efficiency and groundwater governance.” This is stronger than saying “water is a major problem.”
+
+Use a logical structure: define the issue; establish the historical or constitutional context; identify causes and institutions; analyse evidence; examine counterarguments; evaluate policy options; and conclude with a judgement. Every heading should help answer the question, not merely display information.'''),
+          AcademyLessonSection('3. Evidence, maps and chronology', '''Evidence can include constitutional articles, enacted laws, dates of agreements, official statistics, historical documents, court judgments, maps and credible research. State the source and year of a statistic. Distinguish an estimate from a final outcome and a government claim from independently verified evidence. Never invent quotations, percentages or legal holdings.
+
+Use maps for geography, rivers, ports, borders and regional connectivity. Use timelines for constitutional development, wars, agreements and political transitions. Visual material should be labelled and directly relevant to the question; a map without analytical explanation earns little value.'''),
+          AcademyLessonSection('4. A disciplined conclusion', '''The conclusion should answer the question directly and follow from the evidence already presented. It should not introduce a new topic or repeat the introduction. State which factors were most important, why proposed reforms are feasible and what trade-offs remain. Avoid absolute language where evidence is contested or incomplete.'''),
+        ], keyTerms: ['Command word', 'Thesis', 'Causal analysis', 'Counterargument', 'Primary source', 'Evidence hierarchy', 'Chronology', 'Evaluative conclusion'], examQuestion: 'Why do descriptive answers often fail to secure high marks in Pakistan Affairs? Explain how analysis, evidence and judgement improve answer quality.', practiceTask: 'Take any one Pakistan Affairs past-paper question. Mark its command word, scope and time period; write a one-sentence thesis; prepare six analytical headings and a two-sentence conclusion.')
+      ]),
+      AcademyChapter(number: '31', title: 'Model answer frameworks for recurring Pakistan Affairs themes', syllabusLink: 'Supplementary academy workshop: model outlines for constitutional, economic, foreign-policy and security questions', lessons: [
+        AcademyLesson(title: 'Three worked answer plans and a marking checklist', objectives: 'Convert broad Pakistan Affairs topics into coherent arguments supported by legal, historical and economic evidence.', sections: [
+          AcademyLessonSection('1. Model plan: federalism and national integration', '''Question: “Can federalism strengthen national integration in Pakistan?”
+
+Thesis: Federalism can accommodate diversity and improve legitimacy, but its success depends on meaningful provincial authority, predictable finance, effective local government and protection of equal citizenship.
+
+Suggested structure:
+1. Define federalism and national integration.
+2. Briefly trace the constitutional evolution from the 1956 and 1962 systems to the 1973 Constitution.
+3. Explain provincial representation through the Senate and intergovernmental coordination through the Council of Common Interests.
+4. Analyse the Eighteenth Amendment and the National Finance Commission framework.
+5. Discuss implementation challenges: administrative capacity, fiscal autonomy, resource disputes and regional grievances.
+6. Evaluate local government, political dialogue and rights protection as complementary mechanisms.
+7. Conclude that federalism is a framework, not an automatic solution; institutional performance determines its integrative effect.
+
+Evidence to verify: Articles 153 and 160; Eighteenth Amendment text; Twenty-fifth Amendment; current provincial fiscal and service-delivery data.'''),
+          AcademyLessonSection('2. Model plan: economic stabilisation and inclusive growth', '''Question: “Why has macroeconomic stabilisation not automatically delivered inclusive growth in Pakistan?”
+
+Thesis: Stabilisation can reduce immediate external and fiscal pressures, but durable welfare gains require productivity growth, export diversification, fair taxation, investment, human development and reliable energy.
+
+Suggested structure:
+1. Define stabilisation and inclusive growth.
+2. Explain the fiscal, external and inflationary pressures that drive repeated adjustment.
+3. Analyse low productivity, narrow exports, tax exemptions, energy costs and public debt servicing.
+4. Compare the performance of agriculture, manufacturing, services and IT using the latest Economic Survey.
+5. Assess the FY2026–27 budget priorities and the IMF programme’s stated targets, clearly labelling estimates and conditions.
+6. Examine distributional effects on households, firms, employment and public services.
+7. Propose measurable reforms in tax administration, skills, competition, energy efficiency, social protection and export capability.
+
+Evidence to verify: Pakistan Economic Survey 2025–26; Federal Budget 2026–27; IMF statement of 7 October 2026; SBP and PBS releases. Do not use an old GDP, inflation or debt figure without its fiscal year.'''),
+          AcademyLessonSection('3. Model plan: India, Kashmir and regional stability', '''Question: “How does the Kashmir dispute shape Pakistan-India relations and regional security?”
+
+Thesis: Kashmir remains a central dispute, but bilateral instability also reflects competing security perceptions, limited dialogue, terrorism allegations, water tensions, domestic politics and the risks of military escalation between nuclear-armed states.
+
+Suggested structure:
+1. Explain the 1947 origins and the UN framework.
+2. Analyse the 1965 and 1971 wars, Tashkent and the Simla Agreement.
+3. Discuss nuclearisation, Lahore 1999, Kargil and later crisis cycles.
+4. Explain the 2019 constitutional changes in Indian-administered Jammu and Kashmir and the competing legal-political positions.
+5. Analyse the 2025 military crisis and the 10 May ceasefire; distinguish each government’s account from independent reporting.
+6. Link the Indus Waters Treaty dispute to wider trust and security concerns.
+7. Evaluate crisis hotlines, restraint, rights protection, trade and sustained diplomacy as risk-reduction measures.
+
+Evidence to verify: UN resolutions; Simla Agreement; official statements from both states; independent reporting; Permanent Court of Arbitration records on the Indus Waters Treaty.'''),
+          AcademyLessonSection('4. Examiner’s self-assessment checklist', '''Before submitting an answer, check: Did I answer the exact question? Is my thesis visible in the introduction? Does every heading advance the argument? Have I used accurate dates, laws and data? Have I distinguished fact from claim? Have I included at least one counterargument or limitation? Are recommendations feasible and linked to diagnosed causes? Does the conclusion make a clear judgement?
+
+A high-quality answer is relevant, accurate, analytical, balanced and readable. More facts do not compensate for a weak argument, and decorative quotations do not replace evidence.'''),
+        ], keyTerms: ['Model outline', 'Federalism', 'Inclusive growth', 'Stabilisation', 'Kashmir dispute', 'Crisis management', 'Source verification', 'Examiner checklist'], examQuestion: 'Using one of the model themes, write a balanced answer that contains a thesis, evidence, counterargument, policy recommendations and a reasoned conclusion.', practiceTask: 'Write one full timed answer from the three frameworks. Then annotate it against the eight-point examiner checklist and rewrite the weakest paragraph.')
+      ]),
     ],
   ),
   AcademyCourse(
