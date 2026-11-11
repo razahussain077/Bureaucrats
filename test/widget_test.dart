@@ -10,11 +10,12 @@ void main() {
     expect(AppConfig.supabasePublishableKey, startsWith('sb_publishable_'));
   });
 
-  testWidgets('study centre exposes the four preparation areas', (tester) async {
+  testWidgets('study centre exposes all five preparation areas', (tester) async {
     await tester.pumpWidget(const MaterialApp(home: StudyHubScreen()));
     await tester.pumpAndSettle();
 
     expect(find.text('Pakistan Affairs'), findsWidgets);
+    expect(find.text('Core Papers'), findsOneWidget);
     expect(find.text('Current Affairs'), findsWidgets);
     expect(find.text('MCQ Practice'), findsOneWidget);
     expect(find.text('CSS Syllabus'), findsOneWidget);
