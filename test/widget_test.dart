@@ -280,6 +280,10 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Human development, inequality and social policy'), findsOneWidget);
+    expect(find.text('Mark lesson complete'), findsOneWidget);
+    await tester.tap(find.text('Mark lesson complete'));
+    await tester.pumpAndSettle();
+    expect(find.text('1 / 38 lessons completed'), findsOneWidget);
     expect(find.text('CSS EXAM QUESTION'), findsWidgets);
     expect(find.text('CLASSWORK'), findsWidgets);
     expect(find.text('1. Poverty, inequality and social protection'), findsOneWidget);
