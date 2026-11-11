@@ -1058,8 +1058,7 @@ class _SyllabusTabState extends State<_SyllabusTab> {
         ...groups.entries.map((entry) => Card(
           margin: const EdgeInsets.only(bottom: 10),
           child: ExpansionTile(
-            initiallyExpanded: entry.key == 'Compulsory papers' ||
-                entry.key.startsWith('Pakistan Affairs — 28 official syllabus areas'),
+            initiallyExpanded: entry.key == 'Compulsory papers',
             title: Text(entry.key, style: const TextStyle(fontWeight: FontWeight.w700)),
             subtitle: Text('${entry.value.where(completed.contains).length} of ${entry.value.length} completed'),
             children: entry.value.map((item) => CheckboxListTile(
