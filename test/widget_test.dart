@@ -153,4 +153,42 @@ void main() {
     expect(find.text('The Simla Deputation met Lord Minto in:'), findsOneWidget);
     expect(find.text('Next question'), findsOneWidget);
   });
+
+  testWidgets('optional academy subjects open their detailed lessons', (tester) async {
+    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 7)));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Economics').last);
+    await tester.pumpAndSettle();
+    expect(find.text('Economics'.toUpperCase()), findsOneWidget);
+    expect(find.textContaining('4 chapters'), findsOneWidget);
+
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Computer Science').last);
+    await tester.pumpAndSettle();
+    expect(find.text('Computer Science'.toUpperCase()), findsOneWidget);
+    expect(find.textContaining('4 chapters'), findsOneWidget);
+
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Public Administration').last);
+    await tester.pumpAndSettle();
+    expect(find.text('PUBLIC ADMINISTRATION'), findsOneWidget);
+    expect(find.textContaining('4 chapters'), findsOneWidget);
+
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Gender Studies').last);
+    await tester.pumpAndSettle();
+    expect(find.text('GENDER STUDIES'), findsOneWidget);
+    expect(find.textContaining('4 chapters'), findsOneWidget);
+  });
+
 }
