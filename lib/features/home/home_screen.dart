@@ -157,7 +157,7 @@ class _Dashboard extends StatelessWidget {
             Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               const Text('BUREAUCRATS  /  CSS ACADEMY', style: TextStyle(fontSize: 10, letterSpacing: 1.6, color: Color(0xFF1769AA), fontWeight: FontWeight.w900)),
               const SizedBox(height: 8),
-              Text('Your preparation,\\nwith direction.', maxLines: 2, style: TextStyle(fontSize: compact ? 27 : 34, height: 1.12, fontWeight: FontWeight.w900, letterSpacing: -1.0, color: const Color(0xFF102A43))),
+              Text('Your preparation,\nwith direction.', maxLines: 2, style: TextStyle(fontSize: compact ? 27 : 34, height: 1.12, fontWeight: FontWeight.w900, letterSpacing: -1.0, color: const Color(0xFF102A43))),
               const SizedBox(height: 7),
               const Text('A focused academic workspace for the CSS Competitive Examination.', style: TextStyle(fontSize: 13, height: 1.45, color: Color(0xFF718096))),
             ])),
