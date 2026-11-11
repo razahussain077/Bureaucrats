@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'academy_course_data.dart';
 import 'comparative_religions_course.dart';
+import 'optional_academy_courses.dart';
 
 class AcademyLibraryScreen extends StatefulWidget {
   const AcademyLibraryScreen({super.key});
@@ -15,7 +16,11 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final courses = [...compulsoryAcademyCourses, ...comparativeReligionCourses];
+    final courses = [
+      ...compulsoryAcademyCourses,
+      ...optionalAcademyCourses,
+      ...comparativeReligionCourses,
+    ];
     final course = courses[_selectedCourseIndex];
 
     return Column(
@@ -42,7 +47,7 @@ class _AcademyLibraryScreenState extends State<AcademyLibraryScreen> {
               ),
               const SizedBox(height: 5),
               Text(
-                'Choose a compulsory paper to open its chapter-wise lessons.',
+                'Choose a compulsory or optional paper to open its chapter-wise lessons.',
                 style: TextStyle(
                   fontSize: 12,
                   color: Theme.of(context).colorScheme.onSurfaceVariant,
