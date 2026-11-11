@@ -17,6 +17,11 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Pakistan Affairs'), findsWidgets);
+    await tester.tap(find.text('Historical foundations of Muslim political identity'));
+    await tester.pumpAndSettle();
+    expect(find.text('CLASS NOTES'), findsOneWidget);
+    expect(find.textContaining('The events of 1857 marked a decisive rupture'), findsOneWidget);
+    expect(find.text('ANSWER-WRITING TASK'), findsOneWidget);
     expect(find.text('Core Papers'), findsOneWidget);
     expect(find.text('Current Affairs'), findsWidgets);
     expect(find.text('MCQ Practice'), findsOneWidget);
