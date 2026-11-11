@@ -271,7 +271,7 @@ void main() {
 
     expect(find.text('ACADEMY CLASSROOM'), findsOneWidget);
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('32 chapters • 39 lessons'), findsOneWidget);
+    expect(find.textContaining('32 chapters • 44 lessons'), findsOneWidget);
 
     await tester.ensureVisible(find.text('The reformers and educational institutions: a comparative study'));
     expect(find.text('The reformers and educational institutions: a comparative study'), findsOneWidget);
@@ -296,7 +296,7 @@ void main() {
     expect(find.text('Mark lesson complete'), findsOneWidget);
     await tester.tap(find.text('Mark lesson complete'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 39 lessons completed'), findsOneWidget);
+    expect(find.text('1 / 44 lessons completed'), findsOneWidget);
     expect(find.text('CSS EXAM QUESTION'), findsWidgets);
     expect(find.text('CLASSWORK'), findsWidgets);
     expect(find.text('1. Poverty, inequality and social protection'), findsOneWidget);
@@ -306,6 +306,16 @@ void main() {
     await tester.tap(workshop);
     await tester.pumpAndSettle();
     expect(find.text('How to decode a Pakistan Affairs question'), findsOneWidget);
+
+    final modelChapter = find.text('Model answer frameworks for recurring Pakistan Affairs themes');
+    await tester.scrollUntilVisible(modelChapter, 400, scrollable: academyScroll);
+    await tester.tap(modelChapter);
+    await tester.pumpAndSettle();
+    final jinnahAnswer = find.text('Complete model answer: Jinnah’s leadership during 1937–1947');
+    await tester.scrollUntilVisible(jinnahAnswer, 300, scrollable: academyScroll);
+    await tester.tap(jinnahAnswer);
+    await tester.pumpAndSettle();
+    expect(find.textContaining('The decade from 1937 to 1947 transformed'), findsOneWidget);
   });
 
   testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred explained questions', (tester) async {
