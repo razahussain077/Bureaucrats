@@ -271,8 +271,8 @@ class _StudyPlanCard extends StatelessWidget {
     decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), border: Border.all(color: const Color(0xFFE6EDF4))),
     child: const Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       _SectionHeading(title: 'A practical study session', subtitle: 'A suggested 2-hour routine to build consistency'),
-      const SizedBox(height: 17),
-      const _PlanRow(time: '35 min', title: 'Concept study', detail: 'Read one Pakistan Affairs lesson actively', icon: Icons.menu_book_rounded),
+      SizedBox(height: 17),
+      _PlanRow(time: '35 min', title: 'Concept study', detail: 'Read one Pakistan Affairs lesson actively', icon: Icons.menu_book_rounded),
       const _PlanRow(time: '20 min', title: 'Active recall', detail: 'Close your notes and reconstruct key points', icon: Icons.psychology_alt_rounded),
       const _PlanRow(time: '25 min', title: 'MCQ practice', detail: 'Test recall and review every explanation', icon: Icons.quiz_rounded),
       const _PlanRow(time: '40 min', title: 'Answer writing', detail: 'Write one structured analytical response', icon: Icons.edit_note_rounded, last: true),
