@@ -95,10 +95,10 @@ class _Sidebar extends StatelessWidget {
     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const Padding(padding: EdgeInsets.only(left: 10, bottom: 34), child: Row(children: [
         _BrandMark(), SizedBox(width: 11),
-        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text('Bureaucrats', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 17, color: Color(0xFF102A43), letterSpacing: -.4)),
-          Text('CSS PREPARATION', style: TextStyle(fontSize: 9, letterSpacing: 1.3, color: Color(0xFF718096), fontWeight: FontWeight.w800)),
-        ]),
+        Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text('Bureaucrats', maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: Color(0xFF102A43), letterSpacing: -.4)),
+          Text('CSS PREPARATION', maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 8, letterSpacing: 1.0, color: Color(0xFF718096), fontWeight: FontWeight.w800)),
+        ])),
       ])),
       const Padding(padding: EdgeInsets.only(left: 12, bottom: 10), child: Text('WORKSPACE', style: TextStyle(fontSize: 10, letterSpacing: 1.3, color: Color(0xFF9AA8B7), fontWeight: FontWeight.w800))),
       ...List.generate(_workspaceNav.length, (i) {
@@ -115,7 +115,7 @@ class _Sidebar extends StatelessWidget {
               child: Padding(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 13), child: Row(children: [
                 Icon(item.$1, size: 19, color: active ? const Color(0xFF1769AA) : const Color(0xFF718096)),
                 const SizedBox(width: 12),
-                Text(item.$2, style: TextStyle(fontSize: 13, fontWeight: active ? FontWeight.w800 : FontWeight.w600, color: active ? const Color(0xFF1769AA) : const Color(0xFF526579))),
+                Expanded(child: Text(item.$2, maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12, fontWeight: active ? FontWeight.w800 : FontWeight.w600, color: active ? const Color(0xFF1769AA) : const Color(0xFF526579)))),
               ])),
             ),
           ),
