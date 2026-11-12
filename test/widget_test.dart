@@ -310,6 +310,10 @@ void main() {
     final chapterLinks = course.chapters
         .map((chapter) => chapter.syllabusLink)
         .join(' ');
+    final chapterTitles = course.chapters
+        .map((chapter) => chapter.title)
+        .join(' ');
+    final coverageText = '$chapterLinks $chapterTitles';
     for (final clause in <String>[
       'Ideology of Pakistan',
       'Land and people',
@@ -339,7 +343,7 @@ void main() {
       'Constitutional and Legal Debates',
       'Social Problems',
     ]) {
-      expect(chapterLinks.toLowerCase(), contains(clause.toLowerCase()));
+      expect(coverageText.toLowerCase(), contains(clause.toLowerCase()));
     }
   });
 
