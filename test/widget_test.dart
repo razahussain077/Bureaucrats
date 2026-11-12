@@ -614,4 +614,48 @@ void main() {
     expect(find.textContaining('Which approach studies religion'), findsOneWidget);
   });
 
+
+  test('English Essay and Precis courses include substantive advanced lessons', () {
+    final essay = compulsoryAcademyCourses.singleWhere(
+      (course) => course.title == 'English Essay',
+    );
+    final precis = compulsoryAcademyCourses.singleWhere(
+      (course) => course.title == 'English (Precis & Composition)',
+    );
+    expect(essay.chapters, hasLength(8));
+    expect(precis.chapters, hasLength(8));
+
+    final essayLessons = essay.chapters.expand((chapter) => chapter.lessons).toList();
+    final precisLessons = precis.chapters.expand((chapter) => chapter.lessons).toList();
+    expect(essayLessons, hasLength(10));
+    expect(precisLessons, hasLength(10));
+
+    for (final lesson in [...essayLessons, ...precisLessons]) {
+      expect(lesson.title.trim(), isNotEmpty);
+      expect(lesson.objectives.trim(), isNotEmpty);
+      expect(lesson.sections, hasLength(3));
+      expect(lesson.keyTerms.length, greaterThanOrEqualTo(5));
+      expect(lesson.examQuestion.trim(), isNotEmpty);
+      expect(lesson.practiceTask.trim(), isNotEmpty);
+      for (final section in lesson.sections) {
+        expect(section.content.trim().length, greaterThan(250));
+      }
+    }
+
+    expect(
+      essayLessons.map((lesson) => lesson.title),
+      containsAll(<String>[
+        'Plan and draft under the clock',
+        'Diagnose and repair a weak essay',
+      ]),
+    );
+    expect(
+      precisLessons.map((lesson) => lesson.title),
+      containsAll(<String>[
+        'Precis examination workflow and title selection',
+        'Comprehension, inference and précis accuracy clinic',
+      ]),
+    );
+  });
+
 }
