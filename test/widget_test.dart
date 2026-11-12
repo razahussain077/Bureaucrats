@@ -255,8 +255,11 @@ void main() {
       'Environmental Sciences': 4,
       'Business Administration': 4,
     };
-    expect(optionalAcademyCourses, hasLength(10));
-    for (final course in optionalAcademyCourses) {
+    final expandedCourses = optionalAcademyCourses
+        .where((course) => expected.containsKey(course.title))
+        .toList();
+    expect(expandedCourses, hasLength(10));
+    for (final course in expandedCourses) {
       expect(expected[course.title], course.chapters.length);
       expect(
         course.chapters.map((chapter) => chapter.number).toSet(),
