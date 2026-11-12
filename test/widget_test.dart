@@ -302,15 +302,21 @@ void main() {
         'Complete model answer: youth bulge and sustainable economic development',
         'Complete model answer: Pakistan and the US-led War on Terror',
         'Complete model answer: Pakistan’s geo-strategic location and its challenges',
+        'CE-2024 official paper map: political stability, reform and integration',
+        'CE-2025 official paper map: water, history, CPEC and media',
+        'CE-2026 official paper map: Iqbal-Jinnah, Afghanistan, 27th Amendment and human development',
       ]),
     );
 
-    final chapterTitles = course.chapters
+    final chapterTitleSet = course.chapters
         .map((chapter) => chapter.title)
         .toSet();
     expect(
-      chapterTitles,
-      contains('Official past-paper map: CSS CE-2023 Pakistan Affairs'),
+      chapterTitleSet,
+      containsAll(<String>[
+        'Official past-paper map: CSS CE-2023 Pakistan Affairs',
+        'Model answer frameworks for recurring Pakistan Affairs themes',
+      ]),
     );
 
     final chapterLinks = course.chapters
@@ -365,7 +371,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('32 chapters • 55 lessons'), findsOneWidget);
+    expect(find.textContaining('32 chapters • 58 lessons'), findsOneWidget);
     expect(find.text('Mark lesson complete'), findsNothing);
 
     final firstLesson = find.byKey(
@@ -381,7 +387,7 @@ void main() {
     expect(find.text('1. The historical setting'), findsOneWidget);
     await tester.tap(find.text('Mark lesson complete'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 55 lessons completed'), findsOneWidget);
+    expect(find.text('1 / 58 lessons completed'), findsOneWidget);
   });
 
   testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred explained questions', (tester) async {
