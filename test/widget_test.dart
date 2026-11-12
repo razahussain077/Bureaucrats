@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bureaucrats/core/config.dart';
 import 'package:bureaucrats/features/study/academy_course_data.dart';
+import 'package:bureaucrats/features/study/optional_academy_courses.dart';
 import 'package:bureaucrats/features/study/study_hub_screen.dart';
 import 'package:bureaucrats/features/exams/exam_hub_screen.dart';
 import 'package:bureaucrats/features/essay/essay_screen.dart';
@@ -188,58 +189,94 @@ void main() {
     await tester.tap(find.text('Economics').last);
     await tester.pumpAndSettle();
     expect(find.text('Economics'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('4 chapters'), findsOneWidget);
+    expect(find.textContaining('5 chapters'), findsOneWidget);
 
     await tester.tap(find.byType(DropdownButtonFormField<int>));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Computer Science').last);
     await tester.pumpAndSettle();
     expect(find.text('Computer Science'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('4 chapters'), findsOneWidget);
+    expect(find.textContaining('5 chapters'), findsOneWidget);
 
     await tester.tap(find.byType(DropdownButtonFormField<int>));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Public Administration').last);
     await tester.pumpAndSettle();
     expect(find.text('PUBLIC ADMINISTRATION'), findsOneWidget);
-    expect(find.textContaining('4 chapters'), findsOneWidget);
+    expect(find.textContaining('5 chapters'), findsOneWidget);
 
     await tester.tap(find.byType(DropdownButtonFormField<int>));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Gender Studies').last);
     await tester.pumpAndSettle();
     expect(find.text('GENDER STUDIES'), findsOneWidget);
-    expect(find.textContaining('4 chapters'), findsOneWidget);
+    expect(find.textContaining('5 chapters'), findsOneWidget);
 
     await tester.tap(find.byType(DropdownButtonFormField<int>));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Sociology').last);
     await tester.pumpAndSettle();
     expect(find.text('SOCIOLOGY'), findsOneWidget);
-    expect(find.textContaining('3 chapters'), findsOneWidget);
+    expect(find.textContaining('4 chapters'), findsOneWidget);
 
     await tester.tap(find.byType(DropdownButtonFormField<int>));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Criminology').last);
     await tester.pumpAndSettle();
     expect(find.text('CRIMINOLOGY'), findsOneWidget);
-    expect(find.textContaining('3 chapters'), findsOneWidget);
+    expect(find.textContaining('4 chapters'), findsOneWidget);
 
     await tester.tap(find.byType(DropdownButtonFormField<int>));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Environmental Sciences').last);
     await tester.pumpAndSettle();
     expect(find.text('ENVIRONMENTAL SCIENCES'), findsOneWidget);
-    expect(find.textContaining('3 chapters'), findsOneWidget);
+    expect(find.textContaining('4 chapters'), findsOneWidget);
 
     await tester.tap(find.byType(DropdownButtonFormField<int>));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Business Administration').last);
     await tester.pumpAndSettle();
     expect(find.text('BUSINESS ADMINISTRATION'), findsOneWidget);
-    expect(find.textContaining('3 chapters'), findsOneWidget);
+    expect(find.textContaining('4 chapters'), findsOneWidget);
   });
 
+
+  test('ten expanded optional courses contain structured teaching content', () {
+    const expected = <String, int>{
+      'Political Science': 7,
+      'International Relations': 7,
+      'Economics': 5,
+      'Computer Science': 5,
+      'Public Administration': 5,
+      'Gender Studies': 5,
+      'Sociology': 4,
+      'Criminology': 4,
+      'Environmental Sciences': 4,
+      'Business Administration': 4,
+    };
+    expect(optionalAcademyCourses, hasLength(10));
+    for (final course in optionalAcademyCourses) {
+      expect(expected[course.title], course.chapters.length);
+      expect(
+        course.chapters.map((chapter) => chapter.number).toSet(),
+        hasLength(course.chapters.length),
+      );
+      final lessons = course.chapters.expand((chapter) => chapter.lessons);
+      expect(lessons.length, greaterThanOrEqualTo(5));
+      for (final lesson in lessons) {
+        expect(lesson.title.trim(), isNotEmpty);
+        expect(lesson.objectives.trim(), isNotEmpty);
+        expect(lesson.sections.length, greaterThanOrEqualTo(3));
+        expect(lesson.keyTerms.length, greaterThanOrEqualTo(5));
+        expect(lesson.examQuestion.trim(), isNotEmpty);
+        expect(lesson.practiceTask.trim(), isNotEmpty);
+        for (final section in lesson.sections) {
+          expect(section.content.trim().length, greaterThan(250));
+        }
+      }
+    }
+  });
 
   testWidgets('expanded optional academy courses open detailed lessons', (tester) async {
     tester.view.physicalSize = const Size(1200, 2600);
