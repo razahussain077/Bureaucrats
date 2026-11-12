@@ -592,4 +592,26 @@ void main() {
     expect(find.text('CLASSWORK'), findsOneWidget);
   });
 
+
+  testWidgets('Comparative Study has its own timed question set', (tester) async {
+    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(const MaterialApp(home: ExamHubScreen()));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byType(DropdownButtonFormField<String>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Comparative Study of Major Religions').last);
+    await tester.pumpAndSettle();
+    expect(find.text('11 questions'), findsOneWidget);
+
+    await tester.tap(find.text('Begin timed test'));
+    await tester.pump();
+    expect(find.text('QUESTION 1 OF 11'), findsOneWidget);
+    expect(find.text('COMPARATIVE STUDY OF MAJOR RELIGIONS'), findsOneWidget);
+    expect(find.textContaining('Which approach studies religion'), findsOneWidget);
+  });
+
 }
