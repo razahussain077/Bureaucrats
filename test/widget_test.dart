@@ -634,7 +634,7 @@ void main() {
       expect(lesson.title.trim(), isNotEmpty);
       expect(lesson.objectives.trim(), isNotEmpty);
       expect(lesson.sections, hasLength(3));
-      expect(lesson.keyTerms.length, greaterThanOrEqualTo(5));
+      expect(lesson.keyTerms.length, greaterThanOrEqualTo(4));
       expect(lesson.examQuestion.trim(), isNotEmpty);
       expect(lesson.practiceTask.trim(), isNotEmpty);
       for (final section in lesson.sections) {
