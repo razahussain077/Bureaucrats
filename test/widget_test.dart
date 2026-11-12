@@ -279,7 +279,20 @@ void main() {
 
     expect(course.marks, '100 marks');
     expect(course.chapters, hasLength(32));
-    expect(lessons, hasLength(55));
+    expect(course.chapters.map((chapter) => chapter.number).toSet(), hasLength(32));
+    expect(lessons, hasLength(65));
+
+    for (final lesson in lessons) {
+      expect(
+        lesson.sections.length,
+        greaterThanOrEqualTo(2),
+        reason: 'Lesson has too few teaching sections: ${lesson.title}',
+      );
+      expect(lesson.objectives.trim(), isNotEmpty, reason: lesson.title);
+      expect(lesson.keyTerms, isNotEmpty, reason: lesson.title);
+      expect(lesson.examQuestion.trim(), isNotEmpty, reason: lesson.title);
+      expect(lesson.practiceTask.trim(), isNotEmpty, reason: lesson.title);
+    }
 
     expect(
       lessonTitles,
