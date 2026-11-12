@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bureaucrats/core/config.dart';
 import 'package:bureaucrats/features/study/academy_course_data.dart';
+import 'package:bureaucrats/features/study/comparative_religions_course.dart';
 import 'package:bureaucrats/features/study/optional_academy_courses.dart';
 import 'package:bureaucrats/features/study/study_hub_screen.dart';
 import 'package:bureaucrats/features/exams/exam_hub_screen.dart';
@@ -535,6 +536,60 @@ void main() {
 
     expect(find.text('1 / 120'), findsOneWidget);
     expect(find.text('The Simla Deputation took place in:'), findsOneWidget);
+  });
+
+
+  test('Comparative Study of Major Religions contains chapter-wise teaching', () {
+    expect(comparativeReligionCourses, hasLength(1));
+    final course = comparativeReligionCourses.single;
+    expect(course.chapters, hasLength(6));
+    expect(course.chapters.map((chapter) => chapter.number).toSet(), hasLength(6));
+    final lessons = course.chapters.expand((chapter) => chapter.lessons).toList();
+    expect(lessons, hasLength(12));
+    for (final lesson in lessons) {
+      expect(lesson.title.trim(), isNotEmpty);
+      expect(lesson.objectives.trim(), isNotEmpty);
+      expect(lesson.sections, hasLength(3));
+      expect(lesson.keyTerms.length, greaterThanOrEqualTo(5));
+      expect(lesson.examQuestion.trim(), isNotEmpty);
+      expect(lesson.practiceTask.trim(), isNotEmpty);
+      for (final section in lesson.sections) {
+        expect(section.content.trim().length, greaterThan(250));
+      }
+    }
+    final titles = lessons.map((lesson) => lesson.title).toSet();
+    expect(titles, containsAll(<String>[
+      'Religion as a global and changing human phenomenon',
+      'Hindu social thought, reform movements and contemporary change',
+      'Buddhist expansion, philosophical schools and modern engagement',
+      'Jewish law, interpretation and the diversity of modern Jewish life',
+      'Christian reform, worship and encounter with modernity',
+      'Islamic interpretive traditions, ethics and contemporary movements',
+    ]));
+  });
+
+  testWidgets('Comparative Study lessons are available in the Academy Classroom', (tester) async {
+    tester.view.physicalSize = const Size(1200, 5200);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 7)));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byType(DropdownButtonFormField<int>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Comparative Study of Major Religions').last);
+    await tester.pumpAndSettle();
+
+    expect(find.text('COMPARATIVE STUDY OF MAJOR RELIGIONS'), findsOneWidget);
+    expect(find.textContaining('6 chapters • 12 lessons'), findsOneWidget);
+    final lesson = find.text('Religion as a global and changing human phenomenon');
+    await tester.ensureVisible(lesson);
+    await tester.tap(lesson);
+    await tester.pumpAndSettle();
+    expect(find.text('1. Mapping religious diversity without flattening it'), findsOneWidget);
+    expect(find.text('CSS EXAM QUESTION'), findsOneWidget);
+    expect(find.text('CLASSWORK'), findsOneWidget);
   });
 
 }
