@@ -91,6 +91,8 @@ void main() {
     expect(find.text('Official CSS past papers'), findsOneWidget);
     expect(find.text('Previous Question Papers — CSS'), findsOneWidget);
     expect(find.text('Pakistan Affairs — Official CE-2023 Paper'), findsOneWidget);
+    expect(find.text('Pakistan Economic Survey 2025–26'), findsOneWidget);
+    expect(find.text('Federal Budget 2026–27'), findsOneWidget);
     expect(find.text('OPEN FPSC ARCHIVE'), findsOneWidget);
 
     tabController.animateTo(6);
