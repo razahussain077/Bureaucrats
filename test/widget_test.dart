@@ -627,8 +627,8 @@ void main() {
 
     final essayLessons = essay.chapters.expand((chapter) => chapter.lessons).toList();
     final precisLessons = precis.chapters.expand((chapter) => chapter.lessons).toList();
-    expect(essayLessons, hasLength(10));
-    expect(precisLessons, hasLength(10));
+    expect(essayLessons, hasLength(12));
+    expect(precisLessons, hasLength(12));
 
     for (final lesson in [...essayLessons, ...precisLessons]) {
       expect(lesson.title.trim(), isNotEmpty);
