@@ -305,6 +305,13 @@ void main() {
         'CE-2024 official paper map: political stability, reform and integration',
         'CE-2025 official paper map: water, history, CPEC and media',
         'CE-2026 official paper map: Iqbal-Jinnah, Afghanistan, 27th Amendment and human development',
+        'Climate change, disaster resilience and a green economic model',
+        'Dynastic politics, patronage and barriers to democratic competition',
+        'Media, public opinion and political change in Pakistan',
+        'CPEC: geo-economics, implementation and regional connectivity',
+        'The UN Security Council and the Kashmir dispute',
+        'Health and education after the Eighteenth Amendment',
+        'Bhutto-era nationalisation: objectives, outcomes and economic lessons',
       ]),
     );
 
@@ -371,7 +378,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('32 chapters • 58 lessons'), findsOneWidget);
+    expect(find.textContaining('32 chapters • 65 lessons'), findsOneWidget);
     expect(find.text('Mark lesson complete'), findsNothing);
 
     final firstLesson = find.byKey(
@@ -387,7 +394,7 @@ void main() {
     expect(find.text('1. The historical setting'), findsOneWidget);
     await tester.tap(find.text('Mark lesson complete'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 58 lessons completed'), findsOneWidget);
+    expect(find.text('1 / 65 lessons completed'), findsOneWidget);
   });
 
   testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred explained questions', (tester) async {
