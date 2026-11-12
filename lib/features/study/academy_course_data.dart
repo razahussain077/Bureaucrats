@@ -1897,6 +1897,41 @@ Sources to consult: Pakistan Economic Survey 2025–26 portal https://www.financ
             examQuestion: 'Critically assess the performance of health and education after devolution to the provinces under the Eighteenth Amendment and suggest a way forward.',
             practiceTask: 'Create a federal-provincial-local responsibility matrix for education and health. Add one outcome indicator, one funding source and one accountability mechanism at each level.'
           ),
+
+          AcademyLesson(
+            title: 'Timed-answer clinic: a non-official 20-mark self-assessment rubric',
+            objectives: 'Practise the three-hour paper strategy and evaluate a 20-mark answer using a transparent academy rubric that is not represented as FPSC’s official marking scheme.',
+            sections: [
+              AcademyLessonSection('1. Time allocation and question selection', '''Pakistan Affairs is a 100-mark paper. Recent papers have used a 20-mark objective section and an 80-mark subjective section with seven questions, from which candidates attempt four. Always read the instructions printed on the paper in front of you; the question count, time and permitted attempts must be confirmed for that examination year.
+
+A practical three-hour plan is to reserve the first 30 minutes for Part I where the paper instructions require it, then use the remaining time carefully for four subjective answers. The arithmetic gives approximately 37 minutes per 20-mark answer, including planning and review. Do not spend half the subjective period on the first question. Select questions where you can provide accurate evidence, explain the issue and reach a reasoned judgement—not merely those whose wording looks familiar.
+
+Before writing, identify the command word, scope, time period and exact task. “Critically evaluate” requires judgement and limitations; “compare” requires both similarities and differences; “explain” requires a clear causal account; and “suggest a way forward” requires implementable recommendations linked to the diagnosis.'''),
+              AcademyLessonSection('2. Academy self-assessment rubric — not an FPSC marking scheme', '''Use this suggested training rubric to review a 20-mark answer. FPSC does not publish this exact allocation; it is a learning tool for consistent self-assessment.
+
+• Relevance and response to the question — 4 marks. Does the introduction answer the exact demand? Does every heading remain within scope?
+• Factual and constitutional accuracy — 4 marks. Are dates, names, constitutional articles, agreements and institutional roles correct?
+• Analysis and critical judgement — 4 marks. Does the answer explain causes, consequences, competing arguments and limitations rather than merely list facts?
+• Structure and coherence — 3 marks. Is there a clear thesis, logical sequence, balanced paragraphs and a conclusion that follows from the argument?
+• Evidence and examples — 3 marks. Are primary sources, official statistics, historical examples and credible research used accurately and with dates?
+• Recommendations and conclusion — 2 marks. Are recommendations realistic, assigned to responsible institutions and connected to the problem?
+
+A score is useful only when it leads to revision. Identify the weakest category and rewrite that part. Do not use this rubric to predict an official FPSC score.'''),
+              AcademyLessonSection('3. A repeatable 37-minute answer workflow', '''Minutes 0–4: decode the question. Underline the command word, subject, date range and requested output. Write a one-sentence thesis that directly answers the question.
+
+Minutes 4–8: build the outline. Use five to seven headings. Arrange them by logic—context, causes or framework, evidence, consequences, counterargument, reforms and judgement. Add one reliable example or source under each major heading.
+
+Minutes 8–33: write the response. Keep paragraphs focused. Use topic sentences, explain the mechanism behind each claim and connect evidence to the argument. Avoid long quotations, rhetorical filler and headings that do not answer the question.
+
+Minutes 33–37: audit the answer. Check that all parts of the question were attempted, dates and articles are accurate, examples are relevant, recommendations are implementable and the conclusion makes a clear judgement. Cross-check the question number and any instructions on the answer booklet.'''),
+              AcademyLessonSection('4. Evidence hierarchy and common mistakes', '''Prefer primary legal texts for constitutional questions, original agreements for treaty questions, official datasets for economic and social indicators, and credible historical scholarship for contested events. A government statement establishes that a government made a claim; it does not by itself establish that the claim is independently verified. A provisional estimate must not be described as an audited final result. A court’s holding must not be confused with a party’s argument or a dissenting opinion.
+
+Common weaknesses include writing everything known about a topic instead of answering the question, using statistics without a year or source, presenting one cause as the complete explanation, treating a policy announcement as an implemented outcome, making recommendations unrelated to the diagnosis and ending with a slogan instead of a judgement. A disciplined answer is selective, accurate, analytical and balanced.'''),
+            ],
+            keyTerms: ['Command word', 'Thesis statement', 'Evidence hierarchy', 'Critical analysis', 'Answer structure', 'Self-assessment rubric', 'Time management', 'Evaluative conclusion'],
+            examQuestion: 'Why is a structured, evidence-led answer more effective than a descriptive account in a 20-mark Pakistan Affairs question?',
+            practiceTask: 'Attempt one question in 37 minutes. Score it using the six academy categories, write the two weakest paragraphs again and record the change in your self-assessed score. Remember: this is a practice rubric, not FPSC’s official marking scheme.'
+          ),
       ]),
     ],
   ),
