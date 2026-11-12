@@ -1992,6 +1992,55 @@ Repeat key concepts where necessary so the reader can follow the thread. Vary se
 A strong conclusion resolves the essay's central tension and leaves the examiner with a clear final judgement.'''),
         ], keyTerms: ['Thesis', 'Cohesion', 'Transition', 'Synthesis'], examQuestion: 'What makes a conclusion analytical rather than repetitive?', practiceTask: 'Write an introduction and conclusion for the same essay title. Check that both express the same position but perform different functions.'),
       ]),
+
+      AcademyChapter(number: '05', title: 'Argument, evidence and critical reasoning', syllabusLink: 'Build coherent arguments, evaluate competing explanations and support claims with relevant evidence', lessons: [
+        AcademyLesson(title: 'Build a thesis that can be defended', objectives: 'Turn a broad opinion into a qualified proposition that directly answers the essay prompt.', sections: [
+          AcademyLessonSection('1. From topic to proposition', '''A topic names an area; a thesis makes a claim about it. “Climate change is a challenge” is a topic-level statement. A defensible thesis identifies the nature of the challenge, explains why it matters and signals the conditions under which policy can work. A thesis should be specific enough to guide the essay but broad enough to accommodate the required dimensions.
+
+Before drafting, write one sentence that answers the exact question. Test it by asking: could an informed reader reasonably disagree? If not, it may be a truism rather than an argument.'''),
+          AcademyLessonSection('2. Qualify rather than exaggerate', '''Absolute claims are difficult to defend. Words such as always, never, entirely and inevitably create unnecessary burdens of proof. Qualification does not mean indecision. It means specifying the conditions, groups, periods or institutions to which the claim applies.
+
+For example, digital technology can widen access to education where electricity, connectivity, teacher preparation and accessible content exist. Without those conditions, it can reproduce existing inequalities. This is a stronger argument than declaring technology either a complete solution or a complete threat.'''),
+          AcademyLessonSection('3. Make every paragraph prove part of the thesis', '''A body paragraph should begin with a claim, explain its mechanism, support it with evidence, address a limitation where relevant and connect back to the thesis. A paragraph that merely lists facts does not advance the argument.
+
+Use a paragraph test: underline the claim, circle the evidence and write in the margin how the evidence supports the claim. If the relationship is unclear, revise the reasoning rather than adding more quotations.'''),
+        ], keyTerms: ['Thesis', 'Qualification', 'Claim', 'Evidence', 'Warrant', 'Counterargument'], examQuestion: '“Economic growth without institutional accountability cannot produce inclusive development.” Discuss.', practiceTask: 'Write three alternative thesis statements for the prompt. Choose the strongest and produce a 6-paragraph argument map with one counterargument.'),
+        AcademyLesson(title: 'Use evidence without turning an essay into a fact dump', objectives: 'Select, attribute and interpret examples, statistics and reports accurately.', sections: [
+          AcademyLessonSection('1. Evidence must fit the claim', '''A statistic is useful only when its indicator, period, population and source are clear. GDP growth does not by itself prove that household welfare improved. An enrolment rate does not necessarily show learning outcomes. A national average may conceal provincial or gender disparities.
+
+Prefer a small number of well-matched facts over a long list of loosely related numbers. State what the evidence measures and what it cannot establish.'''),
+          AcademyLessonSection('2. Attribute and date evidence', '''Name the institution and reporting period when using official statistics. Distinguish an estimate, a projection, a target and a final reported outcome. If two sources use different definitions or periods, do not combine their figures as though they were directly comparable.
+
+Primary sources are especially useful: official statistical releases, legislation, budget documents, central-bank publications and recognised international datasets. Secondary analysis can help interpret them, but it should not replace verification of the underlying figure.'''),
+          AcademyLessonSection('3. Interpret instead of decorating', '''After presenting evidence, explain its significance. A figure about tax collection may support an argument about fiscal capacity, but only if you explain the relationship between the tax base, compliance, exemptions and public services. A court judgment may illustrate a constitutional principle, but explain the legal issue it decided.
+
+A useful sequence is: claim, evidence, interpretation, limitation and link to the thesis. This prevents evidence from becoming decoration.'''),
+        ], keyTerms: ['Primary source', 'Reporting period', 'Estimate', 'Projection', 'Indicator', 'Attribution'], examQuestion: 'How can evidence-based public debate improve democratic accountability? Explain with examples.', practiceTask: 'Prepare a one-page evidence sheet on education or public finance with five dated facts, source names, definitions and one limitation for each.'),
+      ]),
+      AcademyChapter(number: '06', title: 'Essay structure, expression and timed execution', syllabusLink: 'Organisation, coherence, paragraphing, grammar, vocabulary and examination time management', lessons: [
+        AcademyLesson(title: 'Design an introduction and conclusion that do real work', objectives: 'Write an introduction that frames the problem and a conclusion that delivers a reasoned judgement.', sections: [
+          AcademyLessonSection('1. The introduction', '''An introduction should establish the issue, define any necessary terms, identify the central tension and state the thesis. It should not begin with a memorised quotation that has no direct relevance. Avoid sweeping historical claims and dictionary definitions that consume space without clarifying the argument.
+
+A practical structure is: context in two or three sentences, a precise framing of the problem, and a thesis that previews the argument. The introduction is a contract with the examiner: the body must fulfil what it promises.'''),
+          AcademyLessonSection('2. The conclusion', '''A conclusion should answer the question in light of the argument already developed. It may identify the conditions required for a proposed solution, acknowledge an unresolved tension or state the most important policy implication. It should not introduce a new major argument or merely repeat the introduction.
+
+A strong conclusion is proportionate. If the essay has shown that a policy works only under certain institutional conditions, do not end with an absolute promise that it will solve every problem.'''),
+          AcademyLessonSection('3. Coherence across the essay', '''Use headings only where appropriate to the task and maintain a logical sequence. Each paragraph should have one controlling idea. Transitions should show relationships such as cause, contrast, consequence, qualification or chronology; they should not be inserted mechanically.
+
+Read only the first sentence of every paragraph. If those sentences do not form a coherent outline of the argument, the essay structure needs revision.'''),
+        ], keyTerms: ['Framing', 'Thesis preview', 'Coherence', 'Transition', 'Synthesis', 'Judgement'], examQuestion: '“Good governance is a means of development, not merely an administrative ideal.” Analyse.', practiceTask: 'Draft a 180-word introduction and a 120-word conclusion for the question. Check that both express the same qualified thesis.'),
+        AcademyLesson(title: 'Edit for precision under examination conditions', objectives: 'Identify common grammar, sentence and time-management failures and apply a repeatable editing routine.', sections: [
+          AcademyLessonSection('1. Sentence control', '''Prefer clear subject–verb relationships and avoid sentences that carry several unrelated claims. Check agreement, tense consistency, pronoun reference, articles, prepositions and punctuation. Long sentences are not automatically sophisticated; they become risky when the logical relationship between clauses is unclear.
+
+When a sentence feels difficult to control, divide it. Use a precise verb instead of a chain of abstract nouns. Read the sentence once for meaning and once for grammar.'''),
+          AcademyLessonSection('2. Vocabulary and tone', '''Use words whose meaning you can control. Replacing ordinary words with unfamiliar synonyms can distort meaning and create awkward collocations. Formal writing values precision, restraint and consistency rather than ornamental language.
+
+Avoid unsupported certainty, emotional labels and conversational expressions. If a technical term is necessary, define it briefly and use it consistently.'''),
+          AcademyLessonSection('3. A timed workflow', '''Reserve time for prompt analysis, outline, drafting and a final review. The exact allocation should be practised against the official examination duration and your writing speed. Do not spend so long perfecting the introduction that the body becomes incomplete.
+
+In the final review, check that every paragraph answers the prompt, examples are attributed accurately, the conclusion follows from the argument and no section has been left unfinished. Practise under timed conditions rather than relying on an ideal plan.'''),
+        ], keyTerms: ['Subject–verb agreement', 'Tense consistency', 'Collocation', 'Register', 'Editing pass', 'Timed outline'], examQuestion: 'Why are clarity and coherence more important than ornamental vocabulary in competitive examination writing?', practiceTask: 'Write a 500-word response in a timed sitting. Spend the final five minutes checking thesis alignment, paragraph unity, grammar and factual attribution.'),
+      ]),
     ],
   ),
   AcademyCourse(
@@ -2046,6 +2095,55 @@ For pairs of commonly confused words, explain the distinction briefly and then u
 Translate idiomatic expressions by meaning. A literal translation may be grammatically possible but still communicate the wrong idea.'''),
           AcademyLessonSection('3. Edit the translation', '''After drafting, check articles, prepositions, subject-verb agreement, tense, pronoun reference and natural word order. Ensure that formal Urdu expressions are not converted into awkward English phrases. The final sentence should read like clear English while preserving the original meaning.'''),
         ], keyTerms: ['Synonym', 'Antonym', 'Context', 'Collocation', 'Idiom', 'Register'], examQuestion: 'Why is word-for-word translation often inaccurate?', practiceTask: 'Translate ten Urdu sentences. For each, identify the tense and one phrase that required meaning-based rather than literal translation.'),
+      ]),
+
+      AcademyChapter(number: '05', title: 'Precis writing and comprehension mastery', syllabusLink: 'Precis writing, comprehension, central ideas, inference and concise expression', lessons: [
+        AcademyLesson(title: 'Reduce a passage without losing its argument', objectives: 'Identify the controlling idea, remove redundancy and produce a coherent precis in your own words.', sections: [
+          AcademyLessonSection('1. Read for structure before reducing', '''Read the passage once to understand its subject and again to identify its argument. Mark the central proposition, supporting reasons, qualifications and conclusion. Distinguish the author's main point from examples, anecdotes, repetitions and rhetorical flourishes.
+
+A precis is not a collection of sentences copied from the passage. It is a reconstruction of the author's essential argument at a shorter length. If the original contains a qualification, preserve it when removing it would change the author's meaning.'''),
+          AcademyLessonSection('2. Select and compress', '''Retain the main claim and only those supporting points needed to explain it. Remove repeated illustrations, decorative language and minor details. Combine related points only when their relationship is clear. Do not introduce your own opinion, new evidence or a conclusion the author did not make.
+
+Compression should remove excess wording, not logical steps. If a cause-and-effect relationship disappears, the precis may become shorter but less accurate.'''),
+          AcademyLessonSection('3. Write in independent language', '''Use your own sentence structure and vocabulary while preserving the author's meaning and tone. Avoid copying distinctive phrases unless a technical term cannot reasonably be replaced. Maintain the same point of view and do not turn a cautious argument into a categorical claim.
+
+Give the precis a concise title that captures the central idea, not merely the topic. Then compare your version with the original to detect omissions and distortions.'''),
+        ], keyTerms: ['Central proposition', 'Supporting argument', 'Compression', 'Paraphrase', 'Tone', 'Title'], examQuestion: 'Explain the principles that distinguish a faithful precis from a short summary or personal commentary.', practiceTask: 'Take a 300-word editorial passage, mark its argument map and produce a precis of approximately one-third length with a suitable title.'),
+        AcademyLesson(title: 'Comprehension: distinguish fact, inference and implication', objectives: 'Answer comprehension questions from textual evidence and avoid unsupported assumptions.', sections: [
+          AcademyLessonSection('1. Locate explicit information', '''For a direct question, identify the sentence or passage that supplies the answer. Respond to the question asked and avoid adding information that is not necessary. If the question asks for the author's stated reason, do not substitute a reason you personally consider more persuasive.
+
+Use the wording of the question to determine whether it asks who, what, when, why, how or to what extent.'''),
+          AcademyLessonSection('2. Make disciplined inferences', '''An inference is supported by clues in the passage even when it is not stated word for word. It is not a guess based on outside knowledge. Identify the relevant clues and explain the smallest conclusion that follows from them.
+
+Distinguish inference from implication: an implication is a meaning or consequence suggested by the author's wording or argument. Both require textual support.'''),
+          AcademyLessonSection('3. Identify tone and purpose', '''Tone is the author's attitude, conveyed through word choice and structure. Purpose concerns what the author is trying to do: explain, criticise, persuade, compare, warn or qualify. Do not label every critical passage as hostile or every persuasive passage as biased.
+
+Support an answer by pointing to the language and reasoning that reveal the author's approach.'''),
+        ], keyTerms: ['Explicit information', 'Inference', 'Implication', 'Tone', 'Purpose', 'Textual evidence'], examQuestion: 'How should a candidate distinguish a valid inference from an unsupported assumption in comprehension?', practiceTask: 'Answer five comprehension questions on one editorial. Underline the exact textual clue supporting each answer.'),
+      ]),
+      AcademyChapter(number: '06', title: 'Grammar, vocabulary and sentence correction', syllabusLink: 'Grammar, usage, sentence correction, pair of words and vocabulary in context', lessons: [
+        AcademyLesson(title: 'Diagnose errors in sentence construction', objectives: 'Recognise agreement, tense, modifier, parallelism and clause-boundary errors.', sections: [
+          AcademyLessonSection('1. Agreement and tense', '''The verb must agree with its grammatical subject, not simply the nearest noun. In sentences with intervening phrases, identify the true subject before selecting the verb. Keep tense consistent unless the time relationship changes and requires a shift.
+
+Collect your recurring errors in a personal log. Correcting a pattern is more effective than memorising isolated rules without applying them.'''),
+          AcademyLessonSection('2. Modifiers and parallel structure', '''A modifier should sit close to the word or idea it describes. A misplaced modifier can create an unintended meaning. Parallel items should use matching grammatical forms: nouns with nouns, infinitives with infinitives or clauses with clauses.
+
+Parallelism is especially important in lists and comparisons. Check that the elements joined by and, or, both…and, and not only…but also are structurally balanced.'''),
+          AcademyLessonSection('3. Clauses and punctuation', '''A complete independent clause contains a subject and a finite verb and can stand as a sentence. Two independent clauses should not be joined with a comma alone. Use a full stop, semicolon where appropriate, or a coordinating conjunction with correct punctuation.
+
+Punctuation clarifies relationships between ideas. Do not use commas merely where you pause while speaking.'''),
+        ], keyTerms: ['Subject–verb agreement', 'Tense', 'Modifier', 'Parallelism', 'Independent clause', 'Comma splice'], examQuestion: 'Explain five common errors in formal English sentence construction with corrected examples.', practiceTask: 'Write ten incorrect sentences of your own, label the error in each and provide a corrected version with the rule.'),
+        AcademyLesson(title: 'Use vocabulary and pair of words accurately', objectives: 'Choose words by meaning, grammatical function and collocation rather than superficial similarity.', sections: [
+          AcademyLessonSection('1. Meaning in context', '''A word's meaning depends on context, register and grammatical function. A dictionary may list several senses; select the one that fits the sentence. Learn vocabulary with a model sentence, common collocations and part of speech rather than as an isolated translation.
+
+For pair-of-words questions, explain the distinction and demonstrate each word in a sentence that makes the contrast unmistakable.'''),
+          AcademyLessonSection('2. Collocation and register', '''Words that are individually correct may not naturally occur together. Learn common combinations such as make a decision, reach an agreement and conduct research. Register also matters: a formal essay may require a different expression from casual conversation.
+
+Avoid choosing an impressive-looking word when a simpler, more accurate word exists.'''),
+          AcademyLessonSection('3. A sustainable revision method', '''Review a small vocabulary set repeatedly. Record the word, definition, part of speech, a collocation, an original sentence and a common confusion. Test yourself by producing sentences rather than only recognising meanings.
+
+When you make an error, record why the alternative was wrong. This turns vocabulary revision into a process of discrimination and accurate use.'''),
+        ], keyTerms: ['Polysemy', 'Part of speech', 'Collocation', 'Register', 'Pair of words', 'Context'], examQuestion: 'Why is contextual usage a better measure of vocabulary mastery than memorising word meanings?', practiceTask: 'Prepare a 20-item vocabulary log with definitions, collocations and original sentences; test it again after 48 hours.'),
       ]),
     ],
   ),
@@ -2171,6 +2269,55 @@ A numerical result without a method may hide a conceptual error. Show the steps 
 Maintain an error log. Record the type of error, the underlying concept and the method that would prevent it next time. Revisit repeated errors rather than simply doing more questions.'''),
         ], keyTerms: ['Percentage change', 'Ratio', 'Rate', 'Equation', 'Data interpretation', 'Inference', 'Sampling'], examQuestion: 'Why is identifying the correct base essential when calculating percentage change?', practiceTask: 'A household uses 500 kWh in one month and 425 kWh the next. Calculate the percentage reduction and explain the method.',
       )]),
+
+      AcademyChapter(number: '10', title: 'Biology, health and human systems', syllabusLink: 'Biological Sciences: cells, body systems, nutrition, disease and public health', lessons: [
+        AcademyLesson(title: 'Cells, tissues and the organisation of life', objectives: 'Explain cell structure, basic functions and the hierarchy from cells to organ systems.', sections: [
+          AcademyLessonSection('1. The cell as a basic unit', '''The cell is the basic structural and functional unit of living organisms. A cell membrane regulates exchange with the environment; cytoplasm contains cellular structures; and genetic material stores instructions for cell activity. In eukaryotic cells, the nucleus contains most of the DNA. Mitochondria are involved in energy release through cellular respiration.
+
+Plant cells typically have a cell wall, chloroplasts and a large central vacuole. Animal cells do not have a cellulose cell wall or chloroplasts. These differences help explain how organisms obtain energy and maintain structure.'''),
+          AcademyLessonSection('2. From tissues to organ systems', '''Cells with related functions form tissues; different tissues combine to form organs; and organs work together in systems. The digestive system breaks food into absorbable molecules. The circulatory system transports oxygen, nutrients and waste. The respiratory system exchanges oxygen and carbon dioxide. The nervous and endocrine systems coordinate body functions.
+
+A system should be understood through structure and function. For example, the lungs provide a large surface area for gas exchange, while the heart generates the pressure needed to circulate blood.'''),
+          AcademyLessonSection('3. Homeostasis', '''Homeostasis is the regulation of internal conditions within ranges compatible with life. Temperature, blood glucose, water balance and pH are regulated through feedback mechanisms. Negative feedback counteracts a deviation: if body temperature rises, sweating and increased skin blood flow help lower it.
+
+Positive feedback amplifies a process and is less common in routine homeostatic regulation; blood clotting is a standard example. In an exam answer, define the mechanism and give a physiological example.'''),
+        ], keyTerms: ['Cell membrane', 'Nucleus', 'Mitochondria', 'Tissue', 'Organ system', 'Homeostasis'], examQuestion: 'Describe the organisation of the human body from cells to organ systems and explain the role of homeostasis.', practiceTask: 'Draw a labelled hierarchy from cell to organism and explain one example from the digestive or circulatory system.'),
+        AcademyLesson(title: 'Nutrition, disease prevention and public health', objectives: 'Relate nutrients and disease transmission to prevention at individual and population levels.', sections: [
+          AcademyLessonSection('1. Nutrients and balanced diet', '''Carbohydrates provide a major energy source; proteins supply amino acids for growth and repair; fats provide concentrated energy and support cell membranes. Vitamins and minerals support metabolic and physiological processes, while water is essential for transport and temperature regulation. Dietary fibre supports digestive health.
+
+A balanced diet depends on age, activity, health status and food availability. Avoid presenting one fixed diet as suitable for every person. Explain deficiency and excess as well as the role of dietary diversity.'''),
+          AcademyLessonSection('2. Communicable and non-communicable disease', '''Communicable diseases are caused by infectious agents and can spread through routes such as respiratory droplets, contaminated water or food, vectors and direct contact. Non-communicable diseases such as cardiovascular disease, diabetes and many cancers are influenced by multiple behavioural, environmental, genetic and social factors.
+
+Prevention differs by disease. Vaccination, sanitation and infection control reduce many infectious risks; tobacco control, physical activity, healthy diets and early screening can reduce some non-communicable risks.'''),
+          AcademyLessonSection('3. Public health is more than treatment', '''Public health combines surveillance, prevention, health promotion, environmental measures and accessible services. Safe drinking water and sanitation can prevent disease before a patient reaches a clinic. Primary healthcare supports early detection and continuity of care. Health education works best when services and resources make healthy choices possible.
+
+A strong answer links individual behaviour with social determinants such as income, housing, education, clean water and access to healthcare.'''),
+        ], keyTerms: ['Macronutrients', 'Micronutrients', 'Communicable disease', 'Non-communicable disease', 'Vaccination', 'Primary healthcare'], examQuestion: 'Discuss how nutrition, sanitation and preventive healthcare can reduce the burden of disease in Pakistan.', practiceTask: 'Prepare a cause–transmission–prevention table for two communicable diseases and two non-communicable diseases.'),
+      ]),
+      AcademyChapter(number: '11', title: 'Quantitative reasoning and data interpretation', syllabusLink: 'Quantitative Ability: arithmetic, ratios, percentages, averages, probability, tables and graphs', lessons: [
+        AcademyLesson(title: 'Ratios, percentages and proportional reasoning', objectives: 'Solve practical problems involving ratios, percentage change and direct or inverse proportion.', sections: [
+          AcademyLessonSection('1. Ratios and equivalent quantities', '''A ratio compares quantities measured in compatible units. A ratio of 2:3 means that for every two parts of the first quantity there are three parts of the second. The total number of parts is five, so a total quantity can be divided by five before allocating the shares.
+
+Convert units before comparing quantities. A ratio is not automatically a fraction of the whole unless the relationship is defined that way.'''),
+          AcademyLessonSection('2. Percentage and percentage change', '''A percentage expresses a quantity per hundred. Percentage change is calculated as (new value minus old value) divided by old value, multiplied by 100. A rise from 80 to 100 is a 25 percent increase; a fall from 100 to 80 is a 20 percent decrease. The base matters.
+
+Successive percentage changes are not generally added directly. A 10 percent increase followed by a 10 percent decrease does not return a value to its starting point because the second change applies to a different base.'''),
+          AcademyLessonSection('3. Direct and inverse proportion', '''In direct proportion, two quantities change in the same ratio: if one doubles, the other doubles, provided the relationship remains constant. In inverse proportion, one increases as the other decreases so that their product remains constant under the stated conditions.
+
+Before using a formula, identify the assumed relationship. More workers may reduce completion time only if productivity, task division and available resources remain comparable.'''),
+        ], keyTerms: ['Ratio', 'Proportion', 'Percentage', 'Percentage change', 'Base value', 'Inverse proportion'], examQuestion: 'A quantity increases by 20 percent and then decreases by 20 percent. Explain the net percentage change with a numerical example.', practiceTask: 'Solve ten problems involving ratios, discounts, percentage change and work-rate relationships.'),
+        AcademyLesson(title: 'Read tables, charts and basic probability', objectives: 'Interpret data displays carefully and calculate simple probabilities without confusing correlation and causation.', sections: [
+          AcademyLessonSection('1. Read the axes and units first', '''Before interpreting a graph, inspect its title, axes, scale, units, time period and source. A truncated vertical axis can exaggerate visual differences. A percentage and a percentage-point change are not the same: a movement from 20 percent to 25 percent is five percentage points and a 25 percent relative increase.
+
+Check whether values are totals, averages, rates or shares. These measures answer different questions.'''),
+          AcademyLessonSection('2. Mean, median and range', '''The arithmetic mean is the sum divided by the number of observations and can be affected by extreme values. The median is the middle observation after ordering the data and is often more representative when a distribution is skewed. The range is the difference between the largest and smallest values.
+
+Choose the measure that fits the question. An average income may be pulled upward by a small number of very high incomes, while the median may better describe the middle household.'''),
+          AcademyLessonSection('3. Probability and interpretation', '''Probability ranges from zero to one. For equally likely outcomes, it is the number of favourable outcomes divided by the total number of possible outcomes. The complement of an event has probability one minus the probability of the event.
+
+Observed association does not by itself prove causation. Consider confounding variables, selection effects, sample size and the way data were collected before drawing conclusions.'''),
+        ], keyTerms: ['Axis', 'Percentage point', 'Mean', 'Median', 'Range', 'Probability', 'Correlation', 'Causation'], examQuestion: 'Explain why the median may be more informative than the mean when describing household income.', practiceTask: 'Create a small dataset of ten values, calculate mean, median and range, then explain how one extreme value changes the mean.'),
+      ]),
     ],
   ),
   AcademyCourse(
@@ -2229,6 +2376,55 @@ Avoid treating these issues as isolated. Climate shocks can affect food prices, 
 
 A good answer identifies who controls key routes or institutions, what interests are at stake and how cooperation could reduce risk.'''),
         ], keyTerms: ['International political economy', 'Globalisation', 'Human rights', 'Energy politics', 'Maritime security', 'Supply chain'], examQuestion: 'How do global economic and environmental shocks create new national-security challenges for developing countries?', practiceTask: 'Choose one global issue and connect it to Pakistan through three channels: economy, society and foreign policy.'),
+      ]),
+
+      AcademyChapter(number: '05', title: 'Pakistan economy, governance and human development', syllabusLink: 'Pakistan domestic affairs: economic management, institutions, social indicators and public policy', lessons: [
+        AcademyLesson(title: 'Analyse Pakistan’s macroeconomic position', objectives: 'Connect fiscal, monetary, external-sector and structural constraints without treating one indicator as the whole economy.', sections: [
+          AcademyLessonSection('1. Fiscal position and public debt', '''Fiscal analysis begins with revenue, expenditure, the primary balance, interest payments and the overall deficit. A primary balance excludes interest payments and helps show the current fiscal effort before debt-servicing costs. High interest expenditure can reduce room for development and social spending.
+
+A deficit is not automatically evidence of mismanagement; its composition, financing, economic cycle and use of borrowed resources matter. The sustainability question concerns whether the state can meet obligations without destabilising growth or essential services.'''),
+          AcademyLessonSection('2. Inflation, monetary policy and households', '''Inflation measures the rate at which a defined basket of prices changes over time. Monetary policy influences demand, credit conditions and expectations, but food and energy supply shocks may also drive prices. Interest-rate decisions therefore involve trade-offs between price stability, output, investment and financial conditions.
+
+Always distinguish headline inflation from core measures and identify the period. A fall in the inflation rate means prices are rising more slowly; it does not mean the general price level has returned to an earlier level.'''),
+          AcademyLessonSection('3. External account and competitiveness', '''The current account records transactions in goods, services, primary income and secondary income. Remittances and exports support foreign-exchange availability, while imports and external debt payments create financing needs. A temporary improvement caused by import compression may not indicate stronger productive capacity.
+
+Long-term resilience depends on export diversification, productivity, energy reliability, predictable regulation, skills and the ability to attract sustainable investment.'''),
+        ], keyTerms: ['Primary balance', 'Fiscal deficit', 'Debt servicing', 'Headline inflation', 'Current account', 'Import compression'], examQuestion: 'Critically examine the structural causes of Pakistan’s recurring balance-of-payments pressures and propose a sustainable response.', practiceTask: 'Prepare a one-page macroeconomic issue brief with fiscal, inflation and external-sector indicators, each labelled with source and reporting period.'),
+        AcademyLesson(title: 'Governance, service delivery and human development', objectives: 'Evaluate the relationship between institutional capacity, accountability and education, health and social protection outcomes.', sections: [
+          AcademyLessonSection('1. Governance as implementation capacity', '''Governance is not only the existence of laws or institutions; it includes the ability to formulate policy, coordinate agencies, spend resources transparently and deliver services. Policy failure may arise from weak design, fragmented responsibility, poor data, inadequate staffing or incentives that reward short-term political gains.
+
+An analytical answer should identify the responsible institution and the implementation bottleneck rather than recommending “better governance” as a slogan.'''),
+          AcademyLessonSection('2. Education and health outcomes', '''Education analysis should distinguish access, attendance, completion, learning outcomes, teacher availability and school quality. Health analysis should distinguish financing, workforce, facilities, preventive care, maternal and child health and financial protection. A high-level national average can conceal provincial, rural–urban and gender disparities.
+
+Use official datasets and clearly dated reports. Do not combine indicators from different years without explaining the difference.'''),
+          AcademyLessonSection('3. Social protection and inclusion', '''Social protection can address poverty and vulnerability through cash transfers, nutrition support, pensions, labour protections and targeted services. Effective programmes require accurate identification, accessible delivery, grievance mechanisms and evaluation of outcomes. Targeting can reduce leakage but may exclude eligible households if records are incomplete.
+
+Assess programmes against coverage, adequacy, timeliness, inclusion and fiscal sustainability. Recommendations should specify the delivery institution and the evidence needed to measure progress.'''),
+        ], keyTerms: ['Institutional capacity', 'Service delivery', 'Learning outcomes', 'Financial protection', 'Social protection', 'Grievance redress'], examQuestion: 'Why do improvements in public expenditure not always translate into better human-development outcomes?', practiceTask: 'Map one education or health problem to its responsible tiers of government, financing source, implementation bottleneck and measurable reform.'),
+      ]),
+      AcademyChapter(number: '06', title: 'International order, climate and emerging technologies', syllabusLink: 'Global issues: multilateralism, climate governance, digital transformation and geopolitical competition', lessons: [
+        AcademyLesson(title: 'Understand multilateral institutions and global power', objectives: 'Explain the roles and limits of the UN system, international financial institutions and regional organisations.', sections: [
+          AcademyLessonSection('1. The United Nations system', '''The United Nations Charter establishes principles concerning sovereign equality, peaceful settlement of disputes and the prohibition on the use of force subject to recognised exceptions. The Security Council has primary responsibility for international peace and security and can adopt binding decisions under the Charter. The General Assembly provides a broad deliberative forum, but its resolutions generally have a different legal status from Security Council decisions.
+
+A sound answer distinguishes legal authority from political influence. Veto power, alliances and state interests shape what the Council can do in practice.'''),
+          AcademyLessonSection('2. International financial institutions', '''The IMF focuses on monetary cooperation, balance-of-payments support and macroeconomic stability. The World Bank Group supports development through financing, knowledge and institutional programmes. Their mandates overlap in some policy areas but are not identical.
+
+When assessing a programme, examine its stated objectives, financing, conditionality, implementation record and distributional effects. Avoid reducing a complex programme to either unconditional praise or a claim that it alone explains every domestic economic outcome.'''),
+          AcademyLessonSection('3. Regionalism and strategic competition', '''Regional organisations can facilitate trade, connectivity, dialogue and collective responses, but their effectiveness depends on political trust and member-state interests. Strategic competition may encourage security partnerships while also fragmenting supply chains and technology standards.
+
+Analyse the issue through institutions, interests, capabilities and constraints. Explain how Pakistan’s geography creates both opportunities for connectivity and exposure to regional instability.'''),
+        ], keyTerms: ['UN Charter', 'Security Council', 'Veto', 'IMF', 'World Bank', 'Regionalism'], examQuestion: 'Evaluate the effectiveness of multilateral institutions in managing contemporary international crises.', practiceTask: 'Compare the legal authority, membership and practical constraints of the UN Security Council and General Assembly.'),
+        AcademyLesson(title: 'Climate risk, energy transition and digital governance', objectives: 'Connect climate vulnerability and technological change to policy choices, institutional capacity and equity.', sections: [
+          AcademyLessonSection('1. Climate risk and adaptation', '''Climate risk arises from the interaction of hazards, exposure and vulnerability. Floods, heatwaves, drought and changing rainfall patterns can damage infrastructure, livelihoods, health and food systems. Adaptation includes resilient infrastructure, early-warning systems, water management, climate-smart agriculture and risk-informed land use.
+
+Mitigation reduces greenhouse-gas emissions or increases sinks. Adaptation reduces harm from actual or expected climate impacts. A strong answer distinguishes the two while explaining their links.'''),
+          AcademyLessonSection('2. Energy transition and just transition', '''An energy transition involves changes in generation, transmission, storage, demand and pricing. Renewable energy can reduce emissions and exposure to imported fuels, but integration requires grid investment, storage, planning and reliable system operation. Efficiency can reduce demand while improving productivity.
+
+A just transition considers workers, consumers and regions affected by structural change. Policy should include affordability, retraining, social protection and transparent planning rather than treating transition as a purely technical exercise.'''),
+          AcademyLessonSection('3. Digital governance and emerging technology', '''Digital systems can improve service delivery, financial inclusion and access to information, but they also create risks involving privacy, cyber security, misinformation, exclusion and concentration of power. AI systems may reproduce bias when training data or deployment conditions are unequal.
+
+Governance should address lawful data use, transparency, security, human oversight, accessibility and remedies for harm. Do not assume that adopting a technology automatically improves institutional performance.'''),
+        ], keyTerms: ['Climate hazard', 'Exposure', 'Vulnerability', 'Mitigation', 'Adaptation', 'Just transition', 'Data governance'], examQuestion: 'How can Pakistan pursue climate resilience and digital transformation without deepening social and regional inequalities?', practiceTask: 'Write a policy matrix with one climate adaptation measure and one digital governance measure, identifying the lead institution, beneficiaries, risk and outcome indicator.'),
       ]),
     ],
   ),
@@ -2328,6 +2524,55 @@ When comparing historical and modern institutions, identify similarities in purp
 Explain the role of legal sources, qualifications, methodology and scholarly disagreement. Avoid claiming that every new issue has one universally accepted answer.'''),
         ], keyTerms: ['Social system', 'Economic justice', 'Judicial procedure', 'Ijma', 'Ijtihad', 'Fiqh'], examQuestion: 'Discuss the role of Ijma and Ijtihad in addressing new questions while maintaining continuity in Islamic legal thought.', practiceTask: 'Prepare a comparison of Ijma and Ijtihad: meaning, function, conditions, limits and one contemporary application.',
       )]),
+
+      AcademyChapter(number: '08', title: 'Islamic civilisation, knowledge and social institutions', syllabusLink: 'Islamic civilisation, intellectual traditions, education, family and social responsibilities', lessons: [
+        AcademyLesson(title: 'Knowledge, reason and intellectual responsibility', objectives: 'Explain the place of knowledge and disciplined reasoning in Islamic intellectual traditions.', sections: [
+          AcademyLessonSection('1. Knowledge and ethical purpose', '''Islamic intellectual traditions place knowledge within a moral framework of responsibility, humility and accountability. The pursuit of knowledge is connected to understanding creation, improving human conduct and serving society. Religious texts, scholarly interpretation, observation and rational inquiry have all played roles in Muslim intellectual history.
+
+Avoid presenting the relationship between revelation and reason as a simple conflict. Explain the methods and limits of different forms of inquiry and recognise the diversity of scholarly approaches.'''),
+          AcademyLessonSection('2. Ijtihad and changing circumstances', '''Ijtihad refers to disciplined juristic reasoning by qualified scholars when deriving rulings from recognised sources and methods. It is not an unrestricted licence for personal preference. Its scope, conditions and relationship with established jurisprudence have been debated across schools and periods.
+
+A CSS answer should define the term, explain why new circumstances raise legal questions and distinguish principled reasoning from arbitrary change.'''),
+          AcademyLessonSection('3. Education and intellectual renewal', '''Muslim educational history includes institutions of Quranic learning, jurisprudence, hadith, philosophy, medicine, mathematics and other sciences. Intellectual renewal requires both command of inherited scholarship and the ability to address contemporary questions responsibly.
+
+When discussing decline or revival, avoid sweeping claims that one historical factor explains every region. Identify institutions, political conditions, patronage, translation, debate and access to learning.'''),
+        ], keyTerms: ['Ilm', 'Ijtihad', 'Jurisprudence', 'Reason', 'Scholarly method', 'Intellectual renewal'], examQuestion: 'Discuss the role of knowledge and disciplined reasoning in the intellectual development of Muslim civilisation.', practiceTask: 'Prepare a structured answer distinguishing revelation, interpretation, ijtihad and empirical inquiry, with one historical example.'),
+        AcademyLesson(title: 'Family, rights and social responsibility', objectives: 'Analyse family and community responsibilities through ethical principles and contemporary social challenges.', sections: [
+          AcademyLessonSection('1. Family as a social institution', '''The family is a central social institution through which care, socialisation, responsibility and intergenerational support are organised. Islamic ethical teaching emphasises duties among family members, kindness, justice and protection from harm. In discussing family life, distinguish moral principles from the detailed legal rules that vary by issue and scholarly interpretation.
+
+A balanced answer should recognise both rights and responsibilities rather than presenting family relations as one-sided authority.'''),
+          AcademyLessonSection('2. Rights, dignity and protection', '''Human dignity, justice and the protection of life, property and family are important themes in Islamic ethical and legal discourse. Social responsibilities include care for children, respect for parents, fair treatment of spouses, support for vulnerable people and avoidance of exploitation.
+
+When using contemporary examples, identify the relevant social problem and explain how the ethical principle would guide prevention, protection and remedy.'''),
+          AcademyLessonSection('3. Community welfare', '''Zakat, sadaqah, charitable endowments and mutual assistance have historically contributed to social welfare. These practices connect individual resources with collective responsibility. Their impact depends on trust, sound administration, transparent distribution and attention to eligible beneficiaries.
+
+Do not claim that charity alone replaces public institutions. Explain how community initiatives and accountable state services can complement each other.'''),
+        ], keyTerms: ['Family', 'Dignity', 'Justice', 'Zakat', 'Sadaqah', 'Social responsibility'], examQuestion: 'Explain how Islamic ethical principles can contribute to family welfare and the protection of vulnerable members of society.', practiceTask: 'Write a short policy-oriented answer on child protection or family welfare, linking ethical principles with institutional responsibilities.'),
+      ]),
+      AcademyChapter(number: '09', title: 'Islamic principles and contemporary challenges', syllabusLink: 'Contemporary social, economic, political and interfaith questions in the light of Islamic teachings', lessons: [
+        AcademyLesson(title: 'Islamic economic principles and social justice', objectives: 'Explain core ethical principles in economic life and distinguish them from modern policy instruments.', sections: [
+          AcademyLessonSection('1. Ownership, work and circulation of wealth', '''Islamic economic ethics recognise lawful ownership and trade while placing obligations on economic conduct. Honesty, fulfilment of contracts, fair dealing and avoidance of exploitation are central principles. Wealth is not treated as a purely private matter without social responsibility.
+
+In an exam answer, distinguish normative principles from the many institutional forms used by modern economies. Explain the ethical objective before evaluating a particular policy instrument.'''),
+          AcademyLessonSection('2. Riba, risk and financial practice', '''Riba is prohibited in Islamic teaching, and its interpretation and application to modern financial transactions have been the subject of extensive jurisprudential discussion. Islamic finance commonly uses structures such as trade-based financing, leasing and partnership arrangements, each with specific legal and economic requirements.
+
+Do not assume that a product becomes ethically sound merely by changing its label. Assess the underlying transaction, risk allocation, ownership, transparency and compliance with the relevant scholarly and regulatory framework.'''),
+          AcademyLessonSection('3. Zakat and distribution', '''Zakat is an obligatory form of worship and redistribution with defined categories of eligible recipients. It can support social solidarity and reduce hardship, but its effectiveness depends on accurate identification, trustworthy collection and fair distribution.
+
+A contemporary policy discussion may compare zakat institutions with taxation and social protection, while recognising that they have different legal foundations and purposes.'''),
+        ], keyTerms: ['Lawful ownership', 'Riba', 'Islamic finance', 'Risk sharing', 'Zakat', 'Distribution'], examQuestion: 'Discuss the ethical foundations of an Islamic economic system and assess their relevance to contemporary financial challenges.', practiceTask: 'Compare a trade-based finance structure and a conventional interest-bearing loan at the level of transaction, risk and obligations.'),
+        AcademyLesson(title: 'Interfaith relations, pluralism and contemporary society', objectives: 'Explain principles of justice and peaceful coexistence while distinguishing theological beliefs from civic responsibilities.', sections: [
+          AcademyLessonSection('1. Justice and relations with others', '''Islamic teachings address justice, fulfilment of covenants, protection of life and property, and fair treatment of people beyond one's immediate community. Historical Muslim societies included different religious communities, with experiences shaped by time, place, rulers and legal arrangements.
+
+Avoid idealising all historical practice or generalising from one episode. Separate normative principles from the uneven record of political history.'''),
+          AcademyLessonSection('2. Dialogue and disagreement', '''Interfaith dialogue can clarify beliefs, reduce stereotypes and create cooperation on shared social concerns. Dialogue does not require erasing theological differences. It requires accurate representation, respectful conduct and willingness to distinguish disagreement from hostility.
+
+A strong answer explains the conditions for meaningful dialogue: equality of participation, safety, intellectual honesty and protection from discrimination.'''),
+          AcademyLessonSection('3. Citizenship and social peace', '''Contemporary plural societies require institutions that protect equal civic status, resolve disputes peacefully and prevent violence or discrimination. Ethical principles can support these aims, while constitutional law and public administration provide enforceable procedures and remedies.
+
+In Pakistan-focused answers, distinguish constitutional provisions, public policy, social attitudes and lived implementation. Recommendations should identify institutions and safeguards rather than rely on general appeals for tolerance.'''),
+        ], keyTerms: ['Justice', 'Covenant', 'Pluralism', 'Interfaith dialogue', 'Citizenship', 'Non-discrimination'], examQuestion: 'How can Islamic principles of justice and covenant contribute to peaceful coexistence in a plural society?', practiceTask: 'Write a 400-word answer that separates theological principles, historical experience and present-day constitutional responsibilities.'),
+      ]),
     ],
   ),
 ];
