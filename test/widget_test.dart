@@ -302,8 +302,15 @@ void main() {
         'Complete model answer: youth bulge and sustainable economic development',
         'Complete model answer: Pakistan and the US-led War on Terror',
         'Complete model answer: Pakistan’s geo-strategic location and its challenges',
-        'Official past-paper map: CSS CE-2023 Pakistan Affairs',
       ]),
+    );
+
+    final chapterTitles = course.chapters
+        .map((chapter) => chapter.title)
+        .toSet();
+    expect(
+      chapterTitles,
+      contains('Official past-paper map: CSS CE-2023 Pakistan Affairs'),
     );
 
     final chapterLinks = course.chapters
