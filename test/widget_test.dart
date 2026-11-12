@@ -271,7 +271,7 @@ void main() {
 
 
   testWidgets('Pakistan Affairs classroom covers all expanded syllabus chapters', (tester) async {
-    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.physicalSize = const Size(1200, 5200);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
