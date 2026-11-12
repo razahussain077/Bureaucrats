@@ -280,7 +280,7 @@ void main() {
     expect(course.marks, '100 marks');
     expect(course.chapters, hasLength(32));
     expect(course.chapters.map((chapter) => chapter.number).toSet(), hasLength(32));
-    expect(lessons, hasLength(65));
+    expect(lessons, hasLength(72));
 
     for (final lesson in lessons) {
       expect(
@@ -325,6 +325,13 @@ void main() {
         'The UN Security Council and the Kashmir dispute',
         'Health and education after the Eighteenth Amendment',
         'Bhutto-era nationalisation: objectives, outcomes and economic lessons',
+        'CE-2024 Q2 model answer: political instability and a fractured polity',
+        'CE-2024 Q3 model answer: Shaikh Ahmad Sirhindi and Muslim intellectual renewal',
+        'CE-2024 Q4 model answer: dynastic politics, feudal influence and democracy',
+        'CE-2024 Q5 model answer: climate change and a green economic model',
+        'CE-2024 Q6 model answer: equitable resource distribution and regional grievances',
+        'CE-2024 Q7 model answer: pragmatic civil-military relations and South Asian security',
+        'CE-2024 Q8 model answer: provincial autonomy, devolution and national integration',
       ]),
     );
 
@@ -391,7 +398,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('32 chapters • 65 lessons'), findsOneWidget);
+    expect(find.textContaining('32 chapters • 72 lessons'), findsOneWidget);
     expect(find.text('Mark lesson complete'), findsNothing);
 
     final firstLesson = find.byKey(
@@ -407,7 +414,7 @@ void main() {
     expect(find.text('1. The historical setting'), findsOneWidget);
     await tester.tap(find.text('Mark lesson complete'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 65 lessons completed'), findsOneWidget);
+    expect(find.text('1 / 72 lessons completed'), findsOneWidget);
   });
 
   testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred explained questions', (tester) async {
