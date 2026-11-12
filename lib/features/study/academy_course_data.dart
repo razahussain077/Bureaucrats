@@ -1263,6 +1263,133 @@ Q8 — Performance of health and education after devolution under the Eighteenth
             examQuestion: 'What does the CE-2026 paper indicate about the changing balance between historical knowledge, constitutional literacy and contemporary policy analysis in Pakistan Affairs?',
             practiceTask: 'Attempt any four CE-2026 subjective questions under the original paper’s three-hour limit. For each answer, cite one constitutional or legal source, one current official data source and one counterargument.'
           ),
+
+          AcademyLesson(
+            title: 'Climate change, disaster resilience and a green economic model',
+            objectives: 'Assess Pakistan’s climate exposure and design a development model combining resilience, environmental protection and productive growth.',
+            sections: [
+              AcademyLessonSection('1. Climate exposure and economic transmission', '''Pakistan faces riverine and flash floods, heatwaves, drought, glacier-related hazards, landslides, coastal erosion and changing rainfall. The 2022 floods demonstrated how hazard exposure, poverty, infrastructure weaknesses and land-use decisions combine to produce large human and economic losses. Vulnerability is shaped not only by the hazard but also by housing quality, drainage, early warning, healthcare, household savings and state capacity.
+
+Climate shocks damage crops, livestock, roads, homes, schools, clinics and energy infrastructure. They disrupt supply chains, increase food prices, reduce labour productivity during extreme heat and place pressure on public budgets. Poor households often suffer more because they have limited savings, insurance and access to recovery finance. Adaptation is therefore an investment in productivity and fiscal stability, not only an environmental expense.'''),
+              AcademyLessonSection('2. Green and resilient development', '''A climate-compatible economic model can combine resilient infrastructure, clean and reliable energy, building efficiency, public transport, water productivity, climate-smart agriculture, ecosystem restoration, early-warning systems and disaster-risk financing. Industrial policy can support efficient technology, repair and recycling, low-carbon production and cleaner logistics. Nature-based solutions—such as watershed restoration, mangroves and urban green space—can provide multiple benefits when locally appropriate and maintained.
+
+Policy design must identify who pays, who benefits, which institution implements an intervention and how progress is measured. Announced targets without budgets, data or enforcement arrangements are unlikely to produce measurable change.'''),
+              AcademyLessonSection('3. Climate finance and just transition', '''Climate finance can include domestic public budgets, private investment, concessional finance, insurance and international funds. Access to finance requires credible project preparation, transparent procurement, environmental and social safeguards and monitoring. A just transition considers workers and communities affected by changes in energy and industrial systems, including retraining, social protection and regional investment.
+
+For Pakistan, priorities include adaptation, resilient water and agricultural systems, urban heat management, climate-sensitive health services and improved disaster data. Mitigation matters too, but policy should reflect national development needs and the principle of common but differentiated responsibilities.'''),
+            ],
+            keyTerms: ['Climate vulnerability', 'Adaptation', 'Mitigation', 'Disaster risk reduction', 'Climate finance', 'Resilient infrastructure', 'Nature-based solutions', 'Just transition'],
+            examQuestion: 'Global warming presents an existential threat to states like Pakistan. Examine its far-reaching impacts and propose a development model aligned with environmental protection.',
+            practiceTask: 'Draft a climate-resilient district plan with one intervention each for floods, heat, agriculture, health and livelihoods. Add a financing source and measurable indicator for every intervention.'
+          ),
+          AcademyLesson(
+            title: 'Dynastic politics, patronage and barriers to democratic competition',
+            objectives: 'Assess dynastic leadership, land-based influence and patronage while recognising other structural barriers to democratic consolidation.',
+            sections: [
+              AcademyLessonSection('1. Dynastic politics and internal party democracy', '''Dynastic politics refers to repeated transfer of party leadership or elected office within political families. It can provide continuity, name recognition and established networks, but may restrict internal competition, weaken leadership renewal and concentrate party decision-making. The key question is whether candidate selection, succession and accountability are governed by transparent and competitive rules.
+
+Family background alone does not prove that a politician lacks an electoral mandate. Evaluate internal party elections, candidate selection, financing, membership rights and parliamentary performance rather than applying a blanket judgement to all family-linked political careers.'''),
+              AcademyLessonSection('2. Land, patronage and social structure', '''Large landownership can interact with local patronage, biradari ties, access to administration, debt relationships and control over employment or resources. These patterns vary by province and have changed with urbanisation, commercial agriculture, education and migration. It is inaccurate to explain all electoral outcomes through landownership alone.
+
+Patronage can weaken competition when public resources or administrative discretion reward political supporters. It can also fill service gaps where state provision is weak, which makes reform dependent on stronger universal services and transparent local institutions.'''),
+              AcademyLessonSection('3. Reforms and democratic evaluation', '''Other barriers include expensive campaigns, unequal media access, weak party-finance rules, coercion, limited local government, social inequality, weak rule of law and extra-constitutional intervention. Reforms include transparent party membership and internal elections, disclosure and audit of political finance, competitive candidate selection, independent election administration, stronger local bodies and public access to information.
+
+A balanced answer recognises that political families may enjoy democratic support through elections, but party systems must remain open to challengers and accountable to members and voters.'''),
+            ],
+            keyTerms: ['Dynastic politics', 'Patronage', 'Landholding', 'Biradari networks', 'Political finance', 'Internal party democracy', 'Electoral competition', 'Local government'],
+            examQuestion: 'Do dynastic politics and feudal influence constitute the main barriers to democratic development in Pakistan? Critically evaluate other structural factors.',
+            practiceTask: 'Prepare a cause-and-reform matrix separating party organisation, campaign finance, land-based influence, election administration and public-service dependency.'
+          ),
+          AcademyLesson(
+            title: 'Media, public opinion and political change in Pakistan',
+            objectives: 'Evaluate how broadcast and digital media affect political participation, public accountability and polarisation.',
+            sections: [
+              AcademyLessonSection('1. Expansion of the media landscape', '''Pakistan’s media environment has changed through private television, FM radio, online news, social media, podcasts and citizen journalism. Wider access has expanded public debate, exposed service-delivery failures, provided platforms for opposition voices and helped citizens organise around local or national concerns. Access remains unequal because of literacy, connectivity, language and income.
+
+Media institutions do not merely transmit information. Editorial choices, ownership, advertising, regulation and political pressure influence which issues receive attention. Candidates should analyse these structures rather than equating the number of channels with media freedom.'''),
+              AcademyLessonSection('2. Accountability, misinformation and polarisation', '''Independent journalism can investigate corruption, explain laws and budgets, monitor elections and scrutinise public institutions. Social media can enable rapid documentation of events and direct communication between citizens and representatives. However, sensationalism, paid content, selective framing, fabricated images, coordinated manipulation and online harassment can distort public understanding. Algorithms may reward outrage and speed rather than accuracy.
+
+Media literacy, independent fact-checking, transparent platform processes, privacy protection and fair legal remedies can reduce harm. Vague censorship or arbitrary pressure can undermine legitimate journalism and public trust.'''),
+              AcademyLessonSection('3. Media freedom and responsible governance', '''Media accountability should be based on clear standards, independent complaints procedures, transparent regulation and due process. The right to report and criticise public power must be protected, while genuine threats and unlawful conduct should be addressed through proportionate legal mechanisms. Journalists need safety, access to information and protection against intimidation.
+
+Media is neither simply a curse nor a blessing. Outcomes depend on institutional freedom, professional ethics, public literacy, transparent ownership and the rule of law.'''),
+            ],
+            keyTerms: ['Media pluralism', 'Editorial independence', 'Public opinion', 'Citizen journalism', 'Misinformation', 'Disinformation', 'Media literacy', 'Freedom of expression'],
+            examQuestion: 'Is media a curse or a blessing? Critically evaluate its role in shaping public opinion and political events in Pakistan in the twenty-first century.',
+            practiceTask: 'Analyse one political event across three media sources. Compare headline framing, evidence, omitted context, correction policy and possible bias.'
+          ),
+          AcademyLesson(
+            title: 'CPEC: geo-economics, implementation and regional connectivity',
+            objectives: 'Evaluate CPEC as a development and connectivity framework, balancing infrastructure benefits against commercial, fiscal, security and governance risks.',
+            sections: [
+              AcademyLessonSection('1. Strategic context and project components', '''The China-Pakistan Economic Corridor is a framework of infrastructure, energy, transport, port and industrial cooperation within the wider China-Pakistan partnership and China’s Belt and Road Initiative. Its components have included power projects, road and transport links, Gwadar Port development, communications infrastructure and proposed special economic zones. Its potential lies in linking western China with Pakistan’s Arabian Sea coast while strengthening domestic transport and energy capacity.
+
+CPEC is not one project with one outcome. Each component should be assessed separately according to financing, construction, utilisation, maintenance, environmental impact and economic returns.'''),
+              AcademyLessonSection('2. Economic opportunities and local benefits', '''Improved transport can lower logistics costs and connect producers to markets. Reliable energy can support industrial activity, while industrial zones may attract investment, technology and employment if they have skilled labour, predictable regulation, utilities, customs efficiency and market access. Gwadar’s development could support maritime services and trade, but port activity depends on commercial demand, hinterland links, shipping services and a competitive business environment.
+
+Local benefit-sharing is essential. Communities require consultation, jobs, training, land safeguards, environmental protection and access to services. A corridor that moves goods without developing local productive capacity may deliver less inclusive growth than anticipated.'''),
+              AcademyLessonSection('3. Financing, security and implementation risks', '''Risks include project selection without adequate demand assessment, foreign-exchange exposure, debt and repayment pressure, capacity utilisation, procurement transparency, delayed payments, security incidents and uneven provincial benefits. Power projects must be considered alongside the structure of the electricity market and circular debt. Transport infrastructure requires maintenance funding and commercial utilisation.
+
+The next stage should focus on industrial productivity, export diversification, agricultural value chains, skills and trade facilitation. Evaluation indicators should include export growth, local value addition, jobs, skills transfer, industrial output, logistics cost, project utilisation and fiscal sustainability. CPEC is an opportunity that requires domestic reform, not a substitute for it.'''),
+            ],
+            keyTerms: ['CPEC', 'Belt and Road Initiative', 'Gwadar', 'Special Economic Zones', 'Geo-economics', 'Local value addition', 'Project utilisation', 'Debt sustainability'],
+            examQuestion: 'Explore the significance of CPEC for Pakistan’s economic development. What are its potential opportunities and challenges?',
+            practiceTask: 'Select one CPEC component and prepare a scorecard covering cost, financing, utilisation, local jobs, exports, environmental impact and maintenance.'
+          ),
+          AcademyLesson(
+            title: 'The UN Security Council and the Kashmir dispute',
+            objectives: 'Analyse the Security Council’s role and constraints in Kashmir through the UN Charter, historical resolutions and the politics of enforcement.',
+            sections: [
+              AcademyLessonSection('1. The Security Council and its powers', '''The UN Security Council has primary responsibility for the maintenance of international peace and security under the UN Charter. It has fifteen members: five permanent and ten elected members. Substantive decisions require the prescribed vote and cannot be adopted if a permanent member casts a veto. The Council can discuss disputes and encourage peaceful settlement; under Chapter VII it may adopt measures to address threats to peace, breaches of peace or acts of aggression.
+
+A resolution’s legal effect depends on its text, Charter basis and context. Not every resolution has the same legal status.'''),
+              AcademyLessonSection('2. Kashmir and the UN framework', '''The Kashmir dispute reached the United Nations following the 1947 conflict. Security Council and Commission resolutions in 1948–49 outlined a process involving ceasefire, demilitarisation and a proposed plebiscite subject to specified conditions. Those conditions and their sequence became disputed, and the contemplated process was never implemented. The 1972 Simla Agreement subsequently committed India and Pakistan to peaceful bilateral settlement or other mutually agreed peaceful means and established the Line of Control framework.
+
+Candidates must distinguish the original UN instruments, later bilateral agreements and the separate positions of India and Pakistan. The existence of resolutions does not mean that the Council has continuously enforced the proposed process.'''),
+              AcademyLessonSection('3. Structural limits and diplomatic options', '''The Council’s ability to act depends on member-state agreement, especially among the permanent members. Strategic partnerships, regional rivalry, veto politics and competing interpretations of sovereignty can limit sustained action. The Council may discuss the issue, encourage restraint or call for diplomacy, but it cannot easily impose a settlement where the parties disagree and powerful states have divergent interests.
+
+Pakistan can use multilateral diplomacy to raise humanitarian concerns, support lawful fact-finding and build coalitions around civilian protection and peaceful settlement. Bilateral engagement, confidence-building and humanitarian access remain important because the Council cannot substitute for political agreement between the parties.'''),
+            ],
+            keyTerms: ['UN Charter', 'Security Council', 'Permanent members', 'Veto', 'Chapter VI', 'Chapter VII', 'UN Commission for India and Pakistan', 'Simla Agreement'],
+            examQuestion: '“The unresolved Kashmir issue exposes the inherent weakness in the United Nations Security Council’s architecture.” Critically examine the Council’s role in resolving the Kashmir issue.',
+            practiceTask: 'Draw a Security Council membership and voting diagram, then write an answer distinguishing legal mandate, historical resolutions, veto politics and diplomatic options.'
+          ),
+          AcademyLesson(
+            title: 'Health and education after the Eighteenth Amendment',
+            objectives: 'Evaluate the transfer of responsibilities to provinces and identify the constitutional, fiscal and administrative conditions needed for better outcomes.',
+            sections: [
+              AcademyLessonSection('1. Devolution and constitutional responsibilities', '''The Eighteenth Amendment 2010 abolished the Concurrent Legislative List and expanded provincial responsibilities across a range of policy fields. Health and education became major areas of provincial planning and service delivery, while the federation retains important functions involving coordination, international commitments, national standards and certain federal institutions. Article 25A recognises the right to free and compulsory education for children aged five to sixteen; Article 140A provides for elected local government with devolved political, administrative and financial responsibility.
+
+Devolution is a redistribution of authority, not a guarantee of better results by itself. Outcomes depend on provincial planning, finance, district capacity, workforce management, data systems and accountability.'''),
+              AcademyLessonSection('2. Education outcomes and health service delivery', '''Education challenges include out-of-school children, weak foundational learning, teacher deployment, inadequate facilities, gender gaps and limited technical pathways. Enrolment alone is not sufficient; assess learning, completion, equity and budget execution. Federal coordination can support national learning standards, data and cross-provincial learning while provincial governments remain accountable for delivery.
+
+Health services require effective primary care, immunisation, maternal and child health, nutrition, trained staff, reliable medicines and disease surveillance. A fair evaluation considers access, quality, affordability, district coverage and out-of-pocket expenditure. Federal coordination remains important for health emergencies, medicine regulation and international commitments.'''),
+              AcademyLessonSection('3. Making devolution work', '''Better outcomes require predictable provincial finance, transparent budget execution, merit-based workforce management, capable district institutions, reliable data, independent assessment and citizen grievance channels. Federal-provincial forums can support standards and coordination without removing provincial accountability. Local governments can bring health, sanitation and school needs closer to citizens if they receive clear mandates and resources.
+
+Devolution should be judged by whether children learn, patients receive timely and safe care, marginalised communities gain access and public money produces measurable outcomes.'''),
+            ],
+            keyTerms: ['Eighteenth Amendment', 'Concurrent Legislative List', 'Article 25A', 'Article 140A', 'Provincial autonomy', 'District capacity', 'Learning outcomes', 'Primary healthcare'],
+            examQuestion: 'Critically assess the performance of health and education sectors after being handed over to the provinces under the Eighteenth Amendment. Suggest a way forward.',
+            practiceTask: 'Create a federal-provincial responsibility matrix for one education and one health outcome. Identify legal mandate, budget source, delivery agency, data indicator and accountability forum.'
+          ),
+          AcademyLesson(
+            title: 'Bhutto-era nationalisation: objectives, outcomes and economic lessons',
+            objectives: 'Assess the nationalisation policies of the 1970s and distinguish social objectives from economic implementation and long-term effects.',
+            sections: [
+              AcademyLessonSection('1. Context and objectives', '''The government of Zulfikar Ali Bhutto introduced major nationalisation measures during the 1970s in a context of post-1971 reconstruction, inequality, labour politics and a concentrated private industrial structure. The policy affected major industries, financial institutions and parts of agro-processing and other sectors. Its stated objectives included reducing concentration of economic power, directing investment toward national priorities, protecting workers and increasing public control over strategic sectors.
+
+Nationalisation should be studied in its historical context. Pakistan had lost its eastern wing, faced economic disruption and was debating the role of the state in development.'''),
+              AcademyLessonSection('2. Implementation and economic consequences', '''Public ownership can support coordinated investment and universal service objectives, but weak managerial autonomy, political appointments, limited competition, unclear performance targets and soft budget constraints can reduce productivity. Private investment may also be discouraged when ownership rules and compensation arrangements are uncertain. Outcomes varied by sector and enterprise.
+
+It is inaccurate to attribute every subsequent economic weakness to nationalisation alone. Global oil shocks, domestic political instability, labour relations, fiscal policy, external conditions and broader institutional weaknesses also influenced performance. A balanced answer evaluates productivity, investment, employment, access, fiscal cost and distributional outcomes.'''),
+              AcademyLessonSection('3. Denationalisation and policy lessons', '''Later governments adopted different approaches to privatisation, deregulation and public-private partnerships. Privatisation does not automatically create competition or efficiency: outcomes depend on regulation, market structure, transparent valuation, labour transition, consumer protection and public accountability.
+
+The central lesson is that ownership is only one dimension of economic governance. State-owned enterprises require professional boards, audited accounts, transparent performance contracts and clear public-service obligations. Private firms require competition policy, reliable regulation and protection against monopolistic abuse.'''),
+            ],
+            keyTerms: ['Nationalisation', 'State-owned enterprise', 'Public ownership', 'Market concentration', 'Soft budget constraint', 'Privatisation', 'Competition policy', 'Public accountability'],
+            examQuestion: 'Critically evaluate the impact of Bhutto’s nationalisation policy on the economy of Pakistan.',
+            practiceTask: 'Compare public and private ownership across efficiency, equity, investment, access, innovation and accountability, using one historical sector example for each.'
+          ),
         ], keyTerms: ['FPSC CE-2023', 'GK-III Pakistan Affairs', 'Question selection', 'Question mapping', 'Jinnah 1937–1947', 'Agricultural productivity', 'Industrialisation', 'Demographic dividend'], examQuestion: 'Using the CE-2023 paper, explain how Pakistan Affairs questions connect historical foundations with contemporary economic, political and security challenges.', practiceTask: 'Open the official CE-2023 paper. Choose any four of Q2–Q8, prepare a 10-minute outline for each and then attempt all four under the original examination time and word-discipline conditions.')
       ]),
     ],
