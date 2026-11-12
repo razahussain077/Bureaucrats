@@ -339,24 +339,18 @@ void main() {
     expect(find.text('CLASSWORK'), findsWidgets);
     expect(find.text('1. Poverty, inequality and social protection'), findsOneWidget);
 
-    final workshop = find.text('Past-paper integration and examiner-standard answer writing');
-    await tester.scrollUntilVisible(workshop, 400, scrollable: academyScroll);
-    final workshopTile = find.ancestor(
-      of: workshop,
-      matching: find.byType(ExpansionTile),
-    ).first;
-    await tester.ensureVisible(workshopTile);
+    final workshopTile = find.byKey(
+      const PageStorageKey<String>('Pakistan Affairs-30'),
+    );
+    await tester.scrollUntilVisible(workshopTile, 400, scrollable: academyScroll);
     await tester.tap(workshopTile);
     await tester.pumpAndSettle();
     expect(find.text('How to decode a Pakistan Affairs question'), findsOneWidget);
 
-    final modelChapter = find.text('Model answer frameworks for recurring Pakistan Affairs themes');
-    await tester.scrollUntilVisible(modelChapter, 400, scrollable: academyScroll);
-    final modelChapterTile = find.ancestor(
-      of: modelChapter,
-      matching: find.byType(ExpansionTile),
-    ).first;
-    await tester.ensureVisible(modelChapterTile);
+    final modelChapterTile = find.byKey(
+      const PageStorageKey<String>('Pakistan Affairs-31'),
+    );
+    await tester.scrollUntilVisible(modelChapterTile, 400, scrollable: academyScroll);
     await tester.tap(modelChapterTile);
     await tester.pumpAndSettle();
     final jinnahAnswer = find.text('Complete model answer: Jinnah’s leadership during 1937–1947');
