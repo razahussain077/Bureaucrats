@@ -1182,6 +1182,87 @@ For each theme, prepare a two-page topic sheet: definition and context; key date
 Archive: https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Papers%2FCSS
 
 This course currently provides a verified theme map for CE-2023. It does not claim to have transcribed or categorised every question from the CE-2024, CE-2025 or CE-2026 papers. Add those mappings only after checking each original FPSC PDF.'''),
+
+          AcademyLesson(
+            title: 'CE-2024 official paper map: political stability, reform and integration',
+            objectives: 'Map the seven subjective themes of CE-2024 to the Pakistan Affairs course and practise multi-topic analysis.',
+            sections: [
+              AcademyLessonSection('1. CE-2024 Q2–Q4: institutions, reformers and democracy', '''Q2 — Political stability and a fractured polity. Course links: Chapter 05 (constitutional development), Chapter 13 (political evolution since 1971), Chapter 14 (democratic system) and Chapter 28 (constitutional/legal debates). A strong answer separates institutional causes from short-term political disputes: weak party institutionalisation, civil-military imbalance, contested electoral credibility, constitutional interruptions, federal tensions and weak accountability. Recommendations should be tied to responsible institutions.
+
+Q3 — Shaikh Ahmad Sirhindi and Muslim identity. Course links: Chapter 01 and the comparative lecture on reformers and educational institutions. Explain Sirhindi’s Naqshbandi setting, his critique of religious and court practices, his correspondence and later intellectual influence. Avoid projecting modern nationalism onto a seventeenth-century scholar.
+
+Q4 — Dynastic politics, feudalism and democratisation. Course links: Chapter 14, Chapter 15 and Chapter 29. Distinguish hereditary leadership within parties from land-based patronage, biradari networks, unequal access to campaign finance and weak local accountability. These factors may reinforce each other but are not the only causes of weak democracy. Assess party rules, internal elections, land and tax reform, local government and civic participation.'''),
+              AcademyLessonSection('2. CE-2024 Q5–Q8: climate, resource federalism and security', '''Q5 — Climate change and a sustainable economic model. Course links: Chapter 07 (physical geography and resources), Chapter 08 (economic and water challenges), Chapter 10 (comprehensive security) and Chapter 29 (human development). Cover floods, heat stress, drought, glacier risks, crop losses, health, displacement and fiscal exposure. A climate-compatible model links resilient infrastructure, clean energy, water productivity, climate-smart agriculture, insurance, social protection and low-carbon industry.
+
+Q6 — Equitable resource distribution among ethnic regions. Course links: Chapter 06 (federalism), Chapter 15 (ethnic issues), Chapter 27 (public finance) and Chapter 29 (social problems). Explain NFC transfers, natural-resource royalties, provincial autonomy, local participation, service gaps and transparent data. Distinguish equal distribution from equitable distribution: fiscal need, population, poverty and service-delivery cost may justify different allocations.
+
+Q7 — Pragmatic civil-military relations and South Asian security. Course links: Chapters 06, 10, 17 and 20. Assess constitutional civilian oversight, professional military roles, intelligence coordination, nuclear deterrence, India-Pakistan crises and regional diplomacy. Avoid treating national security as an exclusively military subject.
+
+Q8 — National integration through provincial autonomy and devolution. Course links: Chapters 06, 14 and 15. Use the Eighteenth and Twenty-fifth Amendments, Articles 140A, 153 and 160, local government, language recognition and intergovernmental coordination. Explain why devolution requires finance, capable provincial administrations and accountable local institutions.'''),
+              AcademyLessonSection('3. Evidence, format and verification', '''FPSC’s CSS Previous Question Papers archive lists the GK3 / Pakistan Affairs paper under CE-2024. The themes above are a study map based on published reproductions; candidates must open the original FPSC PDF for the exact wording, instructions and marks before attempting the paper. The academy’s suggested answer structures are original teaching guidance, not an official answer key.
+
+Official archive: https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Papers%2FCSS
+
+Practice rule: select any four of Q2–Q8, plan each in ten minutes, then attempt the full set in the time printed on the original paper. After writing, check whether each answer has a thesis, evidence, counterargument and feasible institutional reforms.'''),
+            ],
+            keyTerms: ['CSS CE-2024', 'Political stability', 'Sirhindī', 'Dynastic politics', 'Climate resilience', 'Fiscal federalism', 'Civil-military relations', 'National integration'],
+            examQuestion: 'What recurring institutional weaknesses are visible across the CE-2024 Pakistan Affairs paper, and how do they connect to the official syllabus?',
+            practiceTask: 'Prepare a seven-question CE-2024 map. For each question, write its syllabus clause, relevant course chapters, a one-sentence thesis and two sources you would consult.'
+          ),
+          AcademyLesson(
+            title: 'CE-2025 official paper map: water, history, CPEC and media',
+            objectives: 'Connect the seven CE-2025 subjective themes to the course and identify the cross-cutting concepts tested by the paper.',
+            sections: [
+              AcademyLessonSection('1. CE-2025 Q2–Q4: water treaty, 1971 and connectivity', '''Q2 — The Indus Waters Treaty (1960) and Pakistan-India relations. Course links: Chapter 08 (hydro-politics), Chapter 20 (Pakistan-India relations) and Chapter 21 (Kashmir and regional security). Explain the eastern/western river allocation, Permanent Indus Commission, dispute procedures, hydropower provisions, domestic water governance and climate pressures. Distinguish treaty text, state positions and arbitral decisions.
+
+Q3 — Causes and consequences of the separation of East Pakistan in 1971. Course links: Chapter 05 (constitutional development), Chapter 13 (political evolution) and Chapter 15 (national integration). Analyse the 1970 electoral mandate, political deadlock, language and representation issues, economic disparity, military action, regional actors and international diplomacy. Avoid a single-cause or purely military explanation.
+
+Q4 — CPEC and Pakistan’s economic development. Course links: Chapter 17 (changing regional apparatus), Chapter 18 (regional organisations), Chapter 19 (neighbours excluding India) and Chapter 27 (economic performance). Assess energy and transport infrastructure, Gwadar, industrial zones, trade facilitation and possible regional connectivity. Balance opportunities against debt and financing risks, security, local participation, transparency, project utilisation and export competitiveness.'''),
+              AcademyLessonSection('2. CE-2025 Q5–Q8: diversity, nationalisation, Kashmir and media', '''Q5 — Demographic and cultural diversity and national integration. Course links: Chapters 07, 15 and 29. Discuss language, ethnicity, region, youth, migration, urbanisation and policy representation. Explain how equal citizenship, local services, education and fair fiscal federalism can turn diversity into social capacity.
+
+Q6 — Bhutto-era nationalisation and the economy. Course links: Chapters 08, 13 and 27. Explain the 1970s context, state ownership in industry, finance and agro-processing, labour and distribution objectives, implementation and management issues, private investment response and subsequent denationalisation. A balanced answer weighs social aims and state capacity against efficiency, investment incentives and fiscal costs.
+
+Q7 — Pakistan’s Kashmir policy. Course links: Chapters 20 and 21, with Chapter 17 for regional context. Compare UN diplomacy, bilateral agreements, confidence-building, post-2019 policy and the humanitarian and security dimensions. Evaluate the effectiveness of different instruments rather than only stating the national position.
+
+Q8 — Media and public opinion in twenty-first-century Pakistan. Course links: Chapters 14, 15, 25 and 29. Assess the growth of private television, digital platforms, citizen journalism and political mobilisation alongside misinformation, polarisation, harassment, censorship and platform manipulation. Policy proposals should protect press freedom and lawful expression while strengthening media literacy, transparency, independent regulation and due process.'''),
+              AcademyLessonSection('3. What CE-2025 tests across the syllabus', '''The paper connects natural resources, historical state formation, geo-economics, diversity, economic policy, foreign relations and democratic discourse. Candidates should not prepare these as isolated facts. A water answer may require treaty law and domestic institutions; a CPEC answer may require foreign policy, energy and fiscal sustainability; an integration answer may require constitutional provisions and social indicators.
+
+FPSC’s Previous Question Papers archive lists the 2025 GK3 / Pakistan Affairs paper. The themes above are a study map from published reproductions and should be checked against the original FPSC PDF before quoting exact wording. The academy’s teaching analysis is not an official marking key.
+
+Official archive: https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Papers%2FCSS'''),
+            ],
+            keyTerms: ['CSS CE-2025', 'Indus Waters Treaty', '1971 separation', 'CPEC', 'National integration', 'Nationalisation', 'Kashmir policy', 'Media literacy'],
+            examQuestion: 'How does the CE-2025 paper test the relationship between domestic institutional capacity and Pakistan’s regional and economic challenges?',
+            practiceTask: 'Choose four CE-2025 themes. For each, prepare a cause-effect matrix and a six-heading outline, then write one complete timed 20-mark response.'
+          ),
+          AcademyLesson(
+            title: 'CE-2026 official paper map: Iqbal-Jinnah, Afghanistan, 27th Amendment and human development',
+            objectives: 'Use the original CE-2026 question paper to connect contemporary issues with the full Pakistan Affairs syllabus.',
+            sections: [
+              AcademyLessonSection('1. Official format and objective section', '''The CE-2026 GK-III Pakistan Affairs paper allowed three hours. Part I carried 20 MCQ marks with a maximum of 30 minutes; Part II carried 80 marks and candidates had to attempt four of seven questions. The original paper’s MCQ instructions stated that candidates should use the OMR answer sheet, that overwriting/cutting would not receive credit, and that there was no negative marking.
+
+The Part I questions covered constitutional provisions, Indus geography, military relations, constitutional amendments, provincial energy policy, books, the IMF, heritage, SAARC, solar energy, Khilafat history, foreign relations, defence exports, economic planning, the 5 Es framework and Islamabad’s capital status. This illustrates the breadth of objective preparation: facts should be connected to a source and updated where needed.
+
+Original paper copy: https://cssprep.com.pk/wp-content/uploads/2026/10/pakistan-affairs-past-paper-2026.pdf
+FPSC archive: https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Papers%2FCSS'''),
+              AcademyLessonSection('2. CE-2026 Q2–Q5: ideology, Afghanistan, constitutionalism and civil-military relations', '''Q2 — Compare Iqbal’s philosophical ideas with Jinnah’s political interpretation of Pakistan’s ideology. Course links: Chapter 01 (Iqbal and Jinnah), Chapter 03 (constitutional proposals) and Chapter 28 (constitutional identity). Compare philosophical purpose, Muslim political community, constitutional safeguards, citizenship and the transformation of political ideas into statecraft. Avoid treating the two figures as identical thinkers.
+
+Q3 — Afghanistan’s instability and Pakistan’s internal security, regional diplomacy and counterterrorism. Course links: Chapters 12, 23, 24 and 25. Cover the TTP threat, border management, refugee protection, trade disruption, regional diplomacy, lawful counterterrorism and institutional capacity.
+
+Q4 — The Twenty-seventh Amendment and constitutionalism / rule of law. Course links: Chapters 05, 06 and 28. Read the Gazette text, identify the Federal Constitutional Court, its jurisdiction and appointment framework, and analyse institutional independence, access to constitutional justice, federal representation and separation of powers. A balanced answer distinguishes the enacted law from political claims about its effects.
+
+Q5 — Youth perspectives, digital activism and civil society in civil-military relations. Course links: Chapters 06, 14, 15, 25 and 29. Analyse digital political participation, social movements, information disorder, civic accountability, institutional trust and constitutional civilian oversight. Do not equate peaceful activism with unlawful conduct.'''),
+              AcademyLessonSection('3. CE-2026 Q6–Q8: macroeconomy, Kashmir and provincial services', '''Q6 — Economic challenges and the influence of IMF conditions on stabilisation and long-term sustainability. Course links: Chapters 08 and 27, with Chapter 29 for distributional effects. Assess fiscal deficits, debt servicing, taxation, energy, external balances, productivity, social protection and the trade-offs in programme conditions. Label the fiscal year and status of each economic statistic.
+
+Q7 — Kashmir and the United Nations Security Council. Course links: Chapters 20 and 21, and Chapter 18 for multilateral diplomacy. Explain the UN framework, Security Council procedure, permanent-member veto, bilateral agreements and the limits of enforcement. Distinguish legal instruments from political realities and assess possible diplomatic avenues.
+
+Q8 — Performance of health and education after devolution under the Eighteenth Amendment. Course links: Chapters 06, 07 and 29. Evaluate constitutional responsibility, provincial planning and finance, inter-provincial inequality, learning and health outcomes, data quality, district capacity and federal coordination. Explain why devolution needs resources, standards, accountability and local delivery capability.'''),
+              AcademyLessonSection('4. Examiner’s synthesis', '''CE-2026 places current constitutional change, Afghanistan, civil-military relations, IMF-linked stabilisation, Kashmir and devolved social services alongside foundational ideology. A candidate must combine historical memory with contemporary legal and economic literacy. Use the original PDF for exact question text and marks; the course mapping is an academy guide, not an official answer key.'''),
+            ],
+            keyTerms: ['CSS CE-2026', 'Twenty-seventh Amendment', 'Federal Constitutional Court', 'Digital activism', 'IMF conditions', 'UN Security Council', 'Eighteenth Amendment', 'Human development'],
+            examQuestion: 'What does the CE-2026 paper indicate about the changing balance between historical knowledge, constitutional literacy and contemporary policy analysis in Pakistan Affairs?',
+            practiceTask: 'Attempt any four CE-2026 subjective questions under the original paper’s three-hour limit. For each answer, cite one constitutional or legal source, one current official data source and one counterargument.'
+          ),
         ], keyTerms: ['FPSC CE-2023', 'GK-III Pakistan Affairs', 'Question selection', 'Question mapping', 'Jinnah 1937–1947', 'Agricultural productivity', 'Industrialisation', 'Demographic dividend'], examQuestion: 'Using the CE-2023 paper, explain how Pakistan Affairs questions connect historical foundations with contemporary economic, political and security challenges.', practiceTask: 'Open the official CE-2023 paper. Choose any four of Q2–Q8, prepare a 10-minute outline for each and then attempt all four under the original examination time and word-discipline conditions.')
       ]),
     ],
