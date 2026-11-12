@@ -176,6 +176,27 @@ void main() {
     expect(find.text('Next question'), findsOneWidget);
   });
 
+  
+  testWidgets('mixed optional mock exam exposes forty explained questions', (tester) async {
+    tester.view.physicalSize = const Size(1200, 2600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(const MaterialApp(home: ExamHubScreen()));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byType(DropdownButtonFormField<String>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Mixed optional subjects').last);
+    await tester.pumpAndSettle();
+    expect(find.text('40 questions'), findsOneWidget);
+
+    await tester.tap(find.text('Begin timed test'));
+    await tester.pump();
+    expect(find.text('QUESTION 1 OF 40'), findsOneWidget);
+    expect(find.text('POLITICAL SCIENCE'), findsOneWidget);
+  });
+
   testWidgets('optional academy subjects open their detailed lessons', (tester) async {
     tester.view.physicalSize = const Size(1200, 5200);
     tester.view.devicePixelRatio = 1;
