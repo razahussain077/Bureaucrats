@@ -2071,6 +2071,18 @@ In the final review, check that every paragraph answers the prompt, examples are
           examQuestion: 'Explain why revision should proceed from argument and structure to paragraphing and sentence-level accuracy.',
           practiceTask: 'Take a previous essay draft. Identify three structural weaknesses, rewrite one weak paragraph and create an error log containing at least five specific corrections.',
         ),
+        AcademyLesson(
+          title: 'Select and verify evidence for an essay',
+          objectives: 'Build a reliable evidence bank and integrate current, historical and conceptual evidence without overclaiming.',
+          sections: [
+            AcademyLessonSection('1. Match evidence to the claim', '''Evidence is useful only when it supports the precise claim being made. A constitutional article can support a legal proposition but may not prove that a policy works in practice. A national statistic may describe an aggregate trend while concealing provincial or gender differences. Before using a source, identify what it measures, who produced it, the date, the geographic coverage and the limitation. Keep a small evidence record with the claim, source, date, unit and caveat.'''),
+            AcademyLessonSection('2. Use a hierarchy of sources', '''Prefer primary material for official rules, laws, budgets, census results and institutional decisions. Use reputable research institutions and peer-reviewed scholarship for interpretation and causal analysis. News reporting can provide timely context, but verify major factual claims against the underlying document where possible. A quotation should be attributed accurately and should not replace explanation. If sources disagree, state the disagreement and explain why one source is more suitable for the claim.'''),
+            AcademyLessonSection('3. Avoid evidence traps', '''Do not use an undated statistic, an unexplained percentage, a quotation without context or a global figure as proof of a Pakistan-specific trend. Distinguish nominal from real values, annual from cumulative totals and correlation from causation. Never manufacture precision to make a paragraph sound authoritative. A qualified statement supported by a verifiable source is stronger than a dramatic but unsubstantiated claim.'''),
+          ],
+          keyTerms: ['Primary source', 'Secondary source', 'Baseline', 'Attribution', 'Correlation', 'Evidence limitation'],
+          examQuestion: 'How can a CSS candidate select and integrate reliable evidence while avoiding misleading statistics and unsupported causal claims?',
+          practiceTask: 'Build a six-entry evidence bank for one essay topic. For each entry record the claim supported, source, date, unit, geographic scope and one limitation.',
+        ),
         ],
       ),
       AcademyChapter(
@@ -2225,6 +2237,18 @@ When you make an error, record why the alternative was wrong. This turns vocabul
           keyTerms: ['Explicit information', 'Inference', 'Implication', 'Textual evidence', 'Causal claim', 'Fidelity audit'],
           examQuestion: 'Differentiate explicit information, inference and implication in reading comprehension. Why must a precis preserve the author\'s qualifications?',
           practiceTask: 'Answer five comprehension questions on a passage: two factual, two inferential and one about implication. Underline the textual basis for every answer, then identify one tempting but unsupported interpretation.',
+        ),
+        AcademyLesson(
+          title: 'Sentence editing and transformation for composition',
+          objectives: 'Improve sentence accuracy through clause analysis, concise rewriting and controlled transformation while preserving meaning.',
+          sections: [
+            AcademyLessonSection('1. Identify clause relationships', '''A sentence may contain independent and dependent clauses connected through coordination or subordination. A fragment lacks an independent clause where one is required; a run-on joins independent clauses incorrectly; a comma splice joins them with only a comma. Identify the subject, finite verb and clause boundary before correcting punctuation. This method prevents random editing and helps preserve the intended relationship between ideas.'''),
+            AcademyLessonSection('2. Transform without changing meaning', '''Sentence transformation tests whether a candidate can express the same relationship through a different grammatical structure. Active and passive forms, direct and indirect speech, simple and complex sentences, and conditional structures each have rules that must be preserved. Maintain tense, pronoun reference, time expressions and the original logical emphasis. Do not transform mechanically if the result changes agency, certainty or the sequence of events.'''),
+            AcademyLessonSection('3. Edit for clarity and economy', '''Remove unnecessary repetition, vague pronouns and wordy expressions. Ensure modifiers sit close to the words they describe and parallel items use consistent grammatical forms. Read the sentence for meaning first, then inspect agreement, tense, articles, prepositions and punctuation. A correct sentence is not necessarily a good sentence if its meaning is difficult to follow; clarity and grammatical accuracy must work together.'''),
+          ],
+          keyTerms: ['Independent clause', 'Dependent clause', 'Comma splice', 'Active voice', 'Passive voice', 'Parallelism'],
+          examQuestion: 'Explain how clause analysis and controlled sentence transformation improve accuracy in English composition.',
+          practiceTask: 'Correct five comma splices, identify five fragments and transform ten sentences between active/passive or direct/indirect speech without changing meaning.',
         ),
         ],
       ),
