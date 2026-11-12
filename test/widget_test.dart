@@ -431,7 +431,7 @@ void main() {
     expect(find.text('1 / 86 lessons completed'), findsOneWidget);
   });
 
-  testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred explained questions', (tester) async {
+  testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred and twenty explained questions', (tester) async {
     await tester.pumpWidget(const MaterialApp(home: StudyHubScreen()));
     await tester.pumpAndSettle();
 
@@ -439,7 +439,7 @@ void main() {
     await tester.tap(find.text('MCQ Practice'));
     await tester.pumpAndSettle();
 
-    expect(find.text('1 / 100'), findsOneWidget);
+    expect(find.text('1 / 120'), findsOneWidget);
     expect(find.text('The Simla Deputation took place in:'), findsOneWidget);
   });
 
