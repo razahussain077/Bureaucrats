@@ -1181,7 +1181,7 @@ For each theme, prepare a two-page topic sheet: definition and context; key date
 
 Archive: https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Papers%2FCSS
 
-This course currently provides a verified theme map for CE-2023. It does not claim to have transcribed or categorised every question from the CE-2024, CE-2025 or CE-2026 papers. Add those mappings only after checking each original FPSC PDF.'''),
+The CE-2023 map is based on the original FPSC PDF. CE-2024 and CE-2025 topic maps are based on published paper reproductions; the CE-2026 map uses an accessible copy of the paper. These are study mappings, not official answer keys. For exact wording, marks and instructions, candidates must verify every year against the original PDF in the FPSC archive.'''),
 
         ], keyTerms: ['FPSC CE-2023', 'GK-III Pakistan Affairs', 'Question selection', 'Question mapping', 'Jinnah 1937–1947', 'Agricultural productivity', 'Industrialisation', 'Demographic dividend'], examQuestion: 'Using the CE-2023 paper, explain how Pakistan Affairs questions connect historical foundations with contemporary economic, political and security challenges.', practiceTask: 'Open the official CE-2023 paper. Choose any four of Q2–Q8, prepare a 10-minute outline for each and then attempt all four under the original examination time and word-discipline conditions.'),
           AcademyLesson(
@@ -1240,11 +1240,11 @@ Official archive: https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Pap
             title: 'CE-2026 official paper map: Iqbal-Jinnah, Afghanistan, 27th Amendment and human development',
             objectives: 'Use the original CE-2026 question paper to connect contemporary issues with the full Pakistan Affairs syllabus.',
             sections: [
-              AcademyLessonSection('1. Official format and objective section', '''The CE-2026 GK-III Pakistan Affairs paper allowed three hours. Part I carried 20 MCQ marks with a maximum of 30 minutes; Part II carried 80 marks and candidates had to attempt four of seven questions. The original paper’s MCQ instructions stated that candidates should use the OMR answer sheet, that overwriting/cutting would not receive credit, and that there was no negative marking.
+              AcademyLessonSection('1. Official format and objective section', '''The CE-2026 GK-III Pakistan Affairs paper allowed three hours. Part I carried 20 MCQ marks with a maximum of 30 minutes; Part II carried 80 marks and candidates had to attempt four of seven questions. The accessible CE-2026 paper copy states that candidates should use the OMR answer sheet, that overwriting/cutting would not receive credit, and that there was no negative marking. Verify these instructions against the original FPSC PDF before the examination.
 
 The Part I questions covered constitutional provisions, Indus geography, military relations, constitutional amendments, provincial energy policy, books, the IMF, heritage, SAARC, solar energy, Khilafat history, foreign relations, defence exports, economic planning, the 5 Es framework and Islamabad’s capital status. This illustrates the breadth of objective preparation: facts should be connected to a source and updated where needed.
 
-Original paper copy: https://cssprep.com.pk/wp-content/uploads/2026/10/pakistan-affairs-past-paper-2026.pdf
+Accessible third-party copy (verify against FPSC): https://cssprep.com.pk/wp-content/uploads/2026/10/pakistan-affairs-past-paper-2026.pdf
 FPSC archive: https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Papers%2FCSS'''),
               AcademyLessonSection('2. CE-2026 Q2–Q5: ideology, Afghanistan, constitutionalism and civil-military relations', '''Q2 — Compare Iqbal’s philosophical ideas with Jinnah’s political interpretation of Pakistan’s ideology. Course links: Chapter 01 (Iqbal and Jinnah), Chapter 03 (constitutional proposals) and Chapter 28 (constitutional identity). Compare philosophical purpose, Muslim political community, constitutional safeguards, citizenship and the transformation of political ideas into statecraft. Avoid treating the two figures as identical thinkers.
 
