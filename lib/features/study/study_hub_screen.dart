@@ -822,6 +822,9 @@ class _PastPapersTab extends StatelessWidget {
   static final Uri _rules = Uri.parse('https://www.fpsc.gov.pk/MPTandMAIN?section=CSS+Rules');
   static final Uri _economicSurvey = Uri.parse('https://www.finance.gov.pk/survey_2026.html');
   static final Uri _federalBudget = Uri.parse('https://www.finance.gov.pk/fb_2026_27.html');
+  static final Uri _currentConstitution = Uri.parse('https://na.gov.pk/uploads/documents/6926e060076ed_467.pdf');
+  static final Uri _indusArbitration = Uri.parse('https://pca-cpa.org/en/cases/284/');
+  static final Uri _imfPakistanOctober2026 = Uri.parse('https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf');
 
   Future<void> _open(BuildContext context, Uri uri) async {
     try {
@@ -894,6 +897,27 @@ class _PastPapersTab extends StatelessWidget {
         detail: 'Official Finance Division budget portal with Budget in Brief, Annual Budget Statement, receipts, expenditure and development documents.',
         action: 'OPEN FEDERAL BUDGET',
         onTap: () => _open(context, _federalBudget),
+      ),
+      _OfficialResourceCard(
+        icon: Icons.account_balance_rounded,
+        title: 'Constitution of Pakistan — amended up to the 27th Amendment',
+        detail: 'National Assembly consolidated constitutional text. Use this primary reference for Articles 175E, Federal Constitutional Court jurisdiction and current constitutional provisions.',
+        action: 'OPEN CONSOLIDATED CONSTITUTION',
+        onTap: () => _open(context, _currentConstitution),
+      ),
+      _OfficialResourceCard(
+        icon: Icons.water_drop_rounded,
+        title: 'Indus Waters Treaty — PCA case record',
+        detail: 'Permanent Court of Arbitration case page with awards and orders, including the 31 August 2026 decision on Treaty status and interim measures.',
+        action: 'OPEN PCA CASE RECORD',
+        onTap: () => _open(context, _indusArbitration),
+      ),
+      _OfficialResourceCard(
+        icon: Icons.trending_up_rounded,
+        title: 'IMF Pakistan — 7 October 2026 review',
+        detail: 'Primary IMF statement with FY26 estimates, FY27 fiscal anchor and reform priorities. Treat estimates and programme targets as such, not audited outcomes.',
+        action: 'OPEN IMF STATEMENT',
+        onTap: () => _open(context, _imfPakistanOctober2026),
       ),
       _OfficialResourceCard(
         icon: Icons.gavel_rounded,
