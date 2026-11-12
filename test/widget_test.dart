@@ -283,7 +283,7 @@ void main() {
     expect(course.marks, '100 marks');
     expect(course.chapters, hasLength(32));
     expect(course.chapters.map((chapter) => chapter.number).toSet(), hasLength(32));
-    expect(lessons, hasLength(86));
+    expect(lessons, hasLength(87));
 
     for (final lesson in lessons) {
       expect(
@@ -349,6 +349,7 @@ void main() {
         'CE-2026 Q6 model answer: Pakistan’s economic challenges and IMF conditionality',
         'CE-2026 Q7 model answer: the UN Security Council and Kashmir',
         'CE-2026 Q8 model answer: health and education after the Eighteenth Amendment',
+        'Timed-answer clinic: a non-official 20-mark self-assessment rubric',
       ]),
     );
 
@@ -415,7 +416,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('32 chapters • 86 lessons'), findsOneWidget);
+    expect(find.textContaining('32 chapters • 87 lessons'), findsOneWidget);
     expect(find.text('Mark lesson complete'), findsNothing);
 
     final firstLesson = find.byKey(
@@ -431,7 +432,7 @@ void main() {
     expect(find.text('1. The historical setting'), findsOneWidget);
     await tester.tap(find.text('Mark lesson complete'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 86 lessons completed'), findsOneWidget);
+    expect(find.text('1 / 87 lessons completed'), findsOneWidget);
   });
 
   testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred and twenty explained questions', (tester) async {
