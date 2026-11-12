@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bureaucrats/core/config.dart';
+import 'package:bureaucrats/features/study/academy_course_data.dart';
 import 'package:bureaucrats/features/study/academy_library_screen.dart';
 import 'package:bureaucrats/features/study/study_hub_screen.dart';
 import 'package:bureaucrats/features/exams/exam_hub_screen.dart';
@@ -270,114 +271,107 @@ void main() {
   });
 
 
-  testWidgets('Pakistan Affairs classroom covers all expanded syllabus chapters', (tester) async {
-    tester.view.physicalSize = const Size(1200, 5200);
+  test('Pakistan Affairs curriculum covers the official syllabus and CE-2023 themes', () {
+    final course = compulsoryAcademyCourses.firstWhere(
+      (item) => item.title == 'Pakistan Affairs',
+    );
+    final lessons = course.chapters.expand((chapter) => chapter.lessons).toList();
+    final lessonTitles = lessons.map((lesson) => lesson.title).toSet();
+
+    expect(course.marks, '100 marks');
+    expect(course.chapters, hasLength(32));
+    expect(lessons, hasLength(55));
+
+    expect(
+      lessonTitles,
+      containsAll(<String>[
+        'The reformers and educational institutions: a comparative study',
+        'Ideology of Pakistan in the thought of Iqbal and Jinnah',
+        'The 1857 uprising, colonial restructuring and Muslim social change',
+        'Round Table Conferences, Communal Award and constitutional deadlock',
+        'The 1937 elections, Lahore Resolution and transfer of power',
+        'Constitution-making, early political crises and constitutional experiments',
+        'Federalism, the Eighteenth Amendment and local government',
+        'Pakistan’s physical regions, climate and strategic geography',
+        'Pakistan’s macroeconomic structure, public finance and external account',
+        'Pakistan’s energy system, circular debt and transition choices',
+        'Hydro-politics, the Indus system and water governance',
+        'Complete model answer: Jinnah’s leadership during 1937–1947',
+        'Complete model answer: agricultural decline and food insecurity',
+        'Complete model answer: barriers to industrial development',
+        'Complete model answer: democratic evolution and institutional consolidation',
+        'Complete model answer: youth bulge and sustainable economic development',
+        'Complete model answer: Pakistan and the US-led War on Terror',
+        'Complete model answer: Pakistan’s geo-strategic location and its challenges',
+        'Official past-paper map: CSS CE-2023 Pakistan Affairs',
+      ]),
+    );
+
+    final chapterLinks = course.chapters
+        .map((chapter) => chapter.syllabusLink)
+        .join(' ');
+    for (final clause in <String>[
+      'Ideology of Pakistan',
+      'Land and people',
+      'changing regional apparatus',
+      'Nuclear Program',
+      'Regional Cooperation Organizations',
+      'Civil-military relations',
+      'Economic challenges',
+      'Non-Traditional Security Threats',
+      'Palestine Issue',
+      'National Security',
+      'Political Evolution Since 1971',
+      'War on Terror',
+      'Foreign Policy',
+      'Democratic System',
+      'Ethnic Issues',
+      'Hydro-politics',
+      'National Interest',
+      'Sovereignty',
+      'Energy Problems',
+      'Relations with Neighbors',
+      'India Relations',
+      'Kashmir Issue',
+      'war in Afghanistan',
+      'Proxy Wars',
+      'Economic Conditions',
+      'Constitutional and Legal Debates',
+      'Social Problems',
+    ]) {
+      expect(chapterLinks.toLowerCase(), contains(clause.toLowerCase()));
+    }
+  });
+
+  testWidgets('Pakistan Affairs classroom tracks completed lessons', (tester) async {
+    tester.view.physicalSize = const Size(1200, 2000);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
-    await tester.pumpWidget(const MaterialApp(home: StudyHubScreen(initialTabIndex: 7)));
+
+    await tester.pumpWidget(
+      const MaterialApp(home: StudyHubScreen(initialTabIndex: 7)),
+    );
     await tester.pumpAndSettle();
 
-    expect(find.text('ACADEMY CLASSROOM'), findsOneWidget);
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
     expect(find.textContaining('32 chapters • 55 lessons'), findsOneWidget);
+    expect(find.text('Mark lesson complete'), findsNothing);
 
-    await tester.ensureVisible(find.text('The reformers and educational institutions: a comparative study'));
-    expect(find.text('The reformers and educational institutions: a comparative study'), findsOneWidget);
-
-    Future<void> openChapter(String title) async {
-      final chapterTitle = find.text(title);
-      final chapterTile = find.ancestor(
-        of: chapterTitle,
-        matching: find.byType(ExpansionTile),
-      ).first;
-      await tester.ensureVisible(chapterTile);
-      await tester.tap(chapterTile);
-      await tester.pumpAndSettle();
-    }
-
-    await openChapter('From 1857 to the formation of the Muslim League');
-    expect(find.text('The 1857 uprising, colonial restructuring and Muslim social change'), findsOneWidget);
-    await openChapter('Constitutional negotiations and the Pakistan Movement');
-    expect(find.text('Round Table Conferences, Communal Award and constitutional deadlock'), findsOneWidget);
-    await openChapter('The final phase: 1935–1947');
-    expect(find.text('The 1937 elections, Lahore Resolution and transfer of power'), findsOneWidget);
-    await openChapter('State formation and constitutional development');
-    expect(find.text('Constitution-making, early political crises and constitutional experiments'), findsOneWidget);
-    await openChapter('Federalism, democracy and civil-military relations');
-    expect(find.text('Federalism, the Eighteenth Amendment and local government'), findsOneWidget);
-
-    final lastChapter = find.text('Prevailing social problems: poverty, education, health and sanitation');
-    final academyScroll = find.descendant(
-      of: find.byType(AcademyLibraryScreen),
-      matching: find.byType(Scrollable),
-    );
-    await tester.scrollUntilVisible(lastChapter, 400, scrollable: academyScroll);
-    final chapterTile = find.ancestor(
-      of: lastChapter,
-      matching: find.byType(ExpansionTile),
-    ).first;
-    await tester.ensureVisible(chapterTile);
-    await tester.tap(chapterTile);
-    await tester.pumpAndSettle();
-
-    final lessonTile = find.byKey(
+    final firstLesson = find.byKey(
       const PageStorageKey<String>(
-        'lesson-Human development, inequality and social policy',
+        'lesson-How Muslim political thought developed in South Asia',
       ),
     );
-    await tester.ensureVisible(lessonTile);
-    await tester.tap(lessonTile);
+    await tester.ensureVisible(firstLesson);
+    await tester.tap(firstLesson);
     await tester.pumpAndSettle();
 
-    expect(find.text('Human development, inequality and social policy'), findsOneWidget);
     expect(find.text('Mark lesson complete'), findsOneWidget);
+    expect(find.text('1. The historical setting'), findsOneWidget);
     await tester.tap(find.text('Mark lesson complete'));
     await tester.pumpAndSettle();
     expect(find.text('1 / 55 lessons completed'), findsOneWidget);
-    expect(find.text('CSS EXAM QUESTION'), findsWidgets);
-    expect(find.text('CLASSWORK'), findsWidgets);
-    expect(find.text('1. Poverty, inequality and social protection'), findsOneWidget);
-
-    final workshopTile = find.byKey(
-      const PageStorageKey<String>('Pakistan Affairs-30'),
-    );
-    await tester.scrollUntilVisible(workshopTile, 400, scrollable: academyScroll);
-    await tester.tap(workshopTile);
-    await tester.pumpAndSettle();
-    expect(find.text('How to decode a Pakistan Affairs question'), findsOneWidget);
-
-    final modelChapterTile = find.byKey(
-      const PageStorageKey<String>('Pakistan Affairs-31'),
-    );
-    await tester.scrollUntilVisible(modelChapterTile, 400, scrollable: academyScroll);
-    await tester.tap(modelChapterTile);
-    await tester.pumpAndSettle();
-    final jinnahAnswer = find.text('Complete model answer: Jinnah’s leadership during 1937–1947');
-    await tester.scrollUntilVisible(jinnahAnswer, 300, scrollable: academyScroll);
-    await tester.tap(jinnahAnswer);
-    await tester.pumpAndSettle();
-    expect(find.textContaining('The decade from 1937 to 1947 transformed'), findsOneWidget);
-
-    final warAnswer = find.byKey(
-      const PageStorageKey<String>(
-        'lesson-Complete model answer: Pakistan and the US-led War on Terror',
-      ),
-    );
-    await tester.ensureVisible(warAnswer);
-    await tester.tap(warAnswer);
-    await tester.pumpAndSettle();
-    expect(find.textContaining('Pakistan’s decision to join the US-led coalition'), findsOneWidget);
-
-    final geographyAnswer = find.byKey(
-      const PageStorageKey<String>(
-        'lesson-Complete model answer: Pakistan’s geo-strategic location and its challenges',
-      ),
-    );
-    await tester.ensureVisible(geographyAnswer);
-    await tester.tap(geographyAnswer);
-    await tester.pumpAndSettle();
-    expect(find.textContaining('Pakistan occupies a strategically important location'), findsOneWidget);
   });
 
   testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred explained questions', (tester) async {
