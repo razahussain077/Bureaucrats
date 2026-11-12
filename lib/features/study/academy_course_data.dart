@@ -1183,6 +1183,7 @@ Archive: https://www.fpsc.gov.pk/Schedule?section=Previous+Question+Papers%2FCSS
 
 This course currently provides a verified theme map for CE-2023. It does not claim to have transcribed or categorised every question from the CE-2024, CE-2025 or CE-2026 papers. Add those mappings only after checking each original FPSC PDF.'''),
 
+        ], keyTerms: ['FPSC CE-2023', 'GK-III Pakistan Affairs', 'Question selection', 'Question mapping', 'Jinnah 1937–1947', 'Agricultural productivity', 'Industrialisation', 'Demographic dividend'], examQuestion: 'Using the CE-2023 paper, explain how Pakistan Affairs questions connect historical foundations with contemporary economic, political and security challenges.', practiceTask: 'Open the official CE-2023 paper. Choose any four of Q2–Q8, prepare a 10-minute outline for each and then attempt all four under the original examination time and word-discipline conditions.'),
           AcademyLesson(
             title: 'CE-2024 official paper map: political stability, reform and integration',
             objectives: 'Map the seven subjective themes of CE-2024 to the Pakistan Affairs course and practise multi-topic analysis.',
@@ -1390,7 +1391,6 @@ The central lesson is that ownership is only one dimension of economic governanc
             examQuestion: 'Critically evaluate the impact of Bhutto’s nationalisation policy on the economy of Pakistan.',
             practiceTask: 'Compare public and private ownership across efficiency, equity, investment, access, innovation and accountability, using one historical sector example for each.'
           ),
-        ], keyTerms: ['FPSC CE-2023', 'GK-III Pakistan Affairs', 'Question selection', 'Question mapping', 'Jinnah 1937–1947', 'Agricultural productivity', 'Industrialisation', 'Demographic dividend'], examQuestion: 'Using the CE-2023 paper, explain how Pakistan Affairs questions connect historical foundations with contemporary economic, political and security challenges.', practiceTask: 'Open the official CE-2023 paper. Choose any four of Q2–Q8, prepare a 10-minute outline for each and then attempt all four under the original examination time and word-discipline conditions.')
       ]),
     ],
   ),
