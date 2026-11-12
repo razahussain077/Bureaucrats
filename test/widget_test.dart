@@ -280,7 +280,7 @@ void main() {
     expect(course.marks, '100 marks');
     expect(course.chapters, hasLength(32));
     expect(course.chapters.map((chapter) => chapter.number).toSet(), hasLength(32));
-    expect(lessons, hasLength(72));
+    expect(lessons, hasLength(86));
 
     for (final lesson in lessons) {
       expect(
@@ -332,6 +332,20 @@ void main() {
         'CE-2024 Q6 model answer: equitable resource distribution and regional grievances',
         'CE-2024 Q7 model answer: pragmatic civil-military relations and South Asian security',
         'CE-2024 Q8 model answer: provincial autonomy, devolution and national integration',
+        'CE-2025 Q2 model answer: the Indus Waters Treaty and bilateral relations',
+        'CE-2025 Q3 model answer: the separation of East Pakistan in 1971',
+        'CE-2025 Q4 model answer: CPEC and Pakistan’s economic development',
+        'CE-2025 Q5 model answer: demographic and cultural diversity and national integration',
+        'CE-2025 Q6 model answer: Bhutto-era nationalisation and economic performance',
+        'CE-2025 Q7 model answer: Pakistan’s Kashmir policy and options for a solution',
+        'CE-2025 Q8 model answer: media, public opinion and political change',
+        'CE-2026 Q2 model answer: Iqbal’s philosophy and Jinnah’s political interpretation',
+        'CE-2026 Q3 model answer: Afghanistan’s instability and Pakistan’s security',
+        'CE-2026 Q4 model answer: the Twenty-seventh Amendment and constitutionalism',
+        'CE-2026 Q5 model answer: youth, digital activism and civil-military relations',
+        'CE-2026 Q6 model answer: Pakistan’s economic challenges and IMF conditionality',
+        'CE-2026 Q7 model answer: the UN Security Council and Kashmir',
+        'CE-2026 Q8 model answer: health and education after the Eighteenth Amendment',
       ]),
     );
 
@@ -398,7 +412,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Pakistan Affairs'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('32 chapters • 72 lessons'), findsOneWidget);
+    expect(find.textContaining('32 chapters • 86 lessons'), findsOneWidget);
     expect(find.text('Mark lesson complete'), findsNothing);
 
     final firstLesson = find.byKey(
@@ -414,7 +428,7 @@ void main() {
     expect(find.text('1. The historical setting'), findsOneWidget);
     await tester.tap(find.text('Mark lesson complete'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 72 lessons completed'), findsOneWidget);
+    expect(find.text('1 / 86 lessons completed'), findsOneWidget);
   });
 
   testWidgets('Pakistan Affairs MCQ bank has expanded to one hundred explained questions', (tester) async {
