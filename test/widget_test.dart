@@ -93,6 +93,9 @@ void main() {
     expect(find.text('Pakistan Affairs — Official CE-2023 Paper'), findsOneWidget);
     expect(find.text('Pakistan Economic Survey 2025–26'), findsOneWidget);
     expect(find.text('Federal Budget 2026–27'), findsOneWidget);
+    expect(find.text('Constitution of Pakistan — amended up to the 27th Amendment'), findsOneWidget);
+    expect(find.text('Indus Waters Treaty — PCA case record'), findsOneWidget);
+    expect(find.text('IMF Pakistan — 7 October 2026 review'), findsOneWidget);
     expect(find.text('OPEN FPSC ARCHIVE'), findsOneWidget);
 
     tabController.animateTo(6);
