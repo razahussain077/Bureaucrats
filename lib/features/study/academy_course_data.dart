@@ -2041,6 +2041,57 @@ Avoid unsupported certainty, emotional labels and conversational expressions. If
 In the final review, check that every paragraph answers the prompt, examples are attributed accurately, the conclusion follows from the argument and no section has been left unfinished. Practise under timed conditions rather than relying on an ideal plan.'''),
         ], keyTerms: ['Subject–verb agreement', 'Tense consistency', 'Collocation', 'Register', 'Editing pass', 'Timed outline'], examQuestion: 'Why are clarity and coherence more important than ornamental vocabulary in competitive examination writing?', practiceTask: 'Write a 500-word response in a timed sitting. Spend the final five minutes checking thesis alignment, paragraph unity, grammar and factual attribution.'),
       ]),
+
+      AcademyChapter(
+        number: '07',
+        title: 'Timed essay planning and execution',
+        syllabusLink: 'Prompt interpretation, coherent argument, paragraph development and examination time management',
+        lessons: [
+        AcademyLesson(
+          title: 'Plan and draft under the clock',
+          objectives: 'Apply a repeatable time-budget, paragraph plan and revision process to a full-length CSS essay.',
+          sections: [
+            AcademyLessonSection('1. Convert the prompt into a writing contract', '''Before writing, restate the prompt as a question that your essay must answer. Identify its key concept, command word, implied debate and limits. Write a one-sentence thesis that directly answers it. Then list the two or three conditions under which your thesis is valid. This prevents the common error of preparing a memorised essay and forcing an unrelated title onto it. A useful planning sheet contains the exact prompt, a working definition, thesis, scope, major claims, counterargument and conclusion direction.'''),
+            AcademyLessonSection('2. Allocate time by task, not by habit', '''A timed essay requires deliberate allocation for interpretation, outline, drafting and revision. Determine your own realistic writing speed through repeated practice rather than copying an arbitrary timetable. Protect time for a complete conclusion and final review. If the outline is taking too long, reduce the number of claims instead of abandoning structure. If drafting is slow, use shorter, clearer sentences and one argument per paragraph. Keep a visible checkpoint for the midpoint so that the final sections are not compressed into rushed fragments.'''),
+            AcademyLessonSection('3. Use a paragraph control sheet', '''For each body paragraph, record its claim, explanation, evidence, limitation and link to the thesis. This five-part check exposes paragraphs that are merely descriptive or repeat earlier material. Evidence should be specific enough to verify: identify the institution, report, date or historical event where possible. If exact figures are uncertain, use a carefully framed qualitative example rather than inventing a statistic. After drafting, mark each paragraph with the prompt dimension it answers and remove material that does not advance the argument.'''),
+          ],
+          keyTerms: ['Writing contract', 'Time budget', 'Paragraph control', 'Thesis alignment', 'Evidence audit'],
+          examQuestion: 'How should a candidate organise time and paragraph development when writing a long analytical essay under examination conditions?',
+          practiceTask: 'Write a 12-minute outline for a past CSS essay title. Then draft two 180-word body paragraphs and audit each for claim, explanation, evidence, limitation and link to thesis.',
+        ),
+        AcademyLesson(
+          title: 'Diagnose and repair a weak essay',
+          objectives: 'Evaluate an essay draft against relevance, argument, evidence, structure and expression, then revise it systematically.',
+          sections: [
+            AcademyLessonSection('1. Recognise the symptoms of a weak draft', '''A weak essay may contain relevant facts but fail to answer the precise question. Other warning signs include a thesis that merely repeats the title, headings that do not form a logical sequence, paragraphs with multiple unrelated claims, unsupported statistics, sweeping generalisations and a conclusion that introduces a new argument. Long introductions often conceal uncertainty about the actual position. Diagnose the problem before editing sentences; polishing grammar cannot repair an argument that is irrelevant or incoherent.'''),
+            AcademyLessonSection('2. Revise in the correct order', '''Use three editing passes. First, revise at document level: check thesis, scope, order and balance. Second, revise at paragraph level: ensure unity, logical progression, evidence and transitions. Third, revise at sentence level: grammar, punctuation, word choice, agreement and concision. This order is efficient because sentence-level polishing may be wasted if a paragraph is later removed. Read topic sentences alone to see whether the argument remains coherent.'''),
+            AcademyLessonSection('3. Use a defensible self-assessment', '''Score the draft against a transparent practice rubric: relevance to the prompt, quality of thesis, analytical depth, organisation, evidence and language control. Explain each score with a line or paragraph from the draft. The rubric is a learning aid, not an official FPSC marking formula and cannot predict an examiner's marks. Maintain an error log with the error, its cause, the correction and a new example. Revisit recurring weaknesses in the next timed exercise.'''),
+          ],
+          keyTerms: ['Relevance audit', 'Document-level revision', 'Paragraph unity', 'Error log', 'Self-assessment rubric'],
+          examQuestion: 'Explain why revision should proceed from argument and structure to paragraphing and sentence-level accuracy.',
+          practiceTask: 'Take a previous essay draft. Identify three structural weaknesses, rewrite one weak paragraph and create an error log containing at least five specific corrections.',
+        ),
+        ],
+      ),
+      AcademyChapter(
+        number: '08',
+        title: 'Essay diagnosis, revision and self-assessment',
+        syllabusLink: 'Critical review, relevance, structure, evidence and language accuracy',
+        lessons: [
+        AcademyLesson(
+          title: 'Diagnose and repair a weak essay',
+          objectives: 'Evaluate an essay draft against relevance, argument, evidence, structure and expression, then revise it systematically.',
+          sections: [
+            AcademyLessonSection('1. Recognise the symptoms of a weak draft', '''A weak essay may contain relevant facts but fail to answer the precise question. Other warning signs include a thesis that merely repeats the title, headings that do not form a logical sequence, paragraphs with multiple unrelated claims, unsupported statistics, sweeping generalisations and a conclusion that introduces a new argument. Long introductions often conceal uncertainty about the actual position. Diagnose the problem before editing sentences; polishing grammar cannot repair an argument that is irrelevant or incoherent.'''),
+            AcademyLessonSection('2. Revise in the correct order', '''Use three editing passes. First, revise at document level: check thesis, scope, order and balance. Second, revise at paragraph level: ensure unity, logical progression, evidence and transitions. Third, revise at sentence level: grammar, punctuation, word choice, agreement and concision. This order is efficient because sentence-level polishing may be wasted if a paragraph is later removed. Read topic sentences alone to see whether the argument remains coherent.'''),
+            AcademyLessonSection('3. Use a defensible self-assessment', '''Score the draft against a transparent practice rubric: relevance to the prompt, quality of thesis, analytical depth, organisation, evidence and language control. Explain each score with a line or paragraph from the draft. The rubric is a learning aid, not an official FPSC marking formula and cannot predict an examiner's marks. Maintain an error log with the error, its cause, the correction and a new example. Revisit recurring weaknesses in the next timed exercise.'''),
+          ],
+          keyTerms: ['Relevance audit', 'Document-level revision', 'Paragraph unity', 'Error log', 'Self-assessment rubric'],
+          examQuestion: 'Explain why revision should proceed from argument and structure to paragraphing and sentence-level accuracy.',
+          practiceTask: 'Take a previous essay draft. Identify three structural weaknesses, rewrite one weak paragraph and create an error log containing at least five specific corrections.',
+        ),
+        ],
+      ),
     ],
   ),
   AcademyCourse(
@@ -2145,6 +2196,57 @@ Avoid choosing an impressive-looking word when a simpler, more accurate word exi
 When you make an error, record why the alternative was wrong. This turns vocabulary revision into a process of discrimination and accurate use.'''),
         ], keyTerms: ['Polysemy', 'Part of speech', 'Collocation', 'Register', 'Pair of words', 'Context'], examQuestion: 'Why is contextual usage a better measure of vocabulary mastery than memorising word meanings?', practiceTask: 'Prepare a 20-item vocabulary log with definitions, collocations and original sentences; test it again after 48 hours.'),
       ]),
+
+      AcademyChapter(
+        number: '07',
+        title: 'Precis method, structure and title',
+        syllabusLink: 'Precis writing, compression, central argument, title and word-limit control',
+        lessons: [
+        AcademyLesson(
+          title: 'Precis examination workflow and title selection',
+          objectives: 'Produce a faithful precis by identifying the central argument, preserving logical relationships and selecting an accurate title.',
+          sections: [
+            AcademyLessonSection('1. Read for argument before reducing', '''Read the passage once to understand its subject and overall direction. On the second reading, identify the central claim, supporting reasons, examples, qualifications and conclusion. Distinguish the author's position from examples used to illustrate it. Mark contrast words such as however, although and nevertheless, and causal links such as because, therefore and consequently. These relationships often carry more meaning than individual details. Do not begin rewriting after reading only the opening lines.'''),
+            AcademyLessonSection('2. Build a reduction plan', '''Write a one-sentence statement of the passage's central argument. Then group supporting points into a small number of logical units. Retain essential qualifications and causal relationships; remove repetition, decorative examples and details that do not advance the central argument. Avoid adding your opinion or outside facts. A precis is not a list of disconnected short sentences: it is a coherent miniature version of the original reasoning. Use your own wording while preserving the author's meaning and tone.'''),
+            AcademyLessonSection('3. Choose a title and check the word limit', '''A title should capture the controlling idea, not merely name the broad subject. Draft the precis first, then choose a concise title that reflects its actual emphasis. Count words according to the examination instructions and leave a margin for correction. Compare the precis with the source: every retained claim must be traceable to the passage, and no important qualification should have disappeared. Check pronoun references, tense, transitions and grammatical completeness before finalising.'''),
+          ],
+          keyTerms: ['Central argument', 'Logical unit', 'Qualification', 'Faithful paraphrase', 'Title selection', 'Word limit'],
+          examQuestion: 'Describe a systematic method for writing a precis that preserves the author\'s argument while reducing the original passage.',
+          practiceTask: 'Select a 350–450-word editorial passage. Annotate its thesis, supporting reasons and qualifications, write a precis to the instructed proportion, propose a title and verify fidelity sentence by sentence.',
+        ),
+        AcademyLesson(
+          title: 'Comprehension, inference and précis accuracy clinic',
+          objectives: 'Distinguish explicit information from inference and implication, and avoid common comprehension and précis errors.',
+          sections: [
+            AcademyLessonSection('1. Separate fact, inference and implication', '''An explicit fact is directly stated in the passage. An inference is a conclusion supported by details but not stated word for word. An implication is a consequence or suggestion that follows from the author's reasoning. A candidate must not present personal assumptions as textual evidence. For each answer, identify the sentence or idea that supports it, then explain the reasoning in concise language. If several interpretations are possible, choose the one best supported by the passage rather than the most elaborate.'''),
+            AcademyLessonSection('2. Answer in the passage\'s frame', '''Comprehension answers should respond to the exact question and remain within the passage's context. A question asking why requires a reason; one asking how requires a process; one asking what the author implies requires a supported interpretation. Avoid importing memorised facts unless the question explicitly asks for external knowledge. Keep answers proportionate: a short factual question does not need a long essay, while an analytical question may require explanation and a textual basis.'''),
+            AcademyLessonSection('3. Correct the errors that distort meaning', '''Common precis failures include copying long phrases, changing the author's degree of certainty, deleting a necessary contrast, confusing correlation with causation, adding personal judgement and exceeding the word limit. In comprehension, common failures include answering a neighbouring question, confusing the author's view with an example, and treating an inference as a direct quotation. Edit for fidelity before style. A polished sentence that changes the source's meaning is still incorrect.'''),
+          ],
+          keyTerms: ['Explicit information', 'Inference', 'Implication', 'Textual evidence', 'Causal claim', 'Fidelity audit'],
+          examQuestion: 'Differentiate explicit information, inference and implication in reading comprehension. Why must a precis preserve the author\'s qualifications?',
+          practiceTask: 'Answer five comprehension questions on a passage: two factual, two inferential and one about implication. Underline the textual basis for every answer, then identify one tempting but unsupported interpretation.',
+        ),
+        ],
+      ),
+      AcademyChapter(
+        number: '08',
+        title: 'Comprehension and precision clinic',
+        syllabusLink: 'Comprehension, inference, implication, textual evidence and accuracy',
+        lessons: [
+        AcademyLesson(
+          title: 'Comprehension, inference and précis accuracy clinic',
+          objectives: 'Distinguish explicit information from inference and implication, and avoid common comprehension and précis errors.',
+          sections: [
+            AcademyLessonSection('1. Separate fact, inference and implication', '''An explicit fact is directly stated in the passage. An inference is a conclusion supported by details but not stated word for word. An implication is a consequence or suggestion that follows from the author's reasoning. A candidate must not present personal assumptions as textual evidence. For each answer, identify the sentence or idea that supports it, then explain the reasoning in concise language. If several interpretations are possible, choose the one best supported by the passage rather than the most elaborate.'''),
+            AcademyLessonSection('2. Answer in the passage\'s frame', '''Comprehension answers should respond to the exact question and remain within the passage's context. A question asking why requires a reason; one asking how requires a process; one asking what the author implies requires a supported interpretation. Avoid importing memorised facts unless the question explicitly asks for external knowledge. Keep answers proportionate: a short factual question does not need a long essay, while an analytical question may require explanation and a textual basis.'''),
+            AcademyLessonSection('3. Correct the errors that distort meaning', '''Common precis failures include copying long phrases, changing the author's degree of certainty, deleting a necessary contrast, confusing correlation with causation, adding personal judgement and exceeding the word limit. In comprehension, common failures include answering a neighbouring question, confusing the author's view with an example, and treating an inference as a direct quotation. Edit for fidelity before style. A polished sentence that changes the source's meaning is still incorrect.'''),
+          ],
+          keyTerms: ['Explicit information', 'Inference', 'Implication', 'Textual evidence', 'Causal claim', 'Fidelity audit'],
+          examQuestion: 'Differentiate explicit information, inference and implication in reading comprehension. Why must a precis preserve the author\'s qualifications?',
+          practiceTask: 'Answer five comprehension questions on a passage: two factual, two inferential and one about implication. Underline the textual basis for every answer, then identify one tempting but unsupported interpretation.',
+        ),
+        ],
+      ),
     ],
   ),
   AcademyCourse(
