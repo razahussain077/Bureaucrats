@@ -66,7 +66,7 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('English Essay'.toUpperCase()), findsOneWidget);
-    expect(find.textContaining('4 chapters'), findsOneWidget);
+    expect(find.textContaining('6 chapters'), findsOneWidget);
   });
 
   testWidgets('optional subjects and official papers are discoverable', (tester) async {
