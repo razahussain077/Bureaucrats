@@ -8,7 +8,7 @@ Bureaucrats is a Flutter-based CSS preparation companion for Pakistan's Central 
 - Authenticated home screen and sign-out
 - Academy Classroom with 46 syllabus-mapped chapter lessons across Pakistan Affairs (12), English Essay (4), English Precis & Composition (4), General Science & Ability (9), Current Affairs (4), Islamic Studies (7) and the Comparative Study of Major Religions alternative paper (6)
 - Each classroom lesson includes explanatory teaching sections, key terms, a CSS-style question and classwork
-- Ten expanded optional-paper courses: Political Science, International Relations, Economics, Computer Science, Public Administration, Gender Studies, Sociology, Criminology, Environmental Sciences and Business Administration (50 chapters / 60 structured lessons). Other optional-paper offerings remain at varying levels of starter coverage and must not be treated as fully authored.
+- Twenty optional-paper courses now have structured chapter maps and teaching, including Political Science, International Relations, Economics, Computer Science, Public Administration, Gender Studies, Sociology, Criminology, Environmental Sciences, Business Administration, Accountancy & Auditing, Agriculture & Forestry, Anthropology, Applied Mathematics, Physics, Chemistry, Constitutional Law, British History, Governance & Public Policies and Town Planning & Urban Management (96 chapters / 80 structured lessons). This is substantial coverage, but it is not a verified exhaustive transcription of every FPSC optional syllabus clause.
 - Six evergreen Current Affairs issue briefs in the older Study Centre tab
 - Ten interactive Pakistan Affairs MCQs with answer explanations and score
 - CSS syllabus planning checklist with an in-session progress indicator
@@ -30,7 +30,7 @@ Bureaucrats is a Flutter-based CSS preparation companion for Pakistan's Central 
 - Complete sign-up, email confirmation, sign-in and sign-out tests against the deployed project.
 - Run and verify Flutter analyze, widget tests, Android build and device testing.
 - The Academy Classroom now contains expanded compulsory-paper teaching across Pakistan Affairs, English Essay, English Precis & Composition, General Science & Ability, Current Affairs and Islamic Studies. This is still not a claim that every FPSC syllabus clause has been fully exhausted; source notes, diagrams/data, further practice questions and expert-reviewed answer keys remain ongoing work.
-- The ten expanded optional-paper courses are substantial teaching releases, not yet a verified exhaustive mapping of every topic in every FPSC optional syllabus. Other optional subjects still need deeper chapter-by-chapter teaching.
+- The twenty optional-paper courses have expanded teaching but still require a line-by-line audit against the latest official FPSC syllabi, additional topic depth, diagrams/data where relevant, practice questions and expert-reviewed answer keys.
 - Comparative Study of Major Religions is included as an alternative-paper course; it also needs further depth, references and question-bank coverage.
 - Current Affairs issue briefs are evergreen, not a live, dated news feed.
 - Syllabus checklist progress currently lives only in the running screen; cross-device persistence is not implemented.
