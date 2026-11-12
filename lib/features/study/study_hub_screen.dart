@@ -799,12 +799,14 @@ class _PastPapersTab extends StatelessWidget {
   static final Uri _pakistanAffairs2023 = Uri.parse('https://www.fpsc.gov.pk/assets/media/2024-06-13-GK3-%28Pakistan-Affairs%29.pdf');
   static final Uri _syllabus = Uri.parse('https://www.fpsc.gov.pk/Syllabuses?section=CSS+Syllabi');
   static final Uri _rules = Uri.parse('https://www.fpsc.gov.pk/MPTandMAIN?section=CSS+Rules');
+  static final Uri _economicSurvey = Uri.parse('https://www.finance.gov.pk/survey_2026.html');
+  static final Uri _federalBudget = Uri.parse('https://www.finance.gov.pk/fb_2026_27.html');
 
   Future<void> _open(BuildContext context, Uri uri) async {
     try {
       final opened = await launchUrl(uri, mode: LaunchMode.externalApplication);
       if (!opened && context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Could not open the FPSC website. Please try again.')));
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Could not open the official website. Please try again.')));
       }
     } catch (_) {
       if (context.mounted) {
@@ -857,6 +859,20 @@ class _PastPapersTab extends StatelessWidget {
         detail: 'Verify compulsory papers, optional subject groups, topic coverage and mark allocations before finalising your study plan.',
         action: 'VIEW OFFICIAL SYLLABUS',
         onTap: () => _open(context, _syllabus),
+      ),
+      _OfficialResourceCard(
+        icon: Icons.bar_chart_rounded,
+        title: 'Pakistan Economic Survey 2025–26',
+        detail: 'Official Finance Division survey with growth, agriculture, industry, fiscal, debt, trade, education, health, energy, IT and climate chapters.',
+        action: 'OPEN ECONOMIC SURVEY',
+        onTap: () => _open(context, _economicSurvey),
+      ),
+      _OfficialResourceCard(
+        icon: Icons.account_balance_rounded,
+        title: 'Federal Budget 2026–27',
+        detail: 'Official Finance Division budget portal with Budget in Brief, Annual Budget Statement, receipts, expenditure and development documents.',
+        action: 'OPEN FEDERAL BUDGET',
+        onTap: () => _open(context, _federalBudget),
       ),
       _OfficialResourceCard(
         icon: Icons.gavel_rounded,
