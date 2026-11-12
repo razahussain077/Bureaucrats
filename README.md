@@ -10,7 +10,7 @@ Bureaucrats is a Flutter-based CSS preparation companion for Pakistan's Central 
 - Each classroom lesson includes explanatory teaching sections, key terms, a CSS-style question and classwork
 - Twenty optional-paper courses now have structured chapter maps and teaching, including Political Science, International Relations, Economics, Computer Science, Public Administration, Gender Studies, Sociology, Criminology, Environmental Sciences, Business Administration, Accountancy & Auditing, Agriculture & Forestry, Anthropology, Applied Mathematics, Physics, Chemistry, Constitutional Law, British History, Governance & Public Policies and Town Planning & Urban Management (96 chapters / 80 structured lessons). This is substantial coverage, but it is not a verified exhaustive transcription of every FPSC optional syllabus clause.
 - Six evergreen Current Affairs issue briefs in the older Study Centre tab
-- Pakistan Affairs practice bank with 120 explained MCQs; timed exam hub with 12 mixed-compulsory and 40 mixed-optional questions, plus subject-specific optional question sets
+- Pakistan Affairs practice bank with 120 explained MCQs; timed exam hub with 12 mixed-compulsory, 40 mixed-optional and 11 Comparative Religions questions, plus subject-specific optional question sets
 - CSS syllabus tracker and lesson-completion progress stored locally on the device; no cross-device cloud sync yet
 - Essay writing screen and structured rubric feedback view
 - Deployed, JWT-protected Supabase Edge Function for Gemini-based essay evaluation
