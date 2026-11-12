@@ -281,6 +281,35 @@ void main() {
     }
   });
 
+  test('the other ten optional courses also contain structured lessons', () {
+    const expected = <String, int>{
+      'Accountancy & Auditing': 5,
+      'Agriculture & Forestry': 4,
+      'Anthropology': 4,
+      'Applied Mathematics': 5,
+      'Physics': 5,
+      'Chemistry': 5,
+      'Constitutional Law': 5,
+      'British History': 5,
+      'Governance & Public Policies': 4,
+      'Town Planning & Urban Management': 4,
+    };
+    for (final course in optionalAcademyCourses.where(
+      (item) => expected.containsKey(item.title),
+    )) {
+      expect(course.chapters, hasLength(expected[course.title]));
+      final lessons = course.chapters.expand((chapter) => chapter.lessons);
+      expect(lessons.length, greaterThanOrEqualTo(5));
+      for (final lesson in lessons) {
+        expect(lesson.objectives.trim(), isNotEmpty);
+        expect(lesson.sections.length, greaterThanOrEqualTo(3));
+        expect(lesson.keyTerms.length, greaterThanOrEqualTo(5));
+        expect(lesson.examQuestion.trim(), isNotEmpty);
+        expect(lesson.practiceTask.trim(), isNotEmpty);
+      }
+    }
+  });
+
   testWidgets('expanded optional academy courses open detailed lessons', (tester) async {
     tester.view.physicalSize = const Size(1200, 2600);
     tester.view.devicePixelRatio = 1;
@@ -290,16 +319,16 @@ void main() {
     await tester.pumpAndSettle();
 
     const courses = <(String, String)>[
-      ('Accountancy & Auditing', '4 chapters'),
-      ('Agriculture & Forestry', '3 chapters'),
-      ('Anthropology', '3 chapters'),
-      ('Applied Mathematics', '4 chapters'),
-      ('Physics', '4 chapters'),
-      ('Chemistry', '4 chapters'),
-      ('Constitutional Law', '4 chapters'),
-      ('British History', '4 chapters'),
-      ('Governance & Public Policies', '3 chapters'),
-      ('Town Planning & Urban Management', '3 chapters'),
+      ('Accountancy & Auditing', '5 chapters'),
+      ('Agriculture & Forestry', '4 chapters'),
+      ('Anthropology', '4 chapters'),
+      ('Applied Mathematics', '5 chapters'),
+      ('Physics', '5 chapters'),
+      ('Chemistry', '5 chapters'),
+      ('Constitutional Law', '5 chapters'),
+      ('British History', '5 chapters'),
+      ('Governance & Public Policies', '4 chapters'),
+      ('Town Planning & Urban Management', '4 chapters'),
     ];
 
     for (final course in courses) {
